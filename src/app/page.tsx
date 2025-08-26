@@ -1,4 +1,4 @@
-import { ServiceCard } from "@/component/Service";
+import { ServiceCard } from "@/components/Service";
 
 export default function Home() {
   return (
