@@ -7,9 +7,10 @@ type FlipCardProps = {
   subtitle: string;
   features: string[];
   cta?: string;
+  icon?: string;
 };
 
-function FlipCard({ title, subtitle, features, cta = "Learn more" }: FlipCardProps) {
+export function FlipCard({ title, subtitle, features, cta = "Learn more", icon }: FlipCardProps) {
   const [flipped, setFlipped] = useState(false);
 
   const toggle = () => setFlipped((f) => !f);
@@ -40,12 +41,20 @@ function FlipCard({ title, subtitle, features, cta = "Learn more" }: FlipCardPro
         {/* Front */}
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-2xl p-6 text-center [backface-visibility:hidden]">
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-[#00E7FF]/15 ring-1 ring-[#00E7FF]/30">
-            <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden>
-              <path
-                d="M12 3l9 6-9 6-9-6 9-6zm0 7.5l9 6-9 6-9-6 9-6z"
-                fill="currentColor"
+            {icon ? (
+              <img 
+                src={icon} 
+                alt={title} 
+                className="h-7 w-7 object-contain"
               />
-            </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden>
+                <path
+                  d="M12 3l9 6-9 6-9-6 9-6zm0 7.5l9 6-9 6-9-6 9-6z"
+                  fill="currentColor"
+                />
+              </svg>
+            )}
           </div>
           <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
           <p className="text-sm text-neutral-600 dark:text-neutral-300">{subtitle}</p>
@@ -86,6 +95,7 @@ export function ServiceCard() {
     {
       title: "Web Development",
       subtitle: "Modern & scalable websites",
+      icon: "https://cdn-icons-png.flaticon.com/512/1006/1006771.png",
       features: [
         "Responsive UI/UX design",
         "Next.js & React expertise",
@@ -95,6 +105,7 @@ export function ServiceCard() {
     {
       title: "Mobile App Development",
       subtitle: "iOS & Android solutions",
+      icon: "https://cdn-icons-png.flaticon.com/512/2111/2111320.png",
       features: [
         "Cross-platform apps (React Native)",
         "Smooth performance & UI",
@@ -104,6 +115,7 @@ export function ServiceCard() {
     {
       title: "Cloud & DevOps",
       subtitle: "Deploy, scale, and secure",
+      icon: "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
       features: [
         "AWS, Azure, Google Cloud",
         "CI/CD pipelines",
@@ -113,6 +125,7 @@ export function ServiceCard() {
     {
       title: "UI/UX Design",
       subtitle: "User-focused experiences",
+      icon: "https://cdn-icons-png.flaticon.com/512/2696/2696051.png",
       features: [
         "Wireframes & prototypes",
         "Design systems & style guides",
@@ -122,6 +135,7 @@ export function ServiceCard() {
     {
       title: "E-commerce Solutions",
       subtitle: "Sell smarter online",
+      icon: "https://cdn-icons-png.flaticon.com/512/2331/2331970.png",
       features: [
         "Custom storefronts",
         "Payment gateway integration",
@@ -131,6 +145,7 @@ export function ServiceCard() {
     {
       title: "AI & Automation",
       subtitle: "Future-ready innovations",
+      icon: "https://cdn-icons-png.flaticon.com/512/4712/4712027.png",
       features: [
         "Chatbots & assistants",
         "Workflow automation",
