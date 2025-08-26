@@ -49,32 +49,32 @@ const ContactUs = () => {
             title: "Email Us",
             info: "contact@techsolutions.com",
             subInfo: "We typically respond within 2 hours",
-            color: "text-blue-400",
-            bgColor: "bg-blue-500/10",
+            color: "text-[#00E7FF]",
+            bgColor: "bg-[#00E7FF]/10",
         },
         {
             icon: MdPhone,
             title: "Call Us",
             info: "+1 (555) 123-4567",
             subInfo: "Mon-Fri 9AM-6PM EST",
-            color: "text-green-400",
-            bgColor: "bg-green-500/10",
+            color: "text-[#00E7FF]",
+            bgColor: "bg-[#00E7FF]/10",
         },
         {
             icon: MdLocationOn,
             title: "Visit Us",
             info: "123 Tech Street, Silicon Valley",
             subInfo: "CA 94043, United States",
-            color: "text-purple-400",
-            bgColor: "bg-purple-500/10",
+            color: "text-[#00E7FF]",
+            bgColor: "bg-[#00E7FF]/10",
         },
         {
             icon: MdAccessTime,
             title: "Business Hours",
             info: "Monday - Friday",
             subInfo: "9:00 AM - 6:00 PM EST",
-            color: "text-yellow-400",
-            bgColor: "bg-yellow-500/10",
+            color: "text-[#00E7FF]",
+            bgColor: "bg-[#00E7FF]/10",
         },
     ];
 
@@ -125,56 +125,37 @@ const ContactUs = () => {
     };
 
     const inputClasses = (fieldName: keyof typeof formData) => `
-    w-full px-4 py-3 bg-slate-800/50 border-2 rounded-lg text-white placeholder-gray-400
+    w-full px-4 py-3 bg-neutral-800/50 border-2 rounded-lg text-white placeholder-neutral-400
     transition-all duration-300 focus:outline-none backdrop-blur-sm
     ${focusedField === fieldName || formData[fieldName]
-            ? "border-blue-500 bg-slate-800/70"
-            : "border-slate-700 hover:border-slate-600"
+            ? "border-[#00E7FF] bg-neutral-800/70"
+            : "border-neutral-700 hover:border-neutral-600"
         }
     `;
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-            {/* Animated Background */}
-            <div className="absolute inset-0">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5"></div>
-                <div className="absolute top-0 left-0 w-full h-full">
-                    {[...Array(30)].map((_, i) => (
-                        <div
-                            key={i}
-                            className="absolute w-2 h-2 bg-blue-400/20 rounded-full animate-pulse"
-                            style={{
-                                left: `${Math.random() * 100}%`,
-                                top: `${Math.random() * 100}%`,
-                                animationDelay: `${Math.random() * 3}s`,
-                                animationDuration: `${2 + Math.random() * 3}s`,
-                            }}
-                        />
-                    ))}
-                </div>
-            </div>
-
+        <div className="min-h-screen w-full bg-gradient-to-b from-neutral-950 to-neutral-900 text-white">
             <div className="relative z-10 container mx-auto px-4 py-20">
                 {/* Header Section */}
                 <div
                     className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                         }`}
                 >
-                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm mb-6">
-                        <MdMessage className="w-4 h-4 text-blue-400 mr-2" />
-                        <span className="text-blue-400 text-sm font-medium">
+                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#00E7FF]/10 border border-[#00E7FF]/20 backdrop-blur-sm mb-6">
+                        <MdMessage className="w-4 h-4 text-[#00E7FF] mr-2" />
+                        <span className="text-[#00E7FF] text-sm font-medium">
                             Get In Touch
                         </span>
                     </div>
 
                     <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
                         Let's Build Something
-                        <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-[#00E7FF] to-[#7AFFF7] bg-clip-text text-transparent">
                             Amazing Together
                         </span>
                     </h1>
 
-                    <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                    <p className="text-xl text-neutral-300 max-w-2xl mx-auto">
                         Ready to transform your business with cutting-edge technology? Let's
                         discuss your project and create innovative solutions.
                     </p>
@@ -188,16 +169,16 @@ const ContactUs = () => {
                                 : "-translate-x-10 opacity-0"
                             }`}
                     >
-                        <div className="bg-slate-800/30 backdrop-blur-lg rounded-2xl border border-slate-700/50 p-8 shadow-2xl">
+                        <div className="bg-neutral-900/80 backdrop-blur-lg rounded-2xl border border-neutral-700/50 p-8 shadow-2xl">
                             <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                                <MdSend className="w-8 h-8 text-blue-400" />
+                                <MdSend className="w-8 h-8 text-[#00E7FF]" />
                                 Send us a message
                             </h2>
 
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="relative">
-                                        <label className="block text-gray-300 font-medium mb-2">
+                                        <label className="block text-neutral-300 font-medium mb-2">
                                             <MdPerson className="w-4 h-4 inline mr-2" />
                                             Full Name *
                                         </label>
@@ -215,7 +196,7 @@ const ContactUs = () => {
                                     </div>
 
                                     <div className="relative">
-                                        <label className="block text-gray-300 font-medium mb-2">
+                                        <label className="block text-neutral-300 font-medium mb-2">
                                             <MdEmail className="w-4 h-4 inline mr-2" />
                                             Email Address *
                                         </label>
@@ -235,7 +216,7 @@ const ContactUs = () => {
 
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="relative">
-                                        <label className="block text-gray-300 font-medium mb-2">
+                                        <label className="block text-neutral-300 font-medium mb-2">
                                             <MdBusiness className="w-4 h-4 inline mr-2" />
                                             Company
                                         </label>
@@ -252,7 +233,7 @@ const ContactUs = () => {
                                     </div>
 
                                     <div className="relative">
-                                        <label className="block text-gray-300 font-medium mb-2">
+                                        <label className="block text-neutral-300 font-medium mb-2">
                                             <MdPhone className="w-4 h-4 inline mr-2" />
                                             Phone Number
                                         </label>
@@ -270,7 +251,7 @@ const ContactUs = () => {
                                 </div>
 
                                 <div className="relative">
-                                    <label className="block text-gray-300 font-medium mb-2">
+                                    <label className="block text-neutral-300 font-medium mb-2">
                                         <MdLanguage className="w-4 h-4 inline mr-2" />
                                         Service Required *
                                     </label>
@@ -288,7 +269,7 @@ const ContactUs = () => {
                                             <option
                                                 key={service}
                                                 value={service}
-                                                className="bg-slate-800"
+                                                className="bg-neutral-800"
                                             >
                                                 {service}
                                             </option>
@@ -297,7 +278,7 @@ const ContactUs = () => {
                                 </div>
 
                                 <div className="relative">
-                                    <label className="block text-gray-300 font-medium mb-2">
+                                    <label className="block text-neutral-300 font-medium mb-2">
                                         <MdMessage className="w-4 h-4 inline mr-2" />
                                         Project Details *
                                     </label>
@@ -318,9 +299,9 @@ const ContactUs = () => {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg
-                           hover:from-blue-500 hover:to-purple-500 transform hover:scale-105 transition-all duration-300
-                           disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-blue-500/25
+                                    className="w-full px-8 py-4 bg-gradient-to-r from-[#00E7FF] to-[#7AFFF7] text-black font-semibold rounded-lg
+                           hover:opacity-90 transform hover:scale-105 transition-all duration-300
+                           disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-[#00E7FF]/25
                            flex items-center justify-center gap-3"
                                 >
                                     {isSubmitting ? (
@@ -366,24 +347,29 @@ const ContactUs = () => {
                         {contactInfo.map((item, index) => (
                             <div
                                 key={item.title}
-                                className={`p-6 bg-slate-800/30 backdrop-blur-lg rounded-xl border border-slate-700/50 hover:border-slate-600 transform hover:scale-105 transition-all duration-300 shadow-lg ${item.bgColor}/5`}
+                                className="relative rounded-2xl p-[2px] overflow-hidden group"
                                 style={{ animationDelay: `${600 + index * 100}ms` }}
                             >
-                                <div
-                                    className={`w-12 h-12 ${item.bgColor} rounded-lg flex items-center justify-center mb-4`}
-                                >
-                                    <item.icon className={`w-6 h-6 ${item.color}`} />
+                                <div className="absolute inset-0 rounded-2xl animate-rotateGlow group-hover:animate-none">
+                                    <div className="absolute -inset-[40%] bg-[conic-gradient(from_0deg,#00E7FFaa_0deg,#00E7FFaa_20deg,transparent_20deg,transparent_360deg)] blur-md" />
                                 </div>
-                                <h3 className="text-white font-semibold text-lg mb-2">
-                                    {item.title}
-                                </h3>
-                                <p className="text-gray-300 font-medium">{item.info}</p>
-                                <p className="text-gray-400 text-sm mt-1">{item.subInfo}</p>
+                                <div className="relative inset-[2px] rounded-2xl bg-neutral-900/90 backdrop-blur p-6 transform hover:scale-[1.02] transition-transform duration-300">
+                                    <div
+                                        className={`w-12 h-12 ${item.bgColor} rounded-lg flex items-center justify-center mb-4`}
+                                    >
+                                        <item.icon className={`w-6 h-6 ${item.color}`} />
+                                    </div>
+                                    <h3 className="text-white font-semibold text-lg mb-2">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-neutral-300 font-medium">{item.info}</p>
+                                    <p className="text-neutral-400 text-sm mt-1">{item.subInfo}</p>
+                                </div>
                             </div>
                         ))}
 
                         {/* Social Links */}
-                        <div className="p-6 bg-slate-800/30 backdrop-blur-lg rounded-xl border border-slate-700/50">
+                        <div className="p-6 bg-neutral-900/80 backdrop-blur-lg rounded-xl border border-neutral-700/50">
                             <h3 className="text-white font-semibold text-lg mb-4">
                                 Follow Us
                             </h3>
@@ -392,7 +378,7 @@ const ContactUs = () => {
                                     <a
                                         key={social.label}
                                         href={social.href}
-                                        className="w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-slate-600/50 transform hover:scale-110 transition-all duration-300"
+                                        className="w-12 h-12 bg-neutral-700/50 rounded-lg flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-600/50 transform hover:scale-110 transition-all duration-300"
                                         aria-label={social.label}
                                     >
                                         <social.icon className="w-5 h-5" />
@@ -402,14 +388,14 @@ const ContactUs = () => {
                         </div>
 
                         {/* Quick Response Promise */}
-                        <div className="p-6 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-lg rounded-xl border border-blue-500/20">
+                        <div className="p-6 bg-gradient-to-r from-[#00e7ff]/10 to-[#7afff7]/10 backdrop-blur-lg rounded-xl border border-[#00E7FF]/20">
                             <div className="flex items-center gap-3 mb-3">
                                 <MdCheckCircle className="w-6 h-6 text-green-400" />
                                 <h3 className="text-white font-semibold">
                                     Quick Response Promise
                                 </h3>
                             </div>
-                            <p className="text-gray-300 text-sm">
+                            <p className="text-neutral-300 text-sm">
                                 We respond to all inquiries within 2 hours during business
                                 hours. For urgent matters, please call us directly.
                             </p>

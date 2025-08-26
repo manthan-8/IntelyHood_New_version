@@ -7,9 +7,10 @@ type FlipCardProps = {
   subtitle: string;
   features: string[];
   cta?: string;
+  icon?: React.ElementType;
 };
 
-function FlipCard({ title, subtitle, features, cta = "Learn more" }: FlipCardProps) {
+export function FlipCard({ title, subtitle, features, cta = "Learn more", icon: Icon }: FlipCardProps) {
   const [flipped, setFlipped] = useState(false);
 
   const toggle = () => setFlipped((f) => !f);
@@ -40,12 +41,14 @@ function FlipCard({ title, subtitle, features, cta = "Learn more" }: FlipCardPro
         {/* Front */}
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-2xl p-6 text-center [backface-visibility:hidden]">
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-[#00E7FF]/15 ring-1 ring-[#00E7FF]/30">
-            <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden>
-              <path
-                d="M12 3l9 6-9 6-9-6 9-6zm0 7.5l9 6-9 6-9-6 9-6z"
-                fill="currentColor"
-              />
-            </svg>
+            {Icon ? <Icon className="h-7 w-7" /> : (
+              <svg viewBox="0 0 24 24" className="h-7 w-7" aria-hidden>
+                <path
+                  d="M12 3l9 6-9 6-9-6 9-6zm0 7.5l9 6-9 6-9-6 9-6z"
+                  fill="currentColor"
+                />
+              </svg>
+            )}
           </div>
           <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
           <p className="text-sm text-neutral-600 dark:text-neutral-300">{subtitle}</p>
