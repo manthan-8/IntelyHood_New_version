@@ -24,9 +24,10 @@ export function FlipCard({ title, subtitle, features, cta = "Learn more", icon }
       tabIndex={0}
       aria-pressed={flipped}
     >
+      {/* Border Glow */}
       <div className="absolute inset-0 rounded-2xl p-[2px] overflow-hidden">
         <div className="absolute inset-0 rounded-2xl animate-rotateGlow">
-          {/* Only a small glowing arc */}
+          {/* Small rotating glowing arc */}
           <div className="absolute -inset-[40%] bg-[conic-gradient(from_0deg,#00E7FFaa_0deg,#00E7FFaa_20deg,transparent_20deg,transparent_360deg)] blur-md" />
         </div>
 
@@ -34,6 +35,7 @@ export function FlipCard({ title, subtitle, features, cta = "Learn more", icon }
         <div className="absolute inset-[2px] rounded-2xl bg-white/90 dark:bg-neutral-900/90 backdrop-blur" />
       </div>
 
+      {/* 3D Flip */}
       <div
         className={`relative h-full w-full rounded-2xl transition-transform duration-700 ease-[cubic-bezier(.2,.8,.2,1)] [transform-style:preserve-3d]
         ${flipped ? "rotate-y-180" : ""} group-hover:rotate-y-180`}
