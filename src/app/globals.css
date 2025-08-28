@@ -25,3 +25,24 @@ body {
 .animate-rotateGlow {
   animation: rotateGlow 8s linear infinite;
 }
+/* Add to your global CSS or tailwind via @layer utilities */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; transform: translateY(0); }
+  50% { opacity: 0.3; transform: translateY(-5px); }
+}
+
+.galaxy-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at bottom, #0b0c1b 0%, #000000 100%);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite ease-in-out;
+}
