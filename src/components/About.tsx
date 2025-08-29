@@ -50,7 +50,7 @@ export function WhyChooseUs() {
         {/* Left Text */}
         <div className="lg:w-1/2 space-y-6">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Why <span className="text-[#00E7FF]">Choose Us</span>
+            Why <span className="text-secondary">Choose Us</span>
           </h2>
           <p className="text-lg leading-relaxed text-white/80">
             We craft experiences that drive growth, innovation, and trust. Here's why businesses rely on us.

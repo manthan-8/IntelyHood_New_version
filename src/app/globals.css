@@ -1,34 +1,90 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@theme {
+  /* Brand colors (from your config) */
+  --color-background-main: #303030;
+  --color-background-light: #181818;
+  --color-background-dark: #000000;
+
+  --color-primary-main: #00E7FF;
+  --color-primary-light: #88f3ffff;
+  --color-primary-dark: #00c7ddff;
+
+  --color-secondary-main: #9931EF;
+  --color-secondary-light: #ab63e6ff;
+  --color-secondary-dark: #7D1B91;
+
+  --color-muted-main: #4A5565;
+  --color-muted-dark: #101828;
+  --color-muted-light: #1E2939;
+
+  --color-border-main: #45404A;
+  --color-border-light: #ffffffff;
+
+  --color-text-main: #d1d5db;
+  --color-text-light: #fbecffff;
+  --color-text-dark: #101828;
+  --color-text-inverse: #ffffff;
+
+  /* success: {
+                    main: "#10b981",  // Bright green for success
+                    light: "#34d399",
+                    dark: "#059669"
+                },
+                error: {
+                    main: "#ef4444",  // Bright red for errors
+                    light: "#f87171",
+                    dark: "#dc2626"
+                },
+                warn: {
+                    main: '#FFB62E',
+                    light: '#FFC65C',
+                    dark: '#FFA700'
+                },
+                muted: {
+                    main: "#6b7280",  // Muted text
+                    light: "#9ca3af",
+                    dark: "#4b5563",
+                },
+                accent: {
+                    main: "#8800FF",  // Pink accent for highlights
+                    light: "#9D2EFF",
+                    dark: "#7000D1",
+                }, */
+
+  --background-image-background-inverse: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(26, 11, 46, 0.6));
+  --background-image-background-dark: linear-gradient(to bottom right, #59136A, #1F0529, #59136A);
+  --background-image-background-light: linear-gradient(to bottom, #f1bcffff, #fbecffff, #f1bcffff);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
 @keyframes rotateGlow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .animate-rotateGlow {
   animation: rotateGlow 8s linear infinite;
 }
+
 /* Add to your global CSS or tailwind via @layer utilities */
 @keyframes twinkle {
-  0%, 100% { opacity: 0.8; transform: translateY(0); }
-  50% { opacity: 0.3; transform: translateY(-5px); }
+
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 0.3;
+    transform: translateY(-5px);
+  }
 }
 
 .galaxy-bg {

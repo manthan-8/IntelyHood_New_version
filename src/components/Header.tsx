@@ -9,9 +9,6 @@ import LogoWhite from "@/assets/logo-white.png";
 import { navItems } from "@/utilities/data";
 import Button from "@/templates/Button";
 
-
-
-
 const Header = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -36,7 +33,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-[100] transition-transform duration-500 bg-[#111]/70  border-b-1 border-[#53EAFD] `}
+      className={`fixed top-0 w-full z-[9999] transition-transform duration-500 bg-[#111]/70  border-b-1 border-[#53EAFD] ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <div className="container mx-auto max-w-screen-xl flex items-center justify-between px-6 py-4">
         {/* Logo */}
@@ -65,8 +62,8 @@ const Header = () => {
                 </Link>
                 <span
                   className={`absolute left-0 -bottom-1 h-[2px] bg-cyan-400 transition-all duration-300 ${isActive
-                      ? "w-full"
-                      : "w-0 group-hover:w-full"
+                    ? "w-full"
+                    : "w-0 group-hover:w-full"
                     }`}
                 />
               </li>
