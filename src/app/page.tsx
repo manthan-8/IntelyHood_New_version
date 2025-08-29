@@ -1,6 +1,7 @@
 import { WhyChooseUs } from "@/components/About";
 import Feature from "@/components/Feature";
 import HeroSection from "@/components/Hero";
+import AnimatedTimeline from "@/components/Timeline";
 import { ServiceCard } from "@/components/Service";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <ServiceCard />
       <WhyChooseUs />
       <Feature />
+      <AnimatedTimeline />
     </div>
   );
 }
