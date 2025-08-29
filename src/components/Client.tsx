@@ -43,11 +43,18 @@ export default function Clients() {
                     </p>
                 </div>
 
-                <div className="flex flex-col gap-5 overflow-hidden">
+                <div className="relative flex flex-col gap-5 overflow-hidden">
+                    {/* left fade */}
+                    <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div>
+
+                    {/* right fade */}
+                    <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-black via-black/70 to-transparent z-10"></div>
+
                     <Slider images={clientsImages.slice(0, 5)} direction="left" />
                     <Slider images={clientsImages.slice(5, 10)} direction="right" />
                     <Slider images={clientsImages.slice(10, 15)} direction="left" />
                 </div>
+
             </div>
         </section>
 

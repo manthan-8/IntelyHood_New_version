@@ -1,46 +1,36 @@
+"use client";
+
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 interface SliderProps {
-  images: (string | StaticImageData)[];
-  direction: "left" | "right";
+  images: string[];
+  direction?: "left" | "right";
 }
 
-const Slider: React.FC<SliderProps> = ({ images, direction }) => {
+export default function Slider({ images, direction = "left" }: SliderProps) {
   return (
-    <div className={`flex animate-slide-${direction}`}>
-      <div className="flex space-x-8 min-w-full">
-        {images.map((client, index) => (
+    <div className="overflow-hidden w-full">
+      <div
+        className={`flex gap-8 animate-scroll ${
+          direction === "right" ? "animate-scroll-reverse" : ""
+        }`}
+      >
+        {/* 👇 images ko 2 bar map karo taki infinite loop lag sake */}
+        {[...images, ...images].map((img, idx) => (
           <div
-            key={index}
-            className=" rounded-lg bg-white p-5 text-center group  transition-colors flex-shrink-0"
+            key={idx}
+            className="flex-shrink-0 w-40 h-20 relative bg-white rounded-lg shadow-sm p-2"
           >
             <Image
-              src={client}
-              alt={`Client ${index + 1}`}
-              height={80}
-              width={200}
-              className="mx-auto transition-all duration-300 object-contain"
-            />
-          </div>
-        ))}
-        {images.map((client, index) => (
-          <div
-            key={`duplicate-${index}`}
-            className="bg-white  rounded-lg p-5 text-center group flex-shrink-0"
-          >
-            <Image
-              src={client}
-              alt={`Client duplicate ${index + 1}`}
-              height={80}
-              width={200}
-              className="mx-auto transition-all duration-300 object-contain"
+              src={img}
+              alt={`client-${idx}`}
+              fill
+              className="object-contain"
             />
           </div>
         ))}
       </div>
     </div>
   );
-};
-
-export default Slider;
+}
