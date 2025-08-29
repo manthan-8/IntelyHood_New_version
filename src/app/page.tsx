@@ -1,6 +1,6 @@
 import { WhyChooseUs } from "@/components/About";
+import Feature from "@/components/Feature";
 import HeroSection from "@/components/Hero";
-import AIShowcase from "@/components/Pricing";
 import { ServiceCard } from "@/components/Service";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection />
       <ServiceCard />
       <WhyChooseUs />
-      <AIShowcase />
+      <Feature />
     </div>
   );
 }
