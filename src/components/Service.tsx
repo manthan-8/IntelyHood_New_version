@@ -18,7 +18,7 @@ export function FlipCard({ title, subtitle, features, cta = "Learn more", icon }
 
   return (
     <div
-      className="group relative h-72 w-full cursor-pointer select-none [perspective:1200px]"
+      className="group relative h-72 w-full cursor-pointer  select-none [perspective:1200px]"
       onClick={toggle}
       onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && toggle()}
       role="button"
@@ -30,7 +30,7 @@ export function FlipCard({ title, subtitle, features, cta = "Learn more", icon }
         <div className="absolute inset-0 rounded-2xl animate-rotateGlow">
           <div className="absolute -inset-[40%] bg-[conic-gradient(from_0deg,#00E7FFaa_0deg,#00E7FFaa_20deg,transparent_20deg,transparent_360deg)] blur-md" />
         </div>
-        <div className="absolute inset-[2px] rounded-2xl bg-white/90 dark:bg-neutral-900/90 backdrop-blur" />
+        <div className="absolute inset-[2px] rounded-2xl bg-gray-900/90 backdrop-blur" />
       </div>
 
       {/* 3D Flip */}
@@ -86,7 +86,7 @@ export function ServiceCard() {
         "Next.js & React expertise",
         "SEO & performance optimization",
       ],
-      icon: "../icons/WebDev.gif",
+      icon: "../assets/icons/WebDev.gif",
     },
     {
       title: "Mobile App Development",
@@ -96,7 +96,7 @@ export function ServiceCard() {
         "Smooth performance & UI",
         "App store deployment support",
       ],
-      icon: "../icons/MobileDev.gif",
+      icon: "../assets/icons/MobileDev.gif",
     },
     {
       title: "Software Development",
@@ -106,7 +106,7 @@ export function ServiceCard() {
         "CI/CD pipelines",
         "Monitoring & cost optimization",
       ],
-      icon: "../icons/SoftwareDev.gif",
+      icon: "../assets/icons/SoftwareDev.gif",
     },
     {
       title: "UI/UX Design",
@@ -116,7 +116,7 @@ export function ServiceCard() {
         "Design systems & style guides",
         "Accessibility best practices",
       ],
-      icon: "../icons/UIUX.gif",
+      icon: "../assets/icons/UIUX.gif",
     },
     {
       title: "cybersecurity",
@@ -126,7 +126,7 @@ export function ServiceCard() {
         "Payment gateway integration",
         "Analytics & growth tracking",
       ],
-      icon: "../icons/CyberSecurity.gif",
+      icon: "../assets/icons/CyberSecurity.gif",
     },
     {
       title: "AI & Automation",
@@ -136,7 +136,7 @@ export function ServiceCard() {
         "Workflow automation",
         "Data-driven insights",
       ],
-      icon: "../icons/AI&Automation.gif",
+      icon: "../assets/icons/AI&Automation.gif",
     },
   ];
 

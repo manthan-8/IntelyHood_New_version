@@ -2,6 +2,7 @@
 
 import { FC } from "react";
 import Image from "next/image";
+import GalaxyBackground from "./GalaxyBg";
 
 
 type CardProps = {
@@ -101,8 +102,9 @@ export default function AIShowcase() {
         backgroundPosition: "center 200px",
       }}
     >
+      <GalaxyBackground />
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold">
+        <h2 className="text-3xl text-text-light md:text-4xl font-bold">
           Pick the best characteristics <br /> of each AI model
         </h2>
       </div>
