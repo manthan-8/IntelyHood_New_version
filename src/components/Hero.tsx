@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { ReactTyped } from "react-typed";
 
 const HeroSection = () => {
   return (
@@ -14,28 +15,26 @@ const HeroSection = () => {
 
       </div>
 
-      {/* ⭐ Floating stars */}
-      {/* ⭐ Floating stars */}
-<div className="absolute inset-0 overflow-hidden pointer-events-none">
-  {[...Array(50)].map((_, i) => {
-    const size = Math.random() * 3 + 1; // 1px - 4px
-    return (
-      <div
-        key={i}
-        className="absolute bg-white rounded-full animate-pulse"
-        style={{
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`,
-          width: `${size}px`,
-          height: `${size}px`,
-          opacity: 0.8,
-          animationDuration: `${2 + Math.random() * 4}s`, // random pulse speed
-          animationDelay: `${Math.random() * 3}s`,
-        }}
-      />
-    );
-  })}
-</div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(50)].map((_, i) => {
+          const size = Math.random() * 3 + 1; // 1px - 4px
+          return (
+            <div
+              key={i}
+              className="absolute bg-white rounded-full animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                width: `${size}px`,
+                height: `${size}px`,
+                opacity: 0.8,
+                animationDuration: `${2 + Math.random() * 4}s`, // random pulse speed
+                animationDelay: `${Math.random() * 3}s`,
+              }}
+            />
+          );
+        })}
+      </div>
 
 
       {/* Content */}
@@ -58,24 +57,28 @@ const HeroSection = () => {
           <h1 className="text-3xl md:text-6xl font-bold text-white mb-6 tracking-tight">
             PATCH LINE
           </h1>
-          <h2 className="text-xl md:text-2xl font-bold text-white mb-8 tracking-tight">
-            code create deliver
+
+          <h2 className="text-xl md:text-2xl font-bold text-[#00E7FF] mb-8 tracking-tight">
+            <ReactTyped
+              strings={[
+                "Code. Create. Deliver.",
+                "Build. Scale. Innovate.",
+                "Ideas into Reality.",
+              ]}
+              typeSpeed={50}
+              backSpeed={30}
+              backDelay={2000}
+              loop
+            />
           </h2>
         </div>
-
-        {/* Description */}
-        <p className="text-gray-300 text-lg md:text-xl text-center max-w-4xl mb-12 leading-relaxed">
-          Performance, flexibility, and scalability for any AI workload—built
-          for startups and enterprises alike.
+        <p className="text-[#88F3FF] text-lg md:text-xl text-center max-w-5xl mb-12 leading-relaxed font-medium">
+          "Performance, flexibility, and scalability for any AI workload — built for startups and enterprises alike.",
         </p>
-
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6">
           <button className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25">
             Get started
-          </button>
-          <button className="px-8 py-4 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
-            Talk to an expert
           </button>
         </div>
       </div>

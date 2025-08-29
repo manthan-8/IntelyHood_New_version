@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
+import { motion } from "framer-motion";
 type FlipCardProps = {
   title: string;
   subtitle: string;
@@ -156,20 +156,22 @@ export function ServiceCard() {
       {/* Galaxy Background */}
       <div className="absolute inset-0 " />
 
-      {/* Floating Stars */}
-      {stars.map((s, i) => (
-        <div
-          key={i}
-          className="absolute bg-white rounded-full animate-pulse"
-          style={{
-            top: `${s.y}%`,
-            left: `${s.x}%`,
-            width: s.size,
-            height: s.size,
-            opacity: 0.8,
-          }}
-        />
-      ))}
+     <div className="galaxy-bg">
+        {stars.map((s, i) => (
+          <motion.div
+            key={i}
+            className="star"
+            style={{
+              top: `${s.y}%`,
+              left: `${s.x}%`,
+              width: s.size,
+              height: s.size,
+            }}
+            animate={{ opacity: [0.3, 0.9, 0.3] }}
+            transition={{ duration: 2 + Math.random() * 3, repeat: Infinity, ease: "easeInOut" }}
+          />
+        ))}
+      </div>
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl p-6">
