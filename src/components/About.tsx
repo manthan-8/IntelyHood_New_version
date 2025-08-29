@@ -27,7 +27,7 @@ export function WhyChooseUs() {
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Galaxy Background */}
+      
       <div className="galaxy-bg">
         {stars.map((s, i) => (
           <motion.div
