@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
 import GalaxyBackground from "./GalaxyBg";
+import Button from "@/templates/Button";
 
 const HeroSection = () => {
   return (
@@ -55,10 +56,8 @@ const HeroSection = () => {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6">
-          <button className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25">
-            Get started
-          </button>
+        <div className="">
+          <Button href="/">Get Started</Button>
         </div>
       </div>
     </div>

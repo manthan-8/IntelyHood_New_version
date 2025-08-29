@@ -30,22 +30,19 @@ const Button: React.FC<ButtonProps> = ({
 
   const BackgroundLayers = () => (
     <>
-      {/* Black base background */}
-      <span className="absolute inset-0 bg-black"></span>
-
-      {/* Left blue half (moves upward on hover) */}
+      {/* Left blue half */}
       <span
         className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-500 to-cyan-600
-        translate-y-0 group-hover:-translate-y-full
-        transition-transform duration-500 ease-in-out"
-      ></span>
+  translate-y-0 group-hover:-translate-y-full
+  transition-transform duration-500 ease-in-out"
+      />
 
-      {/* Right blue half (moves downward on hover) */}
+      {/* Right blue half */}
       <span
-        className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-r from-cyan-600 to-cyan-700
-        translate-y-0 group-hover:translate-y-full
-        transition-transform duration-500 ease-in-out"
-      ></span>
+        className="absolute top-0 right-0 w-[51%] h-full bg-gradient-to-r from-cyan-600 to-cyan-700
+  translate-y-0 group-hover:translate-y-full
+  transition-transform duration-500 ease-in-out"
+      />
 
       {/* Animated Border */}
       <span
