@@ -13,7 +13,7 @@ const Slider: React.FC<SliderProps> = ({ images, direction }) => {
         {images.map((client, index) => (
           <div
             key={index}
-            className=" rounded-lg bg-white p-5 text-center group  transition-colors flex-shrink-0"
+            className=" rounded-lg bg-white/90 p-5 text-center group  transition-colors flex-shrink-0"
           >
             <Image
               src={client}
@@ -27,7 +27,7 @@ const Slider: React.FC<SliderProps> = ({ images, direction }) => {
         {images.map((client, index) => (
           <div
             key={`duplicate-${index}`}
-            className="bg-white  rounded-lg p-5 text-center group flex-shrink-0"
+            className="bg-white/90 rounded-lg p-5 text-center group flex-shrink-0"
           >
             <Image
               src={client}
