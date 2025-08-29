@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaUsers, FaLightbulb, FaShieldAlt, FaClock, FaDollarSign, FaHandsHelping } from "react-icons/fa";
+import GalaxyBackground from "./GalaxyBg";
 
 const reasons = [
   { icon: FaUsers, title: "Expert Team", desc: "Certified professionals with proven industry experience." },
@@ -14,45 +15,17 @@ const reasons = [
 ];
 
 export function WhyChooseUs() {
-  const [stars, setStars] = useState<{ x: number; y: number; size: number }[]>([]);
-
-  useEffect(() => {
-    const generatedStars = Array.from({ length: 100 }, () => ({
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 2 + 1,
-    }));
-    setStars(generatedStars);
-  }, []);
-
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Galaxy Background */}
-      <div className="galaxy-bg">
-        {stars.map((s, i) => (
-          <motion.div
-            key={i}
-            className="star"
-            style={{
-              top: `${s.y}%`,
-              left: `${s.x}%`,
-              width: s.size,
-              height: s.size,
-            }}
-            animate={{ opacity: [0.3, 0.9, 0.3] }}
-            transition={{ duration: 2 + Math.random() * 3, repeat: Infinity, ease: "easeInOut" }}
-          />
-        ))}
-      </div>
-
+      <GalaxyBackground />
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 flex flex-col lg:flex-row gap-12 items-center h-full justify-center text-white">
         {/* Left Text */}
         <div className="lg:w-1/2 space-y-6">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Why <span className="text-secondary">Choose Us</span>
+            Why <span className="text-text-inverse">Choose Us</span>
           </h2>
-          <p className="text-lg leading-relaxed text-white/80">
+          <p className="text-lg leading-relaxed text-text-light">
             We craft experiences that drive growth, innovation, and trust. Here's why businesses rely on us.
           </p>
         </div>
@@ -73,7 +46,7 @@ export function WhyChooseUs() {
                 <motion.div
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-                  className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-full bg-[#00E7FF]/40 text-[#00E7FF]"
+                  className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-full bg-primary-main/40 text-text-inverse"
                 >
                   <Icon size={24} />
                 </motion.div>

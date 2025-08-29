@@ -25,33 +25,27 @@
   --color-text-main: #d1d5db;
   --color-text-light: #fbecffff;
   --color-text-dark: #101828;
-  --color-text-inverse: #ffffff;
+  --color-text-inverse: #00E7FF;
 
-  /* success: {
-                    main: "#10b981",  // Bright green for success
-                    light: "#34d399",
-                    dark: "#059669"
-                },
-                error: {
-                    main: "#ef4444",  // Bright red for errors
-                    light: "#f87171",
-                    dark: "#dc2626"
-                },
-                warn: {
-                    main: '#FFB62E',
-                    light: '#FFC65C',
-                    dark: '#FFA700'
-                },
-                muted: {
-                    main: "#6b7280",  // Muted text
-                    light: "#9ca3af",
-                    dark: "#4b5563",
-                },
-                accent: {
-                    main: "#8800FF",  // Pink accent for highlights
-                    light: "#9D2EFF",
-                    dark: "#7000D1",
-                }, */
+  --color-success-main: #10b981;
+  --color-success-light: #34d399;
+  --color-success-dark: #059669;
+
+  --color-error-main: #ef4444;
+  --color-error-light: #f87171;
+  --color-error-dark: #dc2626;
+
+  --color-warn-main: #FFB62E;
+  --color-warn-light: #FFC65C;
+  --color-warn-dark: #FFA700;
+
+  --color-muted-main: #4A5565;
+  --color-muted-light: #1E2939;
+  --color-muted-dark: #101828;
+
+  --color-accent-main: #8800FF;
+  --color-accent-light: #9D2EFF;
+  --color-accent-dark: #7000D1;
 
   --background-image-background-inverse: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(26, 11, 46, 0.6));
   --background-image-background-dark: linear-gradient(to bottom right, #59136A, #1F0529, #59136A);
@@ -90,10 +84,11 @@
 .galaxy-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at bottom, #0b0c1b 0%, #000000 100%);
+  background: radial-gradient(circle at center, #0b0c1b 0%, #000000 100%);
   overflow: hidden;
   z-index: 0;
 }
+
 
 .star {
   position: absolute;
