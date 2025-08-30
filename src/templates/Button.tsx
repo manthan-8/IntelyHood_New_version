@@ -2,7 +2,6 @@ import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa";
 import type { ButtonHTMLAttributes, HTMLAttributeAnchorTarget, ReactNode } from "react";
 import type React from "react";
-import { LuMoveUpRight } from "react-icons/lu";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string; // for link
@@ -21,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   const baseStyles = `
-    group inline-flex gap-2 items-center justify-center
+    group inline-flex gap-2 items-center justify-center curser-pointer
     px-3 py-2 font-semibold overflow-hidden text-text-light
      rounded-md bg-primary-dark transition-all duration-300 hover:scale-105
     ${className}

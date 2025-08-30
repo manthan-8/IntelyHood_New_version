@@ -33,83 +33,80 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-[9999] transition-transform duration-500 bg-[#111]/70  border-b-1 border-[#53EAFD] ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`fixed top-0 w-full z-[9999] p-5 transition-transform duration-500 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
     >
-      <div className="container mx-auto max-w-screen-xl flex items-center justify-between px-6 py-4">
+      <div className="container mx-auto max-w-screen-xl">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <Image
-            src={LogoWhite}
-            alt="Logo"
-            width={160}
-            height={50}
-            className="h-auto w-auto"
-          />
-        </Link>
+        <nav className="flex items-center justify-between rounded-lg border border-border-dark/20 p-4 backdrop-blur-xl">
+          <Link href="/" className="flex items-center">
+            <Image
+              src={LogoWhite}
+              alt="Logo"
+              width={160}
+              height={50}
+              className="h-auto w-auto"
+            />
+          </Link>
 
-        {/* Desktop Nav */}
-        <ul className="hidden lg:flex items-center gap-10 text-white font-medium">
-          {navItems.map((link) => {
-            const isActive = pathname === link.path;
-            return (
-              <li key={link.title} className="relative group">
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center gap-8 py-3 px-5 rounded-lg">
+            {navItems.map((link) => {
+              const isActive = pathname === link.path;
+              return (
                 <Link
+                  key={link.title}
                   href={link.path}
-                  className={`${isActive ? "text-cyan-400 font-semibold" : "text-white"
-                    } hover:text-cyan-400 transition`}
-                >
+                  className={`relative text-base font-semibold transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-primary-main after:transition-all after:duration-300 ${isActive
+                    ? 'text-primary-main after:w-full' : 'text-text-light hover:text-primary-main after:w-0 hover:after:w-full'}`}>
                   {link.title}
                 </Link>
-                <span
-                  className={`absolute left-0 -bottom-1 h-[2px] bg-cyan-400 transition-all duration-300 ${isActive
-                    ? "w-full"
-                    : "w-0 group-hover:w-full"
-                    }`}
-                />
-              </li>
-            );
-          })}
-        </ul>
+              );
+            })}
+          </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden lg:block">
-          <Button href="/">Get Started</Button>
-        </div>
+          {/* Desktop CTA */}
+          <div className="hidden lg:block">
+            <Button href="/">Get Started</Button>
+          </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden p-2 text-white"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? (
-            <MdOutlineClose className="w-6 h-6" />
-          ) : (
-            <MdOutlineMenu className="w-6 h-6" />
-          )}
-        </button>
-      </div>
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 text-white"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <MdOutlineClose className="w-6 h-6" />
+            ) : (
+              <MdOutlineMenu className="w-6 h-6" />
+            )}
+          </button>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <nav className="flex flex-col items-center gap-6 py-6 bg-[#111] lg:hidden text-white font-medium">
-          {navItems.map((link) => {
-            const isActive = pathname === link.path;
-            return (
-              <Link
-                key={link.title}
-                href={link.path}
-                onClick={() => setIsMenuOpen(false)}
-                className={`${isActive ? "text-cyan-400 font-semibold" : "text-white"
-                  } hover:text-cyan-400`}
-              >
-                {link.title}
-              </Link>
-            );
-          })}
-          <Button href="/">Get Started</Button>
         </nav>
-      )}
-    </header>
+
+        {/* Mobile Menu */}
+        {
+          isMenuOpen && (
+            <nav className={`flex flex-col text-center gap-5 ${isMenuOpen ? 'mt-10' : ''}`}>
+              {navItems.map((link) => {
+                const isActive = pathname === link.path;
+                return (
+                  <Link
+                    key={link.title}
+                    href={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`${isActive ? "text-cyan-400 font-semibold" : "text-white"
+                      } hover:text-cyan-400`}
+                  >
+                    {link.title}
+                  </Link>
+                );
+              })}
+              <Button href="/">Get Started</Button>
+            </nav>
+          )
+        }
+      </div>
+    </header >
   );
 };
 

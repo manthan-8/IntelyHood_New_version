@@ -3,8 +3,8 @@
 
 @theme {
   /* Brand colors (from your config) */
-  --color-background-main: #303030;
-  --color-background-light: #181818;
+  --color-background-light: #303030;
+  --color-background-main: #181818;
   --color-background-dark: #000000;
 
   --color-primary-main: #00E7FF;
@@ -40,9 +40,9 @@
   --color-warn-light: #FFC65C;
   --color-warn-dark: #FFA700;
 
-  --color-muted-main: #4A5565;
-  --color-muted-light: #1E2939;
-  --color-muted-dark: #101828;
+  --color-muted-main: #3C5A96;
+  --color-muted-light: #2F4675;
+  --color-muted-dark: #213254;
 
   --color-accent-main: #8800FF;
   --color-accent-light: #9D2EFF;
@@ -56,11 +56,11 @@
 
   @keyframes fly-1 {
     from {
-      transform: translateY(0.1em);
+      transform: translateY(-0.1em);
     }
 
     to {
-      transform: translateY(-0.1em);
+      transform: translateY(0.1em);
     }
   }
 }
@@ -110,6 +110,7 @@
   opacity: 0.8;
   animation: twinkle 2s infinite ease-in-out;
 }
+
 .orbit1 {
   border-radius: 50%;
   position: absolute;
@@ -187,4 +188,3 @@
 .animate-scroll-reverse {
   animation: scroll-reverse 20s linear infinite;
 }
-

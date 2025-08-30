@@ -1,24 +1,22 @@
 "use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { ReactTyped } from "react-typed";
-import { motion } from "framer-motion";
 import GalaxyBackground from "./GalaxyBg";
+import Button from "@/templates/Button";
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden ">
-      <GalaxyBackground />
-      <div className="absolute inset-0 ">
-        {/* Glow effects */}
-        <div className="absolute w-[400px] h-[400px] bg-cyan-500/30 rounded-full blur-[180px] top-1/6 left-1/3 animate-pulse"></div>
-      </div>
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
-        {/* Central AI badge */}
-        <div className="mb-8">
-          <div className="w-32 h-32 bg-white rounded-3xl border border-gray-600 flex items-center justify-center shadow-2xl backdrop-blur-sm">
+    <section className="relative px-6 pb-20 pt-40 lg:pb-30 lg:pt-50">
+      <div className="container max-w-screen-xl mx-auto overflow-hidden">
+        <GalaxyBackground />
+        <div className="absolute inset-0 z-90">
+          {/* Glow effects */}
+          <div className="absolute w-[400px] h-[400px] bg-primary-dark/30 rounded-full blur-[180px] top-1/6 left-1/3 animate-pulse"></div>
+        </div>
+        {/* Content */}
+        <div className="relative flex flex-col items-center justify-center px-4 space-y-5 z-99">
+          <div className="bg-primary-main rounded-3xl border border-border-light flex items-center justify-center shadow-2xl backdrop-blur-sm">
             <Image
               src="/logo.png"
               alt="AI Logo"
@@ -27,15 +25,12 @@ const HeroSection = () => {
               className="object-contain"
             />
           </div>
-        </div>
 
-        {/* Main heading */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+          <h1 className="text-3xl md:text-6xl font-bold text-text-light tracking-tight">
             PATCH LINE
           </h1>
 
-          <h2 className="text-xl md:text-2xl font-bold text-text-inverse mb-8 tracking-tight">
+          <h2 className="text-xl md:text-2xl font-semibold text-text-inverse tracking-tight">
             <ReactTyped
               strings={[
                 "Code. Create. Deliver.",
@@ -48,20 +43,17 @@ const HeroSection = () => {
               loop
             />
           </h2>
-        </div>
 
-        <p className="text-text-inverse text-lg md:text-xl text-center max-w-5xl mb-12 leading-relaxed font-medium">
-          "Performance, flexibility, and scalability for any AI workload — built for startups and enterprises alike."
-        </p>
+          <p className="text-text-main text-lg md:text-xl max-w-5xl leading-relaxed">
+            Empowering Your Vision with Reliable, Innovative, and Client-Focused Software Solutions
+          </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6">
-          <button className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25">
+          <Button >
             Get started
-          </button>
+          </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

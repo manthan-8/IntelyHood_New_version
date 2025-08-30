@@ -18,7 +18,7 @@ export function FlipCard({ title, subtitle, features, cta = "Learn more", icon }
 
   return (
     <div
-      className="group relative h-72 w-full cursor-pointer  select-none [perspective:1200px]"
+      className="group relative h-72 w-full cursor-pointer select-none [perspective:1200px]"
       onClick={toggle}
       onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && toggle()}
       role="button"
@@ -141,27 +141,26 @@ export function ServiceCard() {
   ];
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden ">
-      <GalaxyBackground />
-      {/* Content */}
-      <div className="relative z-10 mx-auto max-w-6xl p-6">
-        <header className="mb-8 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight sm:text-5xl text-white">
+    <section className="relative px-6 py-15 lg:py-20">
+      <div className="container max-w-screen-xl mx-auto overflow-hidden">
+        <GalaxyBackground />
+        <div className="space-y-20">
+          <div className="space-y-5 text-center">
+            <h1 className="text-3xl text-text-main font-bold tracking-tight sm:text-5xl">
               Our <span className="text-text-inverse">Services</span>
             </h1>
-            <p className="mt-1 text-sm text-white/80">
+            <p className="text-sm text-white/80">
               We craft modern digital solutions for businesses of all sizes.
               Hover or tap a card to explore more.
             </p>
           </div>
-        </header>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {cards.map((c, i) => (
-            <FlipCard key={i} {...c} />
-          ))}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {cards.map((c, i) => (
+              <FlipCard key={i} {...c} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
