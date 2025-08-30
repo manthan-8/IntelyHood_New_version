@@ -1,15 +1,14 @@
 import Link from "next/link";
-import { FiArrowRight } from "react-icons/fi";
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import { FaLocationArrow } from "react-icons/fa";
+import type { ButtonHTMLAttributes, HTMLAttributeAnchorTarget, ReactNode } from "react";
 import type React from "react";
+import { LuMoveUpRight } from "react-icons/lu";
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string; // for link
   children: ReactNode;
   className?: string;
-  type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
-  disabled?: boolean;
-  target?: string;
+  target?: HTMLAttributeAnchorTarget;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -22,44 +21,25 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   const baseStyles = `
-    group relative inline-flex items-center justify-center
-    px-8 py-3 font-semibold text-white overflow-hidden
-    
+    group inline-flex gap-2 items-center justify-center
+    px-3 py-2 font-semibold overflow-hidden text-text-light
+     rounded-md bg-primary-dark transition-all duration-300 hover:scale-105
     ${className}
   `;
 
-  const BackgroundLayers = () => (
+  const AnimationContent = () => (
     <>
-      {/* Black base background */}
-      <span className="absolute inset-0 bg-black"></span>
+      <FaLocationArrow
+        className="
+          transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]
+           group-hover:rotate-45"/>
 
-      {/* Left blue half (moves upward on hover) */}
       <span
-        className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-500 to-cyan-600
-        translate-y-0 group-hover:-translate-y-full
-        transition-transform duration-500 ease-in-out"
-      ></span>
-
-      {/* Right blue half (moves downward on hover) */}
-      <span
-        className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-r from-cyan-600 to-cyan-700
-        translate-y-0 group-hover:translate-y-full
-        transition-transform duration-500 ease-in-out"
-      ></span>
-
-      {/* Animated Border */}
-      <span
-        className="absolute inset-0  border border-transparent 
-        group-hover:border-cyan-700 transition-all duration-500 ease-in-out"
-      ></span>
+        className="transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]
+group-hover:animate-fly-1">
+        {children}
+      </span>
     </>
-  );
-
-  const Content = () => (
-    <span className="relative flex items-center gap-3">
-      {children}
-      <FiArrowRight className="transform transition-transform duration-300 group-hover:translate-x-2" />
-    </span>
   );
 
   if (type === "submit") {
@@ -67,19 +47,17 @@ const Button: React.FC<ButtonProps> = ({
       <button
         type="submit"
         disabled={disabled}
-        className={`${baseStyles} w-full`}
+        className={baseStyles}
         {...rest}
       >
-        <BackgroundLayers />
-        <Content />
+        <AnimationContent />
       </button>
     );
   }
 
   return (
-    <Link href={href || "#"} target={target} className={baseStyles} {...rest}>
-      <BackgroundLayers />
-      <Content />
+    <Link href={href || "#"} target={target} className={baseStyles}>
+      <AnimationContent />
     </Link>
   );
 };
