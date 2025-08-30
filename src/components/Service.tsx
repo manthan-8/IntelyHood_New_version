@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import GalaxyBackground from "./GalaxyBg";
+import { services } from "@/utilities/data";
 type FlipCardProps = {
   title: string;
   subtitle: string;
@@ -77,69 +78,6 @@ export function FlipCard({ title, subtitle, features, cta = "Learn more", icon }
 }
 
 export function ServiceCard() {
-  const cards = [
-    {
-      title: "Web Development",
-      subtitle: "Modern & scalable websites",
-      features: [
-        "Responsive UI/UX design",
-        "Next.js & React expertise",
-        "SEO & performance optimization",
-      ],
-      icon: "../assets/icons/WebDev.gif",
-    },
-    {
-      title: "Mobile App Development",
-      subtitle: "iOS & Android solutions",
-      features: [
-        "Cross-platform apps (React Native)",
-        "Smooth performance & UI",
-        "App store deployment support",
-      ],
-      icon: "../assets/icons/MobileDev.gif",
-    },
-    {
-      title: "Software Development",
-      subtitle: "Deploy, scale, and secure",
-      features: [
-        "AWS, Azure, Google Cloud",
-        "CI/CD pipelines",
-        "Monitoring & cost optimization",
-      ],
-      icon: "../assets/icons/SoftwareDev.gif",
-    },
-    {
-      title: "UI/UX Design",
-      subtitle: "User-focused experiences",
-      features: [
-        "Wireframes & prototypes",
-        "Design systems & style guides",
-        "Accessibility best practices",
-      ],
-      icon: "../assets/icons/UIUX.gif",
-    },
-    {
-      title: "cybersecurity",
-      subtitle: "Protect your digital assets",
-      features: [
-        "Custom storefronts",
-        "Payment gateway integration",
-        "Analytics & growth tracking",
-      ],
-      icon: "../assets/icons/CyberSecurity.gif",
-    },
-    {
-      title: "AI & Automation",
-      subtitle: "Future-ready innovations",
-      features: [
-        "Chatbots & assistants",
-        "Workflow automation",
-        "Data-driven insights",
-      ],
-      icon: "../assets/icons/AI&Automation.gif",
-    },
-  ];
-
   return (
     <div className="relative min-h-screen w-full overflow-hidden ">
       <GalaxyBackground />
@@ -157,7 +95,7 @@ export function ServiceCard() {
           </div>
         </header>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {cards.map((c, i) => (
+          {services.slice(0,6).map((c, i) => (
             <FlipCard key={i} {...c} />
           ))}
         </div>
