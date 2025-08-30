@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const steps = [
   { id: 1, title: "Step 1", desc: "This is the first step of the process." },
@@ -12,6 +13,14 @@ const steps = [
 ];
 
 export default function ScrollSteps() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true, // animation runs once
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
   return (
     <div className="relative w-full bg-gray-950 text-white py-20">
       {/* Vertical center line */}
@@ -27,29 +36,24 @@ export default function ScrollSteps() {
 }
 
 function StepCard({ step, index }: { step: any; index: number }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.3, once: true });
-
   const isLeft = index % 2 === 0; // odd-left, even-right
 
   return (
     <div className="relative flex items-center">
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, y: 80 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+      <div
+        data-aos="fade-up" // 👈 now every card comes from
+        // bottom to top
         className={`bg-gray-800/70 border border-gray-600 shadow-xl rounded-2xl p-8 max-w-md absolute ${
           isLeft
-            ? "right-[52%] text-right" 
-            : "left-[52%] text-left"   // right side, near the line
+            ? "right-[52%] text-right"
+            : "left-[52%] text-left"
         }`}
       >
         <h2 className="text-3xl font-bold mb-3 text-cyan-400">
           {step.title}
         </h2>
         <p className="text-lg text-gray-300">{step.desc}</p>
-      </motion.div>
+      </div>
 
       {/* Connector dot */}
       <span className="absolute left-1/2 w-5 h-5 bg-cyan-400 rounded-full border-4 border-gray-950 -translate-x-1/2" />

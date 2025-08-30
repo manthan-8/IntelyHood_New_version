@@ -96,7 +96,8 @@
   border-radius: 50%;
   opacity: 0.8;
   animation: twinkle 2s infinite ease-in-out;
-}.orbit1 {
+}
+.orbit1 {
   border-radius: 50%;
   position: absolute;
   border: 2px solid transparent;
@@ -169,4 +170,5 @@
 .animate-scroll-reverse {
   animation: scroll-reverse 20s linear infinite;
 }
+
 
