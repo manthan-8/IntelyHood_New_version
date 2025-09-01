@@ -13,7 +13,6 @@ export default function ServicesPage() {
   return (
     <main className="relative min-h-screen w-full overflow-hidden">
       <GalaxyBackground />
-
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16">
         {/* Page Header */}

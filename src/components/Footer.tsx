@@ -86,9 +86,9 @@ export default function FooterReveal() {
               © 2025 <span className="font-semibold">Patch Line Technologies</span>. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-primary-main">Privacy Policy</a>
-              <a href="#" className="hover:text-primary-main">Terms & Conditions</a>
-              <a href="#" className="hover:text-primary-main">Refund Policy</a>
+              <a href="/privacyPolicy" className="hover:text-primary-main">Privacy Policy</a>
+              <a href="/terms&Condition" className="hover:text-primary-main">Terms & Conditions</a>
+              <a href="/refund" className="hover:text-primary-main">Refund Policy</a>
             </div>
           </div>
         </div>
