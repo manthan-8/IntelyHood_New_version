@@ -3,6 +3,8 @@ import Aos from "aos";
 import { useRef, useEffect, useState } from "react";
 import GalaxyBackground from "./GalaxyBg";
 import { steps } from "@/utilities/data";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 type Step = {
   id: number;
