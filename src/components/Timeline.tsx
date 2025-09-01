@@ -1,5 +1,7 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 type Step = {
   id: number;
@@ -47,6 +49,14 @@ const steps: Step[] = [
 ];
 
 export default function ScrollSteps() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true, // animation runs once
+      easing: "ease-out-cubic",
+    });
+  }, []);
+
   return (
     <div className="relative w-full bg-gradient-to-br from-gray-950 via-gray-900 to-blue-950 text-white min-h-screen">
       <div className="text-center mb-8 md:mb-14 relative pt-12 md:pt-20 px-4">
