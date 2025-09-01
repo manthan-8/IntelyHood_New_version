@@ -17,7 +17,6 @@ export default function GalaxyBackground() {
 
   return (
     <div className="absolute inset-0 -z-10">
-      {/* Gradient background */}
       <div className="galaxy-bg">
         {stars.map((s, i) => (
           <motion.div

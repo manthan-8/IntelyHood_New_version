@@ -1,409 +1,145 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
     MdEmail,
     MdPhone,
     MdLocationOn,
     MdAccessTime,
-    MdSend,
     MdCheckCircle,
-    MdError,
-    MdMessage,
-    MdPerson,
-    MdBusiness,
-    MdLanguage,
 } from "react-icons/md";
-import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaMeta } from "react-icons/fa6";
+import GalaxyBackground from "@/components/GalaxyBg";
+import ContactForm from "@/components/ContactForm";
 
 const ContactUs = () => {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        service: "",
-        message: "",
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
-        null
-    );
-    const [focusedField, setFocusedField] = useState<string | null>(null);
-    const [isVisible, setIsVisible] = useState(false);
-
-    const services = [
-        "Web Development",
-        "Mobile App Development",
-        "Cloud Solutions",
-        "Cybersecurity",
-        "IT Consulting",
-        "Database Management",
-        "DevOps Services",
-        "Other",
-    ];
-
     const contactInfo = [
         {
             icon: MdEmail,
             title: "Email Us",
             info: "contact@techsolutions.com",
             subInfo: "We typically respond within 2 hours",
-            color: "text-[#00E7FF]",
-            bgColor: "bg-[#00E7FF]/10",
+            color: "text-primary-main",
+            bgColor: "bg-primary-dark/20",
         },
         {
             icon: MdPhone,
             title: "Call Us",
             info: "+1 (555) 123-4567",
             subInfo: "Mon-Fri 9AM-6PM EST",
-            color: "text-[#00E7FF]",
-            bgColor: "bg-[#00E7FF]/10",
+            color: "text-primary-main",
+            bgColor: "bg-primary-dark/20",
         },
         {
             icon: MdLocationOn,
             title: "Visit Us",
             info: "123 Tech Street, Silicon Valley",
             subInfo: "CA 94043, United States",
-            color: "text-[#00E7FF]",
-            bgColor: "bg-[#00E7FF]/10",
+            color: "text-primary-main",
+            bgColor: "bg-primary-dark/20",
         },
         {
             icon: MdAccessTime,
             title: "Business Hours",
             info: "Monday - Friday",
             subInfo: "9:00 AM - 6:00 PM EST",
-            color: "text-[#00E7FF]",
-            bgColor: "bg-[#00E7FF]/10",
+            color: "text-primary-main",
+            bgColor: "bg-primary-dark/20",
         },
     ];
 
     const socialLinks = [
         { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-        { icon: FaTwitter, href: "#", label: "Twitter" },
-        { icon: FaGithub, href: "#", label: "GitHub" },
+        { icon: FaInstagram, href: "#", label: "Instagram" },
+        { icon: FaMeta, href: "#", label: "Meta" },
     ];
 
-    useEffect(() => {
-        setIsVisible(true);
-    }, []);
-
-    const handleInputChange = (
-        e: React.ChangeEvent<
-            HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-        >
-    ) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
-    };
-
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setSubmitStatus(null);
-
-        // Simulate API call
-        try {
-            await new Promise((resolve) => setTimeout(resolve, 2000));
-            setSubmitStatus("success");
-            setFormData({
-                name: "",
-                email: "",
-                company: "",
-                phone: "",
-                service: "",
-                message: "",
-            });
-        } catch (error) {
-            setSubmitStatus("error");
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
-
-    const inputClasses = (fieldName: keyof typeof formData) => `
-    w-full px-4 py-3 bg-neutral-800/50 border-2 rounded-lg text-white placeholder-neutral-400
-    transition-all duration-300 focus:outline-none backdrop-blur-sm
-    ${focusedField === fieldName || formData[fieldName]
-            ? "border-[#00E7FF] bg-neutral-800/70"
-            : "border-neutral-700 hover:border-neutral-600"
-        }
-    `;
-
     return (
-        <div className="min-h-screen w-full bg-gradient-to-b from-neutral-950 to-neutral-900 text-white">
-            <div className="relative z-10 container mx-auto px-4 py-20">
-                {/* Header Section */}
-                <div
-                    className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                        }`}
-                >
-                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#00E7FF]/10 border border-[#00E7FF]/20 backdrop-blur-sm mb-6">
-                        <MdMessage className="w-4 h-4 text-[#00E7FF] mr-2" />
-                        <span className="text-[#00E7FF] text-sm font-medium">
-                            Get In Touch
-                        </span>
-                    </div>
-
-                    <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-                        Let's Build Something
-                        <span className="block bg-gradient-to-r from-[#00E7FF] to-[#7AFFF7] bg-clip-text text-transparent">
-                            Amazing Together
-                        </span>
-                    </h1>
-
-                    <p className="text-xl text-neutral-300 max-w-2xl mx-auto">
-                        Ready to transform your business with cutting-edge technology? Let's
-                        discuss your project and create innovative solutions.
-                    </p>
-                </div>
-
-                <div className="grid lg:grid-cols-3 gap-12">
-                    {/* Contact Form */}
+        <>
+            <section className="relative px-6 pb-15 pt-40 lg:pb-20 lg:pt-50">
+                <div className="container max-w-screen-xl mx-auto overflow-hidden">
+                    <GalaxyBackground />
+                    {/* Header Section */}
                     <div
-                        className={`lg:col-span-2 transform transition-all duration-1000 delay-200 ${isVisible
-                                ? "translate-x-0 opacity-100"
-                                : "-translate-x-10 opacity-0"
-                            }`}
+                        className={`text-center mb-16 transform transition-all duration-1000 `}
                     >
-                        <div className="bg-neutral-900/80 backdrop-blur-lg rounded-2xl border border-neutral-700/50 p-8 shadow-2xl">
-                            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                                <MdSend className="w-8 h-8 text-[#00E7FF]" />
-                                Send us a message
-                            </h2>
+                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-main border backdrop-blur-sm mb-6">
+                            <span className="text-sm font-medium">
+                                Get In Touch
+                            </span>
+                        </div>
 
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div className="relative">
-                                        <label className="block text-neutral-300 font-medium mb-2">
-                                            <MdPerson className="w-4 h-4 inline mr-2" />
-                                            Full Name *
-                                        </label>
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleInputChange}
-                                            onFocus={() => setFocusedField("name")}
-                                            onBlur={() => setFocusedField(null)}
-                                            placeholder="John Doe"
-                                            className={inputClasses("name")}
-                                            required
-                                        />
-                                    </div>
+                        <h1 className="text-5xl lg:text-6xl font-bold text-text-light mb-6">
+                            Let's Build Something
+                            <span className="block bg-gradient-to-r from-primary-dark to-primary-light bg-clip-text text-transparent leading-[1.5]">
+                                Amazing Together
+                            </span>
+                        </h1>
 
-                                    <div className="relative">
-                                        <label className="block text-neutral-300 font-medium mb-2">
-                                            <MdEmail className="w-4 h-4 inline mr-2" />
-                                            Email Address *
-                                        </label>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleInputChange}
-                                            onFocus={() => setFocusedField("email")}
-                                            onBlur={() => setFocusedField(null)}
-                                            placeholder="john@company.com"
-                                            className={inputClasses("email")}
-                                            required
-                                        />
-                                    </div>
-                                </div>
+                        <p className="text-xl text-text-main max-w-2xl mx-auto">
+                            Ready to transform your business with cutting-edge technology? Let's
+                            discuss your project and create innovative solutions.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section className="relative px-6 py-15 lg:py-20">
+                <div className="container max-w-screen-xl mx-auto overflow-hidden">
+                    <GalaxyBackground/>
+                    <div className="grid lg:grid-cols-2 gap-5">
+                        <ContactForm />
 
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div className="relative">
-                                        <label className="block text-neutral-300 font-medium mb-2">
-                                            <MdBusiness className="w-4 h-4 inline mr-2" />
-                                            Company
-                                        </label>
-                                        <input
-                                            type="text"
-                                            name="company"
-                                            value={formData.company}
-                                            onChange={handleInputChange}
-                                            onFocus={() => setFocusedField("company")}
-                                            onBlur={() => setFocusedField(null)}
-                                            placeholder="Your Company"
-                                            className={inputClasses("company")}
-                                        />
-                                    </div>
-
-                                    <div className="relative">
-                                        <label className="block text-neutral-300 font-medium mb-2">
-                                            <MdPhone className="w-4 h-4 inline mr-2" />
-                                            Phone Number
-                                        </label>
-                                        <input
-                                            type="tel"
-                                            name="phone"
-                                            value={formData.phone}
-                                            onChange={handleInputChange}
-                                            onFocus={() => setFocusedField("phone")}
-                                            onBlur={() => setFocusedField(null)}
-                                            placeholder="+1 (555) 123-4567"
-                                            className={inputClasses("phone")}
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="relative">
-                                    <label className="block text-neutral-300 font-medium mb-2">
-                                        <MdLanguage className="w-4 h-4 inline mr-2" />
-                                        Service Required *
-                                    </label>
-                                    <select
-                                        name="service"
-                                        value={formData.service}
-                                        onChange={handleInputChange}
-                                        onFocus={() => setFocusedField("service")}
-                                        onBlur={() => setFocusedField(null)}
-                                        className={inputClasses("service")}
-                                        required
-                                    >
-                                        <option value="">Select a service</option>
-                                        {services.map((service) => (
-                                            <option
-                                                key={service}
-                                                value={service}
-                                                className="bg-neutral-800"
-                                            >
-                                                {service}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
-
-                                <div className="relative">
-                                    <label className="block text-neutral-300 font-medium mb-2">
-                                        <MdMessage className="w-4 h-4 inline mr-2" />
-                                        Project Details *
-                                    </label>
-                                    <textarea
-                                        name="message"
-                                        value={formData.message}
-                                        onChange={handleInputChange}
-                                        onFocus={() => setFocusedField("message")}
-                                        onBlur={() => setFocusedField(null)}
-                                        placeholder="Tell us about your project, requirements, timeline, and budget..."
-                                        rows={5}
-                                        className={inputClasses("message")}
-                                        required
-                                    />
-                                </div>
-
-                                {/* Submit Button */}
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                    className="w-full px-8 py-4 bg-gradient-to-r from-[#00E7FF] to-[#7AFFF7] text-black font-semibold rounded-lg
-                           hover:opacity-90 transform hover:scale-105 transition-all duration-300
-                           disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-[#00E7FF]/25
-                           flex items-center justify-center gap-3"
+                        <div
+                            className={`grid grid-cols-2 gap-3 transform transition-all duration-1000 delay-400`}
+                        >
+                            {contactInfo.map((item, index) => (
+                                <div
+                                    key={item.title}
+                                    className="relative rounded-lg overflow-hidden group"
+                                    style={{ animationDelay: `${600 + index * 100}ms` }}
                                 >
-                                    {isSubmitting ? (
-                                        <>
-                                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                                            Sending...
-                                        </>
-                                    ) : (
-                                        <>
-                                            <MdSend className="w-5 h-5" />
-                                            Send Message
-                                        </>
-                                    )}
-                                </button>
-
-                                {/* Status Messages */}
-                                {submitStatus === "success" && (
-                                    <div className="flex items-center gap-3 p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400 animate-fade-in">
-                                        <MdCheckCircle className="w-5 h-5" />
-                                        Message sent successfully! We&apos;ll get back to you within
-                                        24 hours.
+                                    <div className="absolute inset-0 animate-rotateGlow group-hover:animate-none">
+                                        <div className="absolute -inset-[40%] bg-[conic-gradient(from_0deg,#00E7FFaa_0deg,#00E7FFaa_20deg,transparent_20deg,transparent_360deg)] blur-md" />
                                     </div>
-                                )}
-
-                                {submitStatus === "error" && (
-                                    <div className="flex items-center gap-3 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 animate-fade-in">
-                                        <MdError className="w-5 h-5" />
-                                        Failed to send message. Please try again or contact us
-                                        directly.
+                                    <div className="relative inset-[1px] rounded-lg bg-background-main backdrop-blur p-6 transform hover:scale-[1.02] transition-transform duration-300 text-text-main flex flex-col items-center gap-3">
+                                        <div
+                                            className={`rounded-lg flex items-center justify-center`}
+                                        >
+                                            <item.icon className={`text-5xl p-2 rounded ${item.bgColor} ${item.color}`} />
+                                        </div>
+                                        <h3 className="font-semibold text-lg">
+                                            {item.title}
+                                        </h3>
+                                        <p className="font-medium">{item.info}</p>
+                                        <p className="text-sm">{item.subInfo}</p>
                                     </div>
-                                )}
-                            </form>
-                        </div>
-                    </div>
-
-                    {/* Contact Information */}
-                    <div
-                        className={`space-y-6 transform transition-all duration-1000 delay-400 ${isVisible
-                                ? "translate-x-0 opacity-100"
-                                : "translate-x-10 opacity-0"
-                            }`}
-                    >
-                        {contactInfo.map((item, index) => (
-                            <div
-                                key={item.title}
-                                className="relative rounded-2xl p-[2px] overflow-hidden group"
-                                style={{ animationDelay: `${600 + index * 100}ms` }}
-                            >
-                                <div className="absolute inset-0 rounded-2xl animate-rotateGlow group-hover:animate-none">
-                                    <div className="absolute -inset-[40%] bg-[conic-gradient(from_0deg,#00E7FFaa_0deg,#00E7FFaa_20deg,transparent_20deg,transparent_360deg)] blur-md" />
                                 </div>
-                                <div className="relative inset-[2px] rounded-2xl bg-neutral-900/90 backdrop-blur p-6 transform hover:scale-[1.02] transition-transform duration-300">
-                                    <div
-                                        className={`w-12 h-12 ${item.bgColor} rounded-lg flex items-center justify-center mb-4`}
-                                    >
-                                        <item.icon className={`w-6 h-6 ${item.color}`} />
-                                    </div>
-                                    <h3 className="text-white font-semibold text-lg mb-2">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-neutral-300 font-medium">{item.info}</p>
-                                    <p className="text-neutral-400 text-sm mt-1">{item.subInfo}</p>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
 
-                        {/* Social Links */}
-                        <div className="p-6 bg-neutral-900/80 backdrop-blur-lg rounded-xl border border-neutral-700/50">
-                            <h3 className="text-white font-semibold text-lg mb-4">
-                                Follow Us
-                            </h3>
-                            <div className="flex gap-4">
-                                {socialLinks.map((social, index) => (
-                                    <a
-                                        key={social.label}
-                                        href={social.href}
-                                        className="w-12 h-12 bg-neutral-700/50 rounded-lg flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-600/50 transform hover:scale-110 transition-all duration-300"
-                                        aria-label={social.label}
-                                    >
-                                        <social.icon className="w-5 h-5" />
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Quick Response Promise */}
-                        <div className="p-6 bg-gradient-to-r from-[#00e7ff]/10 to-[#7afff7]/10 backdrop-blur-lg rounded-xl border border-[#00E7FF]/20">
-                            <div className="flex items-center gap-3 mb-3">
-                                <MdCheckCircle className="w-6 h-6 text-green-400" />
-                                <h3 className="text-white font-semibold">
-                                    Quick Response Promise
+                            {/* Quick Response Promise */}
+                            <div className="bg-gradient-to-r from-primary-main/10 to-primary-light/10 backdrop-blur-lg rounded-lg p-6 border border-primary-main/20 text-text-main col-span-2 space-y-3">
+                                <h3 className="font-semibold">
+                                    Follow Us On
                                 </h3>
+                                <div className="flex gap-4">
+                                    {socialLinks.map((social, index) => (
+                                        <a
+                                            key={social.label}
+                                            href={social.href}
+                                            className="bg-background-light text-2xl p-2 rounded-lg flex items-center justify-center hover:bg-background-main border border-border-dark/30 transform hover:scale-110 transition-all duration-300"
+                                            aria-label={social.label}
+                                        >
+                                            <social.icon className="text-primary-main" />
+                                        </a>
+                                    ))}
+                                </div>
                             </div>
-                            <p className="text-neutral-300 text-sm">
-                                We respond to all inquiries within 2 hours during business
-                                hours. For urgent matters, please call us directly.
-                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </>
     );
 };
 
