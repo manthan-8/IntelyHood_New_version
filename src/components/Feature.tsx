@@ -3,76 +3,76 @@
 import { FC } from "react";
 import Image from "next/image";
 import GalaxyBackground from "./GalaxyBg";
-
+import {
+  FiSmile,
+  FiZap,
+  FiShield,
+  FiSettings,
+  FiHeadphones,
+  FiTrendingUp,
+} from "react-icons/fi";
+import { GiCheckedShield } from "react-icons/gi";
 
 type CardProps = {
   title: string;
   subtitle: string;
   description: string;
-  icon: string;
+  icon: React.ElementType;
 };
 
-const aiModels: CardProps[] = [
+const features: CardProps[] = [
   {
-    title: "Atul PATEL 5",
-    subtitle: "All Rounder Explainer",
+    title: "Seamless Experience",
+    subtitle: "Smooth & Intuitive",
     description:
-      "Great for questions, brainstorming, and clear step-by-step explanations.",
-    icon: "🤖",
+      "Enjoy a user-friendly interface with smooth navigation and effortless interaction.",
+    icon: FiSmile,
   },
   {
-    title: "gOUATAM  4",
-    subtitle: "Co-Writing Master",
+    title: "High Performance",
+    subtitle: "Fast & Reliable",
     description:
-      "Refines polished emails, essays, and scripts while keeping your style.",
-    icon: "✍️",
+      "Optimized for speed and efficiency to deliver results without delays.",
+    icon: FiZap,
   },
   {
-    title: "Tanish Pro",
-    subtitle: "Long Context Master",
+    title: "Secure Platform",
+    subtitle: "Data Protection",
     description:
-      "Handles long documents and images, tracking full context and details.",
-    icon: "✨",
+      "Your information is encrypted and safeguarded with advanced security protocols.",
+    icon: GiCheckedShield,
   },
   {
-    title: "Aditya Pro",
-    subtitle: "Live Web Researcher",
+    title: "Customizable",
+    subtitle: "Tailored for You",
     description:
-      "Delivers fresh answers and news from credible, real-time sources.",
-    icon: "🌐",
+      "Easily personalize settings and features to match your preferences.",
+    icon: FiSettings,
   },
   {
-    title: "Prakhar Deep",
-    subtitle: "Reasoning Specialist",
+    title: "24/7 Support",
+    subtitle: "Always Available",
     description:
-      "Excels at logic, math, and coding with clear, detailed solutions.",
-    icon: "🧠",
+      "Get round-the-clock assistance from our dedicated support team.",
+    icon: FiHeadphones,
   },
   {
-    title: "Akash 4",
-    subtitle: "Creative Powerhouse",
+    title: "Scalable Solution",
+    subtitle: "Grow Without Limits",
     description:
-      "Bold, unconventional ideas and punchy copy for trend-focused content.",
-    icon: "🎨",
+      "Built to adapt as your needs expand, ensuring long-term usability.",
+    icon: FiTrendingUp,
   },
 ];
 
-const Card: FC<CardProps> = ({ title, subtitle, description, icon }) => {
+const Card: FC<CardProps> = ({ title, subtitle, description, icon: Icon }) => {
   return (
     <div className="w-full max-w-xs rounded-xl bg-gray-900/60 border border-cyan-500/40 p-3 hover:border-cyan-400 transition-all duration-300 shadow-md">
-      <div className="flex gap-4">
-        {/* Profile Photo */}
-        <div className="w-10 h-10 rounded-full overflow-hidden border border-cyan-300">
-          <Image
-            src="/profile.jpg"
-            alt="Profile"
-            width={40}
-            height={40}
-            className="w-full h-full object-cover"
-          />
+      <div className="flex gap-4 items-center">
+        <div className="w-10 h-10 flex items-center justify-center rounded-full border border-cyan-500/40 bg-cyan-900/40 text-cyan-300">
+          <Icon className="w-5 h-5" />
         </div>
 
-        {/* Name + Subtitle */}
         <div className="flex flex-col">
           <h3 className="text-base font-semibold text-white">{title}</h3>
           <span className="inline-block bg-cyan-900/40 text-cyan-300 text-[10px] font-medium px-2 py-0.5 rounded-md border border-cyan-500/40 mt-1 w-fit">
@@ -81,23 +81,16 @@ const Card: FC<CardProps> = ({ title, subtitle, description, icon }) => {
         </div>
       </div>
 
-      {/* Description */}
-      <p className="text-gray-400 text-xs leading-relaxed mt-2">
-        {description}
-      </p>
+      <p className="text-gray-400 text-xs leading-relaxed mt-2">{description}</p>
     </div>
-
-
-
   );
 };
 
 export default function AIShowcase() {
   return (
     <section
-      className="relative py-20 px-6 bg-center bg-no-repeat bg-contain"
+      className="relative py-20 px-6 bg-center bg-no-repeat bg-contain md:bg-[url('/ff.avif')]"
       style={{
-        backgroundImage: "url('/ff.avif')",
         backgroundSize: "440px 440px",
         backgroundPosition: "center 200px",
       }}
@@ -112,26 +105,21 @@ export default function AIShowcase() {
       <div className="flex flex-col md:flex-row justify-center items-center gap-23">
         {/* Left column */}
         <div className="flex flex-col gap-6">
-          {aiModels.slice(0, 3).map((model, i) => (
+          {features.slice(0, 3).map((model, i) => (
             <Card key={i} {...model} />
           ))}
         </div>
 
         {/* Center glowing circle */}
-        <div className="relative flex items-center justify-center">
-          {/* Glowing background */}
-          <div className="absolute w-[350px] h-[350px] rounded-full bg-cyan-500/30 blur-3xl animate-pulse"></div>
-          {/* Inner black circle */}
-          <div className="relative w-52 h-52 rounded-full flex items-center justify-center bg-black z-10">
-            {/* Orbit lines */}
+        <div className="relative flex items-center justify-center my-10 md:my-0">
+          <div className="absolute w-[300px] h-[300px] md:w-[350px] md:h-[350px] rounded-full bg-cyan-500/30 blur-3xl animate-pulse"></div>
+          <div className="relative w-40 h-40 md:w-52 md:h-52 rounded-full flex items-center justify-center bg-black z-10">
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="orbit1 w-44 h-44"></div>
-              <div className="orbit2 w-36 h-36"></div>
+              <div className="orbit1 w-32 h-32 md:w-44 md:h-44"></div>
+              <div className="orbit2 w-24 h-24 md:w-36 md:h-36"></div>
             </div>
 
-
-            {/* Logo inside */}
-            <div className="w-20 h-20 flex items-center justify-center">
+            <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
               <Image
                 src="/logo-white.png"
                 alt="Profile"
@@ -143,16 +131,13 @@ export default function AIShowcase() {
           </div>
         </div>
 
-
-
         {/* Right column */}
         <div className="flex flex-col gap-6">
-          {aiModels.slice(3).map((model, i) => (
+          {features.slice(3).map((model, i) => (
             <Card key={i} {...model} />
           ))}
         </div>
       </div>
     </section>
-
   );
 }
