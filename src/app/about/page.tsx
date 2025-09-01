@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 import {
     MdRocket,
     MdVisibility,
@@ -24,7 +25,9 @@ import {
     BiHeart,
     BiBulb
 } from 'react-icons/bi';
-import { FlipCard } from '@/components/Service';
+import GalaxyBackground from '@/components/GalaxyBg';
+import { FlipCard } from '@/components/FlipCard';
+import { Border } from '@/components/Broder';
 
 type TabType = 'mission' | 'vision' | 'story';
 type CounterKeys = 'projects' | 'clients' | 'experience' | 'satisfaction';
@@ -107,11 +110,34 @@ const AboutUs = () => {
         { icon: "https://cdn-icons-png.flaticon.com/512/3079/3079872.png", title: '24/7 Support', subtitle: 'Round-the-clock assistance', features: ["Dedicated Support", "System Monitoring", "Incident Response"] }
     ];
 
-    const tabs = [
-        { id: 'mission' as TabType, label: 'Our Mission', icon: MdRocket },
-        { id: 'vision' as TabType, label: 'Our Vision', icon: MdVisibility },
-        { id: 'story' as TabType, label: 'Our Story', icon: BiWorld }
+    const cardData = [
+        {
+            id: 1,
+            title: "Vision",
+            content: "At Patchline, our vision is to bridge the gap between technology and creativity, empowering businesses with innovative digital solutions.",
+        },
+        {
+            id: 2,
+            title: "Mission",
+            content: "Our mission is to deliver seamless and scalable solutions in web, mobile, and enterprise applications that drive growth and impact.",
+        },
+        {
+            id: 3,
+            title: "Story",
+            content: "Patchline started with a team of passionate engineers and designers, united by the goal of simplifying technology for real-world use cases.",
+        },
+        {
+            id: 4,
+            title: "Values",
+            content: "We believe in innovation, collaboration, and integrity, ensuring every project we build reflects excellence and trust.",
+        },
+        {
+            id: 5,
+            title: "Future",
+            content: "We are committed to exploring AI, automation, and next-gen technologies to redefine possibilities for our clients.",
+        },
     ];
+
 
     useEffect(() => {
         setIsVisible(true);
@@ -137,7 +163,7 @@ const AboutUs = () => {
 
         const timer = setTimeout(animateCounters, 500);
         return () => clearTimeout(timer);
-    }, [stats]);
+    }, []);
 
     const tabContent: Record<TabType, { title: string; content: string }> = {
         mission: {
@@ -155,8 +181,9 @@ const AboutUs = () => {
     };
 
     return (
-        <div className="min-h-screen w-full bg-gradient-to-b from-neutral-950 to-neutral-900 text-white">
-            <div className="relative z-10 container mx-auto px-4 py-20">
+        <section className="relative px-6 pb-20 pt-30 lg:pb-30 lg:pt-40">
+            <div className="container max-w-screen-xl mx-auto overflow-hidden">
+                <GalaxyBackground />
                 {/* Hero Section */}
                 <div className={`text-center mb-20 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#00E7FF]/10 border border-[#00E7FF]/20 backdrop-blur-sm mb-6">
@@ -182,53 +209,26 @@ const AboutUs = () => {
                     {stats.map((stat, index) => (
                         <div
                             key={stat.key}
-                            className="relative rounded-2xl p-[2px] overflow-hidden"
+                            className="relative rounded-2xl overflow-hidden animate-fadeInUp"
                             style={{ animationDelay: `${300 + index * 100}ms` }}
                         >
-                            <div className="absolute inset-0 rounded-2xl animate-rotateGlow">
-                                <div className="absolute -inset-[40%] bg-[conic-gradient(from_0deg,#00E7FFaa_0deg,#00E7FFaa_20deg,transparent_20deg,transparent_360deg)] blur-md" />
-                            </div>
-                            <div className="relative inset-[2px] rounded-2xl bg-neutral-900/90 backdrop-blur p-6 text-center">
-                                <stat.icon className={`w-8 h-8 ${stat.color} mx-auto mb-4`} />
-                                <div className="text-3xl font-bold text-white mb-2">
-                                    {counters[stat.key]}{stat.suffix}
+                            <Border>
+                                <div className="p-6 text-center">
+                                    <stat.icon className={`w-8 h-8 ${stat.color} mx-auto mb-4`} />
+                                    <div className="text-3xl font-bold text-white mb-2">
+                                        {counters[stat.key]}{stat.suffix}
+                                    </div>
+                                    <div className="text-neutral-400 text-sm">{stat.label}</div>
                                 </div>
-                                <div className="text-neutral-400 text-sm">{stat.label}</div>
-                            </div>
+                            </Border>
                         </div>
                     ))}
                 </div>
 
-                {/* Mission/Vision/Story Tabs */}
-                <div className={`mb-20 transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                    <div className="bg-neutral-900/80 backdrop-blur-lg rounded-2xl border border-neutral-700/50 p-8">
-                        {/* Tab Navigation */}
-                        <div className="flex flex-wrap justify-center gap-4 mb-8">
-                            {tabs.map((tab) => (
-                                <button
-                                    key={tab.id}
-                                    onClick={() => setActiveTab(tab.id)}
-                                    className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${activeTab === tab.id
-                                            ? 'bg-[#00E7FF] text-black shadow-lg'
-                                            : 'bg-neutral-700/50 text-neutral-300 hover:bg-neutral-600/50'
-                                        }`}
-                                >
-                                    <tab.icon className="w-5 h-5" />
-                                    {tab.label}
-                                </button>
-                            ))}
-                        </div>
-
-                        {/* Tab Content */}
-                        <div className="text-center">
-                            <h3 className="text-3xl font-bold text-white mb-6">
-                                {tabContent[activeTab].title}
-                            </h3>
-                            <p className="text-lg text-neutral-300 max-w-4xl mx-auto leading-relaxed">
-                                {tabContent[activeTab].content}
-                            </p>
-                        </div>
-                    </div>
+                <div className="flex flex-wrap  gap-6 px-6 py-20 justify-center">
+                    {cardData.map((card) => (
+                        <ExplodeCard key={card.id} title={card.title} content={card.content} />
+                    ))}
                 </div>
 
                 {/* Core Values */}
@@ -245,33 +245,7 @@ const AboutUs = () => {
                     </div>
                 </div>
 
-                {/* Team Section */}
-                <div className={`mb-20 transform transition-all duration-1000 delay-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
-                        <p className="text-xl text-neutral-300">The brilliant minds behind our success</p>
-                    </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {team.map((member, index) => (
-                            <FlipCard key={index} title={member.name} subtitle={member.role} features={member.features} icon={member.icon} />
-                        ))}
-                    </div>
-                </div>
-
-                {/* Services Preview */}
-                <div className={`mb-20 transform transition-all duration-1000 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-white mb-4">What We Do</h2>
-                        <p className="text-xl text-neutral-300">Comprehensive IT solutions for modern businesses</p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {services.map((service, index) => (
-                            <FlipCard key={index} {...service} />
-                        ))}
-                    </div>
-                </div>
 
                 {/* CTA Section */}
                 <div className={`text-center transform transition-all duration-1000 delay-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
@@ -290,9 +264,75 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>
+        </section>
     );
 };
+
+function ExplodeCard({ title, content }: { title: string; content: string }) {
+    const [particles, setParticles] = useState<{ id: number; x: number; y: number }[]>([]);
+    const [showContent, setShowContent] = useState(false);
+
+    const handleHoverEnter = () => {
+        const newParticles = Array.from({ length: 25 }, (_, i) => ({
+            id: i,
+            x: (Math.random() - 0.5) * 300,
+            y: (Math.random() - 0.5) * 300,
+        }));
+        setParticles(newParticles);
+        setShowContent(true);
+
+        setTimeout(() => setParticles([]), 1000); // clear particles
+    };
+
+    const handleHoverLeave = () => {
+        setShowContent(false);
+    };
+
+    return (
+        <div
+            className="relative  border border-neutral-700 rounded-2xl p-8  w-1/2 md:w-1/4 flex items-center justify-center text-center overflow-hidden cursor-pointer"
+            onMouseEnter={handleHoverEnter}
+            onMouseLeave={handleHoverLeave}
+        >
+            {/* Title */}
+            {!showContent && (
+                <motion.h2
+                    initial={{ opacity: 1, scale: 1 }}
+                    animate={particles.length > 0 ? { opacity: 0, scale: 1.5, rotate: 360 } : { opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    className="text-2xl font-bold text-cyan-400 z-10"
+                >
+                    {title}
+                </motion.h2>
+            )}
+
+            {/* Particles */}
+            {particles.map((p) => (
+                <motion.div
+                    key={p.id}
+                    initial={{ x: 0, y: 0, opacity: 1, scale: 1 }}
+                    animate={{ x: p.x, y: p.y, opacity: 0, scale: 0.3 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="absolute w-2 h-2 bg-cyan-400 rounded-full"
+                />
+            ))}
+
+            {/* Content */}
+            {showContent && particles.length === 0 && (
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-neutral-300 leading-relaxed"
+                >
+                    {content}
+                </motion.p>
+            )}
+        </div>
+    );
+}
 
 export default AboutUs;

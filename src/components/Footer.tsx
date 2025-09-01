@@ -12,7 +12,7 @@ export default function FooterReveal() {
   return (
     <div className="relative">
       {/* Spacer (dynamic height) */}
-      <div className="h-200 md:h-100" />
+      <div className="h-250 md:h-100" />
       <div className="absolute inset-0 -z-60">
         <GalaxyBackground />
       </div>
