@@ -3,31 +3,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import {
-    MdRocket,
-    MdVisibility,
     MdStar,
     MdPeople,
     MdTrendingUp,
-    MdShield,
-    MdSupport,
     MdCode,
-    MdCloud,
-    MdSecurity
 } from 'react-icons/md';
-import {
-    FaLinkedin,
-    FaTwitter,
-    FaGithub
-} from 'react-icons/fa';
-import {
-    BiWorld,
-    BiTrophy,
-    BiHeart,
-    BiBulb
-} from 'react-icons/bi';
 import GalaxyBackground from '@/components/GalaxyBg';
 import { FlipCard } from '@/components/FlipCard';
 import { Border } from '@/components/Broder';
+import { cardData, values } from '@/utilities/data';
 
 type TabType = 'mission' | 'vision' | 'story';
 type CounterKeys = 'projects' | 'clients' | 'experience' | 'satisfaction';
@@ -49,94 +33,7 @@ const AboutUs = () => {
         { key: 'satisfaction' as CounterKeys, label: 'Client Satisfaction', target: 99, suffix: '%', icon: MdStar, color: 'text-[#00E7FF]' }
     ];
 
-    const values = [
-        {
-            icon: "https://cdn-icons-png.flaticon.com/512/3079/3079872.png",
-            title: 'Innovation',
-            subtitle: 'Embracing creative solutions',
-            features: ['Cutting-edge technologies', 'Creative problem-solving', 'Future-focused approach'],
-        },
-        {
-            icon: "https://cdn-icons-png.flaticon.com/512/2913/2913133.png",
-            title: 'Reliability',
-            subtitle: 'Consistent, dependable results',
-            features: ['Robust systems & processes', 'High-quality deliverables', 'Trusted by clients'],
-        },
-        {
-            icon: "https://cdn-icons-png.flaticon.com/512/833/833472.png",
-            title: 'Passion',
-            subtitle: 'Committed to excellence',
-            features: ['Love for technology', 'Exceptional user experiences', 'Dedicated to client success'],
-        },
-        {
-            icon: "https://cdn-icons-png.flaticon.com/512/1283/1283342.png",
-            title: 'Excellence',
-            subtitle: 'Striving for perfection',
-            features: ['Pixel-perfect design', 'High-quality code', 'Superior customer service'],
-        }
-    ];
-
-    const team = [
-        {
-            name: 'Sarah Johnson',
-            role: 'Chief Executive Officer',
-            icon: "https://cdn-icons-png.flaticon.com/512/2784/2784403.png",
-            features: ["15+ years experience", "Drives innovation", "Strategic growth expert"]
-        },
-        {
-            name: 'Michael Chen',
-            role: 'Chief Technology Officer',
-            icon: "https://cdn-icons-png.flaticon.com/512/1006/1006771.png",
-            features: ["Full-stack architect", "Scalable solutions", "Emerging tech enthusiast"]
-        },
-        {
-            name: 'Emily Rodriguez',
-            role: 'Head of Design',
-            icon: "https://cdn-icons-png.flaticon.com/512/2696/2696051.png",
-            features: ["User-centric design", "Beautiful interfaces", "Functional UX"]
-        },
-        {
-            name: 'David Kim',
-            role: 'Security Expert',
-            icon: "https://cdn-icons-png.flaticon.com/512/2913/2913133.png",
-            features: ["Cybersecurity specialist", "Robust protection", "Threat mitigation expert"]
-        }
-    ];
-
-    const services = [
-        { icon: "https://cdn-icons-png.flaticon.com/512/1006/1006771.png", title: 'Custom Development', subtitle: 'Tailored software solutions', features: ["Web & Mobile Apps", "Enterprise Software", "APIs & Integrations"] },
-        { icon: "https://cdn-icons-png.flaticon.com/512/2920/2920277.png", title: 'Cloud Solutions', subtitle: 'Scalable infrastructure', features: ["AWS, Azure, GCP", "Serverless Architecture", "DevOps & CI/CD"] },
-        { icon: "https://cdn-icons-png.flaticon.com/512/2913/2913133.png", title: 'Cybersecurity', subtitle: 'Advanced protection', features: ["Threat Analysis", "Penetration Testing", "Security Audits"] },
-        { icon: "https://cdn-icons-png.flaticon.com/512/3079/3079872.png", title: '24/7 Support', subtitle: 'Round-the-clock assistance', features: ["Dedicated Support", "System Monitoring", "Incident Response"] }
-    ];
-
-    const cardData = [
-        {
-            id: 1,
-            title: "Vision",
-            content: "At Patchline, our vision is to bridge the gap between technology and creativity, empowering businesses with innovative digital solutions.",
-        },
-        {
-            id: 2,
-            title: "Mission",
-            content: "Our mission is to deliver seamless and scalable solutions in web, mobile, and enterprise applications that drive growth and impact.",
-        },
-        {
-            id: 3,
-            title: "Story",
-            content: "Patchline started with a team of passionate engineers and designers, united by the goal of simplifying technology for real-world use cases.",
-        },
-        {
-            id: 4,
-            title: "Values",
-            content: "We believe in innovation, collaboration, and integrity, ensuring every project we build reflects excellence and trust.",
-        },
-        {
-            id: 5,
-            title: "Future",
-            content: "We are committed to exploring AI, automation, and next-gen technologies to redefine possibilities for our clients.",
-        },
-    ];
+    
 
 
     useEffect(() => {
@@ -242,26 +139,6 @@ const AboutUs = () => {
                         {values.map((value, index) => (
                             <FlipCard key={index} {...value} />
                         ))}
-                    </div>
-                </div>
-
-
-
-                {/* CTA Section */}
-                <div className={`text-center transform transition-all duration-1000 delay-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                    <div className="bg-neutral-900/80 backdrop-blur-lg rounded-2xl border border-[#00E7FF]/20 p-12">
-                        <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-                        <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-                            Let's discuss how our expertise and passion can help you achieve your technology goals.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="px-8 py-4 bg-gradient-to-r from-[#00E7FF] to-[#7AFFF7] text-black font-semibold rounded-lg hover:opacity-90 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[#00E7FF]/25">
-                                Start Your Project
-                            </button>
-                            <button className="px-8 py-4 border-2 border-neutral-600 text-neutral-300 rounded-lg font-semibold hover:border-neutral-400 hover:text-white transform hover:scale-105 transition-all duration-300">
-                                Learn More
-                            </button>
-                        </div>
                     </div>
                 </div>
 

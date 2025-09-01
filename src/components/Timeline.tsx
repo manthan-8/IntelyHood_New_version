@@ -1,6 +1,8 @@
 "use client";
 import Aos from "aos";
 import { useRef, useEffect, useState } from "react";
+import GalaxyBackground from "./GalaxyBg";
+import { steps } from "@/utilities/data";
 
 type Step = {
   id: number;
@@ -14,39 +16,6 @@ interface StepCardProps {
   index: number;
 }
 
-const steps: Step[] = [
-  {
-    id: 1,
-    title: "Discovery & Requirement Gathering",
-    desc: "We start by understanding your goals, challenges, and expectations. This stage builds the foundation for a customized.",
-    points: ["Wireframes & Architecture", "Tech Stack Finalization", "Timelines & Milestones"],
-  },
-  {
-    id: 2,
-    title: "Planning & Architecture",
-    desc: "We design the roadmap, project architecture, and delivery plan based on the discovered requirements.",
-    points: ["Client Consultation", "Business Requirement Analysis", "Scope Definition"],
-  },
-  {
-    id: 3,
-    title: "Design & Development",
-    desc: "From UX/UI to backend logic, our team builds the solution iteratively with regular updates and feedback cycles.",
-    points: ["UI/UX Design", "Frontend & Backend Development", "API Integrations"],
-  },
-  {
-    id: 4,
-    title: "Quality Assurance & Launch",
-    desc: "We ensure the product is stable, tested, and ready to launch — meeting performance and security benchmarks.",
-    points: ["Manual & Automated Testing", "Bug Fixing", "Deployment & Go-Live"],
-  },
-  {
-    id: 5,
-    title: "Post-Launch Support",
-    desc: "We don't just deliver — we stand by our clients with continuous updates, optimizations, and support.",
-    points: ["Performance Monitoring", "Feature Enhancements", "Ongoing Support & Maintenance"],
-  },
-];
-
 export default function ScrollSteps() {
   useEffect(() => {
     Aos.init({
@@ -57,18 +26,19 @@ export default function ScrollSteps() {
   }, []);
 
   return (
-    <div className="relative w-full bg-gradient-to-br from-gray-950 via-gray-900 to-blue-950 text-white min-h-screen">
-      <div className="text-center mb-8 md:mb-14 relative pt-12 md:pt-20 px-4">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide">
+     <section className="relative px-6 pb-20 pt-30 lg:pb-30 lg:pt-40">
+                <div className="container max-w-screen-xl mx-auto overflow-hidden">
+                    <GalaxyBackground />
+
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-center tracking-wide">
           <span className="text-white drop-shadow-sm">Our </span>
-          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent 
-                     drop-shadow-[0_0_15px_rgba(56,189,248,0.8)]">
+          <span className="text-text-inverse">
             PROCESS
           </span>
         </h2>
 
-        <p className="text-xs md:text-sm lg:text-base text-gray-400 mt-3 max-w-2xl mx-auto px-4">
-          A transparent and structured workflow that ensures efficiency, quality, and client satisfaction.
+        <p className="text-xs md:text-sm lg:text-base text-text-light mt-3 text-center max-w-2xl mx-auto px-4">
+          A transparent and structured workflow that ensures<br /> efficiency, quality, and client satisfaction.
         </p>
       </div>
 
@@ -91,7 +61,7 @@ export default function ScrollSteps() {
           <DesktopStepCard key={step.id} step={step} index={i} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

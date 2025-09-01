@@ -11,7 +11,6 @@ export default function FooterReveal() {
 
   return (
     <div className="relative">
-      {/* Spacer (dynamic height) */}
       <div className="h-250 md:h-100" />
       <div className="absolute inset-0 -z-60">
         <GalaxyBackground />
@@ -64,7 +63,7 @@ export default function FooterReveal() {
               </li>
               <li className="flex items-center space-x-2">
                 <MdPhone className="text-cyan-400" />
-                <span>+91 7649800211</span>
+                <span>+91 8966983955</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MdEmail className="text-cyan-400" />
@@ -72,14 +71,14 @@ export default function FooterReveal() {
               </li>
               <li className="flex items-center space-x-2">
                 <MdEmail className="text-cyan-400" />
-                <span>info@patchlinetech.com</span>
+                <span>support@patchlinetech.com</span>
               </li>
 
             </ul>
           </div>
           <div className="space-y-4">
             <h4 className="text-cyan-400 font-bold mb-4 uppercase tracking-wider">Address</h4>
-            <a target="_blank" href="https://www.google.com/maps/dir/22.7145446,75.8882503/Office+No.+209,+Prakhar+Art+Solutions+-+AI+Powered+Digital+Marketing+%7C+Graphics+Designing,+Social+Media+Management,+SEO+%26+SMO,+Veda+Business+Park,+Bhawarkua+Main+Rd,+Indore,+Madhya+Pradesh+452014/@22.7018415,75.8559771,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3962fd54bfe265e7:0x5d3a73538d6968ad!2m2!1d75.8671134!2d22.6931365?entry=ttu&g_ep=EgoyMDI1MDgxNy4wIKXMDSoASAFQAw%3D%3D" className="text-text-light text-lg flex items-start gap-3">
+            <a target="_blank" href="https://www.google.com/maps/place/Patch+Line+Technologies/@22.6931301,75.8670594,17z/data=!3m1!4b1!4m6!3m5!1s0x3962fdcc06a09e7b:0x6b156f6b6d35d4a9!8m2!3d22.6931301!4d75.8670594!16s%2Fg%2F11x27fz3l7?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" className="text-text-light text-lg flex items-start gap-3">
               <MdLocationPin className="inline w-15 mt-1 text-cyan-400" />
               Office No.209, Veda Business Park,
               Bhawarkua Main Square,

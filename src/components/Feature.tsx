@@ -3,15 +3,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import GalaxyBackground from "./GalaxyBg";
-import {
-  FiSmile,
-  FiZap,
-  FiShield,
-  FiSettings,
-  FiHeadphones,
-  FiTrendingUp,
-} from "react-icons/fi";
-import { GiCheckedShield } from "react-icons/gi";
+import { features } from "@/utilities/data";
 
 type CardProps = {
   title: string;
@@ -20,51 +12,6 @@ type CardProps = {
   icon: React.ElementType;
 };
 
-const features: CardProps[] = [
-  {
-    title: "Seamless Experience",
-    subtitle: "Smooth & Intuitive",
-    description:
-      "Enjoy a user-friendly interface with smooth navigation and effortless interaction.",
-    icon: FiSmile,
-  },
-  {
-    title: "High Performance",
-    subtitle: "Fast & Reliable",
-    description:
-      "Optimized for speed and efficiency to deliver results without delays.",
-    icon: FiZap,
-  },
-  {
-    title: "Secure Platform",
-    subtitle: "Data Protection",
-    description:
-      "Your information is encrypted and safeguarded with advanced security protocols.",
-    icon: GiCheckedShield,
-  },
-  {
-    title: "Customizable",
-    subtitle: "Tailored for You",
-    description:
-      "Easily personalize settings and features to match your preferences.",
-    icon: FiSettings,
-  },
-  {
-    title: "24/7 Support",
-    subtitle: "Always Available",
-    description:
-      "Get round-the-clock assistance from our dedicated support team.",
-    icon: FiHeadphones,
-  },
-  {
-    title: "Scalable Solution",
-    subtitle: "Grow Without Limits",
-    description:
-      "Built to adapt as your needs expand, ensuring long-term usability.",
-    icon: FiTrendingUp,
-  },
-];
-
 const Card: FC<CardProps> = ({ title, subtitle, description, icon: Icon }) => {
   return (
     <div className="w-full max-w-xs rounded-xl bg-gray-900/60 border border-cyan-500/40 p-3 hover:border-cyan-400 transition-all duration-300 shadow-md">
@@ -72,7 +19,6 @@ const Card: FC<CardProps> = ({ title, subtitle, description, icon: Icon }) => {
         <div className="w-10 h-10 flex items-center justify-center rounded-full border border-cyan-500/40 bg-cyan-900/40 text-cyan-300">
           <Icon className="w-5 h-5" />
         </div>
-
         <div className="flex flex-col">
           <h3 className="text-base font-semibold text-white">{title}</h3>
           <span className="inline-block bg-cyan-900/40 text-cyan-300 text-[10px] font-medium px-2 py-0.5 rounded-md border border-cyan-500/40 mt-1 w-fit">
@@ -80,15 +26,14 @@ const Card: FC<CardProps> = ({ title, subtitle, description, icon: Icon }) => {
           </span>
         </div>
       </div>
-
       <p className="text-gray-400 text-xs leading-relaxed mt-2">{description}</p>
     </div>
   );
 };
 
-export default function AIShowcase() {
+export default function Features() {
   return (
-    <section
+    <section id="features"
       className="relative py-20 px-6 bg-center bg-no-repeat bg-contain md:bg-[url('/ff.avif')]"
       style={{
         backgroundSize: "440px 440px",
@@ -96,10 +41,11 @@ export default function AIShowcase() {
       }}
     >
       <GalaxyBackground />
-      <div className="text-center mb-12">
+      <div className="text-center mb-16">
         <h2 className="text-3xl text-text-light md:text-4xl font-bold">
-          Pick the best characteristics <br /> of each AI model
+           Our <span className="text-text-inverse">Features</span>
         </h2>
+        <p className="text-text-light">Empowering You With Smarter Solutions</p>
       </div>
 
       <div className="flex flex-col md:flex-row justify-center items-center gap-23">
