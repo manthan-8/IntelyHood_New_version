@@ -3,13 +3,13 @@
 
 @theme {
   /* Brand colors (from your config) */
-  --color-background-main: #303030;
-  --color-background-light: #181818;
+  --color-background-light: #303030;
+  --color-background-main: #181818;
   --color-background-dark: #000000;
 
   --color-primary-main: #00E7FF;
-  --color-primary-light: #88f3ffff;
-  --color-primary-dark: #00c7ddff;
+  --color-primary-light: #2EEAFF;
+  --color-primary-dark: #00BCD1;
 
   --color-secondary-main: #9931EF;
   --color-secondary-light: #ab63e6ff;
@@ -19,8 +19,9 @@
   --color-muted-dark: #101828;
   --color-muted-light: #1E2939;
 
-  --color-border-main: #45404A;
-  --color-border-light: #ffffffff;
+  --color-border-main: #B6B6B6;
+  --color-border-light: #CFCFCF;
+  --color-border-dark: #9E9E9E;
 
   --color-text-main: #d1d5db;
   --color-text-light: #ffffff;
@@ -39,9 +40,9 @@
   --color-warn-light: #FFC65C;
   --color-warn-dark: #FFA700;
 
-  --color-muted-main: #4A5565;
-  --color-muted-light: #1E2939;
-  --color-muted-dark: #101828;
+  --color-muted-main: #3C5A96;
+  --color-muted-light: #2F4675;
+  --color-muted-dark: #213254;
 
   --color-accent-main: #8800FF;
   --color-accent-light: #9D2EFF;
@@ -50,6 +51,18 @@
   --background-image-background-inverse: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(26, 11, 46, 0.6));
   --background-image-background-dark: linear-gradient(to bottom right, #59136A, #1F0529, #59136A);
   --background-image-background-light: linear-gradient(to bottom, #f1bcffff, #fbecffff, #f1bcffff);
+
+  --animate-fly-1: fly-1 0.6s ease-in-out infinite alternate;
+
+  @keyframes fly-1 {
+    from {
+      transform: translateY(-0.1em);
+    }
+
+    to {
+      transform: translateY(0.1em);
+    }
+  }
 }
 
 @keyframes rotateGlow {
@@ -97,14 +110,15 @@
   opacity: 0.8;
   animation: twinkle 2s infinite ease-in-out;
 }
+
 .orbit1 {
   border-radius: 50%;
   position: absolute;
   border: 2px solid transparent;
   background: linear-gradient(300deg, cyan, rgb(46, 46, 54), rgb(0, 0, 0)) border-box;
   background-size: 200% 200%;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
@@ -117,8 +131,8 @@
   border: 2px solid transparent;
   background: linear-gradient(300deg, rgb(0, 0, 0), rgb(46, 46, 54), cyan) border-box;
   background-size: 200% 200%;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
@@ -130,6 +144,7 @@
   0% {
     background-position: 0% 50%;
   }
+
   100% {
     background-position: 200% 50%;
   }
@@ -140,6 +155,7 @@
   0% {
     background-position: 200% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -149,6 +165,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -158,6 +175,7 @@
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -170,5 +188,3 @@
 .animate-scroll-reverse {
   animation: scroll-reverse 20s linear infinite;
 }
-
-

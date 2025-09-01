@@ -16,7 +16,7 @@ export default function ServicesPage() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16">
         {/* Page Header */}
-        <div className="text-center mb-12">
+        <div className="text-center py-20">
           <h1 className="text-4xl sm:text-6xl font-bold text-white">
             Our <span className="text-cyan-400">Services</span>
           </h1>
