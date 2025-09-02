@@ -4,7 +4,7 @@ const TextArea: React.FC<TextareaHTMLAttributes<HTMLTextAreaElement>> = ({ class
     return (
         <div>
             <textarea
-                className={`bg-background-dark p-2 w-full rounded border border-border-dark/0 text-text-light ${className || ''}`}
+                className={`bg-primary-dark/20 p-2 w-full rounded border border-border-dark/0 text-text-light ${className || ''}`}
                 rows={rows}
                 {...props}
             />
