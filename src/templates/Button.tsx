@@ -41,23 +41,18 @@ group-hover:animate-fly-1">
     </>
   );
 
-  if (type === "submit") {
+  if (href) {
     return (
-      <button
-        type="submit"
-        disabled={disabled}
-        className={baseStyles}
-        {...rest}
-      >
+      <Link href={href} target={target} className={baseStyles}>
         <AnimationContent />
-      </button>
+      </Link>
     );
   }
 
   return (
-    <Link href={href || "#"} target={target} className={baseStyles}>
+    <button type={type} disabled={disabled} className={baseStyles} {...rest}>
       <AnimationContent />
-    </Link>
+    </button>
   );
 };
 

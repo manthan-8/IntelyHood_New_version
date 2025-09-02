@@ -4,6 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdLocationOn, MdEmail, MdPhone, MdLocationPin } from "react-icons/md";
 import GalaxyBackground from "./GalaxyBg";
+import Link from "next/link";
 
 export default function FooterReveal() {
   const footerRef = useRef<HTMLDivElement>(null);
@@ -86,9 +87,9 @@ export default function FooterReveal() {
               © 2025 <span className="font-semibold">Patch Line Technologies</span>. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-primary-main">Privacy Policy</a>
-              <a href="#" className="hover:text-primary-main">Terms & Conditions</a>
-              <a href="#" className="hover:text-primary-main">Refund Policy</a>
+              <Link href="#" className="hover:text-primary-main">Privacy Policy</Link>
+              <Link href="#" className="hover:text-primary-main">Terms & Conditions</Link>
+              <Link href="/refund" className="hover:text-primary-main">Refund Policy</Link>
             </div>
           </div>
         </div>

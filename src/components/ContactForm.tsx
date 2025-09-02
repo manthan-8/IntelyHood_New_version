@@ -155,8 +155,8 @@ const ContactForm: React.FC = () => {
             {visible && (
                 <div
                     id="formMessage"
-                    className={`mt-4 px-4 py-2 rounded ${isSuccess ? 'bg-success' : 'bg-danger/30'
-                        } text-text`}
+                    className={`mt-4 px-4 py-2 rounded ${isSuccess ? 'bg-success-main' : 'bg-error-main'
+                        } text-text-dark`}
                 >
                     {response}
                 </div>

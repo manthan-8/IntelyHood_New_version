@@ -23,7 +23,7 @@ const Select: React.FC<SelectProps> = ({
             <select
                 value={value}
                 {...rest}
-                className={`bg-background-dark p-2 rounded border border-dark-dark text-text-light py-2 w-full ${className || ''}`}
+                className={`bg-background-dark p-2 rounded border border-border-dark/0 text-text-light py-2 w-full ${className || ''}`}
             >
                 {placeholder && (
                     <option value="" className='text-text-light bg-background-main' disabled>
