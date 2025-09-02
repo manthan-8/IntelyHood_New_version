@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react'
 import { TbCreditCardRefund } from "react-icons/tb";
 import * as Yup from 'yup';

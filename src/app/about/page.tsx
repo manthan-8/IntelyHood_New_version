@@ -12,6 +12,7 @@ import GalaxyBackground from '@/components/GalaxyBg';
 import { FlipCard } from '@/components/FlipCard';
 import { Border } from '@/components/Broder';
 import { cardData, values } from '@/utilities/data';
+import { Contact } from '@/components/Contact';
 
 type TabType = 'mission' | 'vision' | 'story';
 type CounterKeys = 'projects' | 'clients' | 'experience' | 'satisfaction';
@@ -141,7 +142,7 @@ const AboutUs = () => {
                         ))}
                     </div>
                 </div>
-
+                <Contact />
             </div>
         </section>
     );

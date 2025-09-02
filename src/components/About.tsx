@@ -8,7 +8,8 @@ import { reasons } from "@/utilities/data";
 
 export function WhyChooseUs() {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative px-6 py-15 lg:py-20">
+      <div className="container max-w-screen-xl mx-auto overflow-hidden">
       <GalaxyBackground />
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 flex flex-col lg:flex-row gap-12 items-center h-full justify-center text-white">
@@ -50,6 +51,7 @@ export function WhyChooseUs() {
             );
           })}
         </div>
+      </div>
       </div>
     </section>
   );
