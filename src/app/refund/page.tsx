@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from 'react'
 import { TbCreditCardRefund } from "react-icons/tb";
@@ -9,6 +9,7 @@ import Button from '@/templates/Button';
 import FormInput from '@/templates/FormInput';
 import FormTextArea from '@/templates/FormTextArea';
 import { refund } from '@/utilities/data';
+import GalaxyBackground from '@/components/GalaxyBg';
 
 interface RefundFormValues {
     fullName: string;
@@ -175,52 +176,54 @@ const Refund: React.FC = () => {
     return (
         <>
             {/* Hero Section */}
-            <section className="px-5 py-30 lg:pb-30 lg:pt-50">
-                <div className="container mx-auto max-w-screen-xl">
+            <section className="relative px-6 pb-15 pt-40 lg:pb-30 lg:pt-50">
+                <div className="container max-w-screen-xl mx-auto overflow-hidden text-center">
+                    <GalaxyBackground />
                     <div className="flex justify-center mb-8 text-center">
-                        <div className="p-4 bg-primary-default/50 rounded-full">
-                            <TbCreditCardRefund className="text-5xl text-text" />
+                        <div className="p-4 bg-primary-main rounded-full">
+                            <TbCreditCardRefund className="text-5xl text-text-dark" />
                         </div>
                     </div>
-                    <h1 className="text-4xl lg:text-6xl font-bold text-text mb-6">
-                        Refund <span className="bg-gradient-to-r from-secondary-default to-primary-default bg-clip-text text-transparent">Policy</span>
+                    <h1 className="text-4xl lg:text-6xl font-bold text-text-main mb-6">
+                        Refund <span className="bg-gradient-to-r from-primary-dark to-primary-light bg-clip-text text-transparent">Policy</span>
                     </h1>
-                    <p className="text-xl text-text/70 mb-4">
+                    <p className="text-xl text-text-main mb-4">
                         At Chit Codes Technologies LLP, we value customer satisfaction and offer a transparent refund policy for our services and products.
                     </p>
-                    <p className="text-text/70">Last updated: {lastUpdated}</p>
+                    <p className="text-text-main">Last updated: {lastUpdated}</p>
                 </div>
             </section>
 
             {/* Main Sections */}
-            <section className="px-5 py-20 lg:py-24">
+            <section className="relative px-5 py-20 lg:py-24">
                 <div className="container mx-auto max-w-screen-lg">
-                    <div className="flex flex-col gap-10 mx-auto">
+                    <GalaxyBackground />
+                    <div className="flex flex-col gap-10 mx-auto text-text-main">
                         {refund.map((rfd, index) => (
-                            <div key={index} className="border p-5 border-border/30 bg-accent-default/40 rounded-md">
+                            <div key={index} className="border p-5 border-border-main/30 bg-background-main rounded-md">
                                 <div className="flex items-center space-x-4 mb-5">
-                                    <div className="bg-primary-default/40 p-3 rounded-lg flex items-center justify-center">
-                                        <rfd.icon className="text-2xl text-text" />
+                                    <div className="bg-primary-main p-3 rounded-lg flex items-center justify-center">
+                                        <rfd.icon className="text-2xl text-text-dark" />
                                     </div>
-                                    <h3 className="text-2xl text-text font-semibold">{rfd.title}</h3>
+                                    <h3 className="text-2xl font-semibold">{rfd.title}</h3>
                                 </div>
                                 <div className="space-y-6">
                                     {rfd.content.map((item, itemIndex) => (
                                         <div key={itemIndex}>
-                                            <h4 className="text-lg font-semibold text-text/90 mb-2">{item.subtitle}</h4>
-                                            <p className="text-text/70 leading-relaxed">{item.text}</p>
+                                            <h4 className="text-lg font-semibold mb-2">{item.subtitle}</h4>
+                                            <p className="leading-relaxed">{item.text}</p>
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <div className='text-center text-text pt-10'>
+                    <div className='text-center text-text-main pt-10'>
                         <Button className='mb-10' onClick={() => setShow(!show)}>Refund Form</Button>
 
                         {show && (
-                            <form onSubmit={formik.handleSubmit} className="text-left p-7 border border-border/50 rounded-md">
-                                <h5 className='font-semibold mb-3'>Personal Details -</h5>
+                            <form onSubmit={formik.handleSubmit} className="text-left p-7 border border-border-main/30 rounded-md bg-background-main">
+                                <h5 className='font-semibold mb-3 text-lg'>Personal Details -</h5>
                                 <div className='grid grid-cols-2 gap-5 mb-10'>
                                     <FormInput
                                         label='Full Name'
@@ -253,7 +256,7 @@ const Refund: React.FC = () => {
                                     <FormInput id="zipCode" name="zipCode" label="Zip Code" placeholder="Enter your Zip Code" type="text" formik={formik} />
                                     <FormInput id="Date" name="applyDate" label="Date" placeholder="Date" type="date" formik={formik} required />
                                 </div>
-                                <h5 className='font-semibold mb-3'>Invoice Details -</h5>
+                                <h5 className='font-semibold mb-3 text-lg'>Invoice Details -</h5>
                                 <div className='grid grid-cols-2 gap-5 mb-10'>
                                     <FormInput id="invoiceNumber" name="invoiceNumber" label="Invoice Number" type="number" formik={formik} required placeholder='' />
                                     <FormInput id="amount" name="amount" label="Invoice Amount" type="number" placeholder="Invoice Amount" formik={formik} required />
@@ -268,7 +271,7 @@ const Refund: React.FC = () => {
                                         placeholder="Write reason for refund"
                                         required />
                                 </div>
-                                <h5 className='font-semibold mb-3'>Bank Details For Your Refund -</h5>
+                                <h5 className='font-semibold mb-3 text-lg'>Bank Details For Your Refund -</h5>
                                 <div className='grid grid-cols-2 gap-5'>
                                     <FormInput id="accountHolder" name="accountHolder" label="Account Holder Name" type="text" placeholder="Enter Bank Holder Name" formik={formik} required />
                                     <FormInput id="bankName" name="bankName" label="Bank Name" type="text" placeholder="Enter Bank Name" formik={formik} required />
@@ -288,12 +291,12 @@ const Refund: React.FC = () => {
                                             checked={formik.values.acceptTerms}
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
-                                            className="mt-1 h-4 w-4 rounded text-primary focus:ring-primary"
+                                            className="mt-1 h-4 w-4 rounded"
                                         />
                                         <span className="text-sm text-text-inverse">
                                             I have read and accept the{" "}
                                             <span
-                                                className="text-secondary-default underline underline-offset-2"
+                                                className="text-secondary-main underline underline-offset-2"
                                                 role="button"
                                                 tabIndex={0}
                                             >
@@ -303,7 +306,7 @@ const Refund: React.FC = () => {
                                         </span>
                                     </label>
                                     {formik.touched.acceptTerms && formik.errors.acceptTerms ? (
-                                        <p className="mt-2 text-xs text-red-500">{formik.errors.acceptTerms}</p>
+                                        <p className="mt-2 text-xs text-error-main">{formik.errors.acceptTerms}</p>
                                     ) : null}
                                 </div>
                                 <div>
@@ -314,8 +317,8 @@ const Refund: React.FC = () => {
                                 {visible && (
                                     <div
                                         id="formMessage"
-                                        className={`mt-4 px-4 py-2 rounded ${isSuccess ? 'bg-success' : 'bg-danger/30'
-                                            } text-text`}
+                                        className={`mt-4 px-4 py-2 rounded ${isSuccess ? 'bg-success-main' : 'bg-error-main'
+                                            } text-text-dark`}
                                     >
                                         {response}
                                     </div>
@@ -325,8 +328,6 @@ const Refund: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-            <div className="h-screen"></div>
         </>
     )
 }

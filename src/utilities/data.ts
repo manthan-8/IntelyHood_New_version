@@ -3,7 +3,7 @@ import { CiLock } from "react-icons/ci";
 import { FaDatabase, FaUserCheck, FaUsersCog } from "react-icons/fa";
 import { GrCycle } from "react-icons/gr";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import { IoWarningOutline } from "react-icons/io5";
+import { IoTrendingUp, IoTrophyOutline, IoWarningOutline } from "react-icons/io5";
 import { LiaCookieSolid, LiaGavelSolid } from "react-icons/lia";
 import { MdOutlineCancel, MdOutlinePayment, MdOutlineRemoveRedEye } from "react-icons/md";
 import { PiScales } from "react-icons/pi";
@@ -14,6 +14,7 @@ import {
   FiSettings,
   FiHeadphones,
   FiTrendingUp,
+  FiUsers,
 } from "react-icons/fi";
 import { GiCheckedShield } from "react-icons/gi";
 import { FaUsers, FaLightbulb, FaShieldAlt, FaClock, FaDollarSign, FaHandsHelping } from "react-icons/fa";
@@ -23,6 +24,7 @@ export const navItems = [
   { title: "About", path: "/about" },
   { title: "Services", path: "/service" },
   { title: "Features", path: "/#features" },
+  { title: "Career", path: "/career" },
   { title: "Contact", path: "/contact" },
 ];
 
@@ -488,57 +490,323 @@ export const reasons = [
 ];
 
 export const values = [
-        {
-            icon: "https://cdn-icons-png.flaticon.com/512/3079/3079872.png",
-            title: 'Innovation',
-            subtitle: 'Embracing creative solutions',
-            features: ['Cutting-edge technologies', 'Creative problem-solving', 'Future-focused approach'],
-        },
-        {
-            icon: "https://cdn-icons-png.flaticon.com/512/2913/2913133.png",
-            title: 'Reliability',
-            subtitle: 'Consistent, dependable results',
-            features: ['Robust systems & processes', 'High-quality deliverables', 'Trusted by clients'],
-        },
-        {
-            icon: "https://cdn-icons-png.flaticon.com/512/833/833472.png",
-            title: 'Passion',
-            subtitle: 'Committed to excellence',
-            features: ['Love for technology', 'Exceptional user experiences', 'Dedicated to client success'],
-        },
-        {
-            icon: "https://cdn-icons-png.flaticon.com/512/1283/1283342.png",
-            title: 'Excellence',
-            subtitle: 'Striving for perfection',
-            features: ['Pixel-perfect design', 'High-quality code', 'Superior customer service'],
-        }
-    ];
+  {
+    icon: "https://cdn-icons-png.flaticon.com/512/3079/3079872.png",
+    title: 'Innovation',
+    subtitle: 'Embracing creative solutions',
+    features: ['Cutting-edge technologies', 'Creative problem-solving', 'Future-focused approach'],
+  },
+  {
+    icon: "https://cdn-icons-png.flaticon.com/512/2913/2913133.png",
+    title: 'Reliability',
+    subtitle: 'Consistent, dependable results',
+    features: ['Robust systems & processes', 'High-quality deliverables', 'Trusted by clients'],
+  },
+  {
+    icon: "https://cdn-icons-png.flaticon.com/512/833/833472.png",
+    title: 'Passion',
+    subtitle: 'Committed to excellence',
+    features: ['Love for technology', 'Exceptional user experiences', 'Dedicated to client success'],
+  },
+  {
+    icon: "https://cdn-icons-png.flaticon.com/512/1283/1283342.png",
+    title: 'Excellence',
+    subtitle: 'Striving for perfection',
+    features: ['Pixel-perfect design', 'High-quality code', 'Superior customer service'],
+  }
+];
 
+export const cardData = [
+  {
+    id: 1,
+    title: "Vision",
+    content: "At Patchline, our vision is to bridge the gap between technology and creativity, empowering businesses with innovative digital solutions.",
+  },
+  {
+    id: 2,
+    title: "Mission",
+    content: "Our mission is to deliver seamless and scalable solutions in web, mobile, and enterprise applications that drive growth and impact.",
+  },
+  {
+    id: 3,
+    title: "Story",
+    content: "Patchline started with a team of passionate engineers and designers, united by the goal of simplifying technology for real-world use cases.",
+  },
+  {
+    id: 4,
+    title: "Values",
+    content: "We believe in innovation, collaboration, and integrity, ensuring every project we build reflects excellence and trust.",
+  },
+  {
+    id: 5,
+    title: "Future",
+    content: "We are committed to exploring AI, automation, and next-gen technologies to redefine possibilities for our clients.",
+  },
+];
 
-  export  const cardData = [
-        {
-            id: 1,
-            title: "Vision",
-            content: "At Patchline, our vision is to bridge the gap between technology and creativity, empowering businesses with innovative digital solutions.",
-        },
-        {
-            id: 2,
-            title: "Mission",
-            content: "Our mission is to deliver seamless and scalable solutions in web, mobile, and enterprise applications that drive growth and impact.",
-        },
-        {
-            id: 3,
-            title: "Story",
-            content: "Patchline started with a team of passionate engineers and designers, united by the goal of simplifying technology for real-world use cases.",
-        },
-        {
-            id: 4,
-            title: "Values",
-            content: "We believe in innovation, collaboration, and integrity, ensuring every project we build reflects excellence and trust.",
-        },
-        {
-            id: 5,
-            title: "Future",
-            content: "We are committed to exploring AI, automation, and next-gen technologies to redefine possibilities for our clients.",
-        },
-    ];
+export const whyWorkWithUs = [
+  {
+    icon: FaLightbulb,
+    title: "Cutting-Edge Innovation",
+    description: "Work on revolutionary AI technology that's shaping the future of software development.",
+    stats: "50+ AI models in production",
+    aos: "fade-up"
+  },
+  {
+    icon: IoTrendingUp,
+    title: "Rapid Growth",
+    description: "Join a fast-growing company with unlimited potential and career advancement opportunities.",
+    stats: "300% growth year-over-year",
+    aos: 'fade-down'
+  },
+  {
+    icon: FiUsers,
+    title: "World-Class Team",
+    description: "Collaborate with brilliant minds from top tech companies like Google, Microsoft, and Meta.",
+    stats: "Team from 15+ countries",
+    aos: 'fade-up'
+  },
+  {
+    icon: IoTrophyOutline,
+    title: "Industry Recognition",
+    description: "Be part of an company recognized by top industry publications and organizations.",
+    stats: "Winner of 5+ industry awards",
+    aos: 'fade-down'
+  },
+]
+
+export const jobOpenings = [
+  {
+    id: 1,
+    title: "Business Development Executive",
+    department: "Sales",
+    location: "Indore, India",
+    type: "Full-time",
+    salary: "20K - 50K",
+    experience: "0 - 3 years",
+    posted: "Today",
+    description: "As a BDE, you will be responsible for generating leads, building relationships with potential clients, and closing deals. You will also be working closely with the engineering team to understand our product and services.",
+    requirements: [
+      "0-3 years of experience in sales and marketing",
+      "Strong communication and interpersonal skills",
+      "Ability to work in a fast-paced environment",
+      "Basic understanding of software development and tech industry",
+      "Comfortable with cold calling and lead generation",
+      "Ability to work independently and in a team-oriented environment"
+    ],
+    responsibilities: [
+      "Create and execute sales strategies to drive revenue growth",
+      "Generate leads, build relationships, and close deals",
+      "Collaborate with the engineering team to understand our product and services",
+      "Develop and maintain a strong understanding of the tech industry",
+      "Work closely with the marketing team to develop targeted campaigns",
+      "Participate in sales calls and meetings with potential clients",
+      "Maintain accurate records of sales activities and performance"
+    ],
+    qualifications: [
+      "Bachelor's degree in Business Administration or related field",
+      "Strong negotiation and closing skills",
+      "Ability to work in a fast-paced environment",
+      "Basic understanding of software development and tech industry",
+      "Comfortable with cold calling and lead generation",
+      "Ability to work independently and in a team-oriented environment"
+    ],
+    benefits: [
+      "Competitive salary and commission structure",
+      "Opportunity to work with a fast-growing company",
+      "Professional development and training opportunities",
+      "Flexible work hours and work-from-home options",
+      "Paid time off and company holidays",
+      "Health insurance and wellness perks"
+    ]
+  },
+  {
+    id: 2,
+    title: "MERN Stack Developer",
+    department: "Engineering",
+    location: "Indore, India",
+    type: "Full-time",
+    salary: "80K - 110K",
+    experience: "0 - 3 years",
+    posted: "Today",
+    description: "Join our dynamic team to build full-stack web applications using the MERN (MongoDB, Express.js, React, Node.js) stack. You'll work on modern, scalable products that empower developers globally.",
+    requirements: [
+      "0-3 years of experience in full-stack development",
+      "Strong knowledge of MongoDB, Express.js, React, and Node.js",
+      "Familiarity with RESTful APIs and JSON",
+      "Understanding of basic DevOps practices",
+      "Good debugging and problem-solving skills",
+      "Comfortable with Git and version control workflows",
+      "Basic understanding of deployment on cloud platforms"
+    ],
+    responsibilities: [
+      "Develop and maintain full-stack applications using the MERN stack",
+      "Collaborate with UI/UX designers and backend developers",
+      "Write clean, maintainable, and efficient code",
+      "Participate in code reviews and stand-ups",
+      "Contribute to bug fixing and performance improvements",
+      "Work closely with the QA team for testing and deployment",
+      "Stay updated on new technologies and trends in full-stack development"
+    ],
+    qualifications: [
+      "Bachelor's degree in Computer Science or related field",
+      "Solid foundation in JavaScript and web development",
+      "Hands-on experience with MongoDB and Node.js",
+      "Understanding of front-end development principles",
+      "Familiarity with Agile methodologies",
+      "Good communication and teamwork skills"
+    ],
+    benefits: [
+      "Mentorship and hands-on training",
+      "Remote-friendly work environment",
+      "Health and wellness benefits",
+      "Opportunity to work with a skilled team",
+      "Access to latest tech and tools",
+      "Career growth and learning resources"
+    ]
+  },
+  {
+    id: 3,
+    title: "React Developer",
+    department: "Engineering",
+    location: "Indore, India",
+    type: "Full-time",
+    salary: "75K - 105K",
+    experience: "0 - 3 years",
+    posted: "Today",
+    description: "We are looking for a passionate React Developer to create dynamic and responsive user interfaces. Work on real-time dashboards, developer tools, and AI-enhanced web applications.",
+    requirements: [
+      "0-3 years of experience with React.js",
+      "Good knowledge of JavaScript, HTML, CSS",
+      "Familiarity with Redux or Context API",
+      "Understanding of component-based architecture",
+      "Experience with REST APIs and asynchronous operations",
+      "Basic knowledge of testing tools like Jest or React Testing Library",
+      "Comfort with Git version control"
+    ],
+    responsibilities: [
+      "Develop responsive UI components using React",
+      "Work closely with designers to implement user-centric features",
+      "Optimize components for performance across devices",
+      "Maintain code quality through testing and reviews",
+      "Integrate with backend APIs and services",
+      "Fix bugs and address usability issues",
+      "Stay current with the latest React best practices"
+    ],
+    qualifications: [
+      "Bachelor’s degree in Computer Science or related field",
+      "Understanding of responsive design and cross-browser compatibility",
+      "Hands-on experience with React hooks and modern features",
+      "Good problem-solving skills and attention to detail",
+      "Ability to work in a team-oriented environment",
+      "Knowledge of web accessibility standards"
+    ],
+    benefits: [
+      "Flexible work hours and remote options",
+      "Learning budget and certification support",
+      "Supportive and inclusive team culture",
+      "Paid time off and company holidays",
+      "Competitive compensation with bonus potential",
+      "Health insurance and wellness perks"
+    ]
+  },
+  {
+    id: 4,
+    title: "Java Developer",
+    department: "Engineering",
+    location: "Indore, India",
+    type: "Full-time",
+    salary: "85K - 115K",
+    experience: "0 - 3 years",
+    posted: "Today",
+    description: "We are seeking a Java Developer to help build backend systems and APIs that power our AI-driven platform. Ideal for recent grads or junior developers with a strong Java foundation.",
+    requirements: [
+      "0-3 years of experience with Java development",
+      "Familiarity with Spring Boot or similar frameworks",
+      "Understanding of RESTful APIs and JSON",
+      "Experience with databases like MySQL or PostgreSQL",
+      "Knowledge of object-oriented programming concepts",
+      "Ability to write clean, maintainable code",
+      "Understanding of unit testing and version control"
+    ],
+    responsibilities: [
+      "Develop and maintain backend services using Java",
+      "Implement REST APIs and integrations",
+      "Work with product and frontend teams on system design",
+      "Write and maintain unit and integration tests",
+      "Troubleshoot bugs and optimize performance",
+      "Contribute to architecture decisions and planning",
+      "Document code and workflows clearly"
+    ],
+    qualifications: [
+      "Bachelor's degree in Computer Science or similar",
+      "Solid grasp of Java and related technologies",
+      "Strong logical and analytical thinking",
+      "Understanding of database concepts and schemas",
+      "Eagerness to learn and grow in a collaborative environment",
+      "Familiarity with CI/CD pipelines is a plus"
+    ],
+    benefits: [
+      "On-the-job training and mentorship",
+      "Modern tech stack and tools",
+      "Career advancement opportunities",
+      "Paid certification programs",
+      "Remote-first culture",
+      "Health, dental, and vision insurance"
+    ]
+  },
+  {
+    id: 5,
+    title: "Python Django Developer",
+    department: "Engineering",
+    location: "Indore, India",
+    type: "Full-time",
+    salary: "80K - 110K",
+    experience: "0 - 3 years",
+    posted: "Today",
+    description: "Join our fast-growing engineering team to build scalable web applications using Python and Django. Ideal for early-career developers passionate about backend development and clean architecture.",
+    requirements: [
+      "0-3 years of experience with Python and Django",
+      "Understanding of REST APIs and Django ORM",
+      "Experience with PostgreSQL or other relational databases",
+      "Knowledge of version control tools like Git",
+      "Basic understanding of testing frameworks",
+      "Ability to write clean and efficient code",
+      "Familiarity with Docker is a plus"
+    ],
+    responsibilities: [
+      "Develop backend systems and APIs using Django",
+      "Collaborate with frontend and product teams",
+      "Participate in system design and architecture discussions",
+      "Write and maintain unit tests and documentation",
+      "Optimize applications for performance and scalability",
+      "Help troubleshoot and debug production issues",
+      "Contribute to continuous improvement initiatives"
+    ],
+    qualifications: [
+      "Bachelor’s degree in Computer Science or related field",
+      "Strong foundation in Python programming",
+      "Experience with Django-based projects",
+      "Familiarity with MVC architecture",
+      "Willingness to learn and adapt quickly",
+      "Good communication and teamwork skills"
+    ],
+    benefits: [
+      "Opportunity to work on real-world Django projects",
+      "Supportive team environment",
+      "Flexible work hours and remote options",
+      "Training and certification budget",
+      "Health and wellness benefits",
+      "Career growth path and mentorship"
+    ]
+  },
+]
+
+export const experienceOptions = [
+  "No experience",
+  "0-1 years",
+  "2-3 years",
+  "4-5 years",
+  "6-10 years",
+  "10+ years"
+]

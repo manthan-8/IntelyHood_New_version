@@ -4,6 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdLocationOn, MdEmail, MdPhone, MdLocationPin } from "react-icons/md";
 import GalaxyBackground from "./GalaxyBg";
+import Link from "next/link";
 
 export default function FooterReveal() {
   const footerRef = useRef<HTMLDivElement>(null);

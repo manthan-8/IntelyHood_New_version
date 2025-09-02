@@ -30,7 +30,7 @@ const FormSelect = <T,>({
 
     return (
         <div className={className}>
-            <label className="w-full inline-block text-base font-medium text-text mb-2" htmlFor={id}>{label} {required ? <span className='text-danger'>*</span> : <></>}</label>
+            <label className="w-full inline-block text-base font-medium text-text-main mb-2" htmlFor={id}>{label} {required ? <span className='text-danger'>*</span> : <></>}</label>
             <Select
                 id={id}
                 name={name}
