@@ -33,6 +33,7 @@ export default function RootLayout({
         <Suspense fallback={<Loader />}>
           <Header />
           {children}
+          
           <Footer />
         </Suspense>
 
