@@ -44,7 +44,7 @@ export default function Features() {
       <GalaxyBackground />
 
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-text-light">
+        <h2 className="sm:text-5xl text-3xl font-bold text-text-light">
           Our <span className="text-text-inverse">Features</span>
         </h2>
         <p className="text-text-light">Empowering You With Smarter Solutions</p>

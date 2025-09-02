@@ -8,25 +8,26 @@ import {
     MdAccessTime,
     MdCheckCircle,
 } from "react-icons/md";
-import { FaLinkedin, FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaMeta } from "react-icons/fa6";
 import GalaxyBackground from "@/components/GalaxyBg";
 import ContactForm from "@/components/ContactForm";
+import { Border } from "@/components/Broder";
 
 const ContactUs = () => {
     const contactInfo = [
         {
             icon: MdEmail,
             title: "Email Us",
-            info: "contact@techsolutions.com",
-            subInfo: "We typically respond within 2 hours",
+            info: "info@patchlinetech.com",
+            subInfo: "We typically respond within 2 days",
             color: "text-primary-main",
             bgColor: "bg-primary-dark/20",
         },
         {
             icon: MdPhone,
             title: "Call Us",
-            info: "+1 (555) 123-4567",
+            info: "+91 8966983955",
             subInfo: "Mon-Fri 9AM-6PM EST",
             color: "text-primary-main",
             bgColor: "bg-primary-dark/20",
@@ -34,8 +35,8 @@ const ContactUs = () => {
         {
             icon: MdLocationOn,
             title: "Visit Us",
-            info: "123 Tech Street, Silicon Valley",
-            subInfo: "CA 94043, United States",
+            info: "Office No.209, Veda Business Park, Bhawarkua Main Square, Indore, Madhya Pradesh - 452009",
+            subInfo: "",
             color: "text-primary-main",
             bgColor: "bg-primary-dark/20",
         },
@@ -43,7 +44,7 @@ const ContactUs = () => {
             icon: MdAccessTime,
             title: "Business Hours",
             info: "Monday - Friday",
-            subInfo: "9:00 AM - 6:00 PM EST",
+            subInfo: "10:00 AM - 7:00 PM EST",
             color: "text-primary-main",
             bgColor: "bg-primary-dark/20",
         },
@@ -99,10 +100,8 @@ const ContactUs = () => {
                                     className="relative rounded-lg overflow-hidden group"
                                     style={{ animationDelay: `${600 + index * 100}ms` }}
                                 >
-                                    <div className="absolute inset-0 animate-rotateGlow group-hover:animate-none">
-                                        <div className="absolute -inset-[40%] bg-[conic-gradient(from_0deg,#00E7FFaa_0deg,#00E7FFaa_20deg,transparent_20deg,transparent_360deg)] blur-md" />
-                                    </div>
-                                    <div className="relative inset-[1px] rounded-lg bg-background-main backdrop-blur p-6 transform hover:scale-[1.02] transition-transform duration-300 text-text-main flex flex-col items-center gap-3">
+                                    <Border>
+                                    <div className="relative inset-[1px] rounded-2xl bg-background-main backdrop-blur p-6 transform hover:scale-[1.02] transition-transform duration-300 text-text-main flex flex-col items-center gap-3">
                                         <div
                                             className={`rounded-lg flex items-center justify-center`}
                                         >
@@ -114,6 +113,7 @@ const ContactUs = () => {
                                         <p className="font-medium">{item.info}</p>
                                         <p className="text-sm">{item.subInfo}</p>
                                     </div>
+                                    </Border>
                                 </div>
                             ))}
 

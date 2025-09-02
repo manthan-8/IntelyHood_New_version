@@ -12,7 +12,7 @@ export function ServiceCard() {
         <GalaxyBackground />
         <div className="space-y-20">
           <div className="space-y-5 text-center">
-            <h1 className="text-3xl text-text-main font-bold tracking-tight sm:text-5xl">
+            <h1 className="text-text-main font-bold tracking-tight sm:text-5xl text-3xl ">
               Our <span className="text-text-inverse">Services</span>
             </h1>
             <p className="text-sm text-white/80">

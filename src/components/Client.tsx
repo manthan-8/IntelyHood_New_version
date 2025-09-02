@@ -33,9 +33,9 @@ export default function Clients() {
             <div className="container mx-auto max-w-screen-xl">
                 <div className="text-center mb-12" data-aos="zoom-in">
                     <h2 className="text-3xl lg:text-5xl font-bold text-text-light mb-4">
-                        Building Trust Through{" "}
+                        Building Trust {" "}
                         <span className="text-text-inverse ">
-                            Results
+                             Through Results 
                         </span>
                     </h2>
                     <p className="text-lg text-text-light/80 max-w-2xl mx-auto">

@@ -13,7 +13,7 @@ export function WhyChooseUs() {
       <div className="relative z-10 mx-auto max-w-6xl px-6 flex flex-col lg:flex-row gap-12 items-center h-full justify-center text-white">
         {/* Left Text */}
         <div className="lg:w-1/2 space-y-6">
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
+          <h2 className="sm:text-5xl text-3xl font-bold tracking-tight">
             Why <span className="text-text-inverse">Choose Us</span>
           </h2>
           <p className="text-lg leading-relaxed text-text-light">

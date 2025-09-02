@@ -31,9 +31,9 @@ export default function ScrollSteps() {
       <div className="container max-w-screen-xl mx-auto overflow-hidden">
         <GalaxyBackground />
 
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-center tracking-wide">
+        <h2 className="sm:text-5xl text-3xl font-bold text-center tracking-wide">
           <span className="text-text-light drop-shadow-sm">Our </span>
-          <span className="text-text-inverse">PROCESS</span>
+          <span className="text-text-inverse">Process</span>
         </h2>
 
         <p className="text-xs md:text-sm lg:text-base text-text-light mt-3 text-center max-w-2xl mx-auto px-4">
