@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Loader() {
   return (
-    <div className="fixed inset-0 bg-gray-900 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-background-main flex items-center justify-center z-50">
       <style jsx>{`
         @keyframes pulse-glow {
           0%, 100% { 
@@ -29,14 +29,14 @@ export default function Loader() {
         <div className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">
           
           {/* Central Core */}
-          <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800 border-2 border-cyan-500/30 z-10 animate-[pulse-glow_3s_infinite]">
+          <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center bg-gradient-to-br from-background-main via-background-main mask-b-to-background-dark border-2 border-primary-main/30 z-10 animate-[pulse-glow_3s_infinite]">
             
             {/* Inner Ring */}
-            <div className="absolute inset-2 rounded-full border border-cyan-400/20 bg-gradient-to-br from-cyan-950/50 to-transparent"></div>
+            <div className="absolute inset-2 rounded-full border border-primary-main/20 bg-gradient-to-br from-background-dark/50 to-transparent"></div>
             
             {/* Reverse Scanning Effect */}
             <div
-              className="absolute inset-2 rounded-full border-2 border-transparent border-b-cyan-300 animate-spin"
+              className="absolute inset-2 rounded-full border-2 border-transparent border-b-primary-main animate-spin"
               style={{ animationDuration: "1.5s", animationDirection: "reverse" }}
             ></div>
             
@@ -54,7 +54,7 @@ export default function Loader() {
 
             {/* Main Scanning Effect */}
             <div
-              className="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-400 animate-spin"
+              className="absolute inset-0 rounded-full border-2 border-transparent border-t-primary-main animate-spin"
               style={{ animationDuration: "2s" }}
             ></div>
           </div>
