@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-[9999] p-5 transition-transform duration-500 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`fixed top-0 w-full z-[9999] p-5 transition-transform duration-500 ${showNavbar ? 'translate-y-0' : '-translate-y-full'} ${isMenuOpen ? 'backdrop-blur-2xl h-full' : ''}`}
     >
       <div className="container mx-auto max-w-screen-xl">
         {/* Logo */}

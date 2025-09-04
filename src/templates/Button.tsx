@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { FaLocationArrow } from "react-icons/fa";
+import { FaBookmark, FaLocationArrow } from "react-icons/fa";
 import type { ButtonHTMLAttributes, HTMLAttributeAnchorTarget, ReactNode } from "react";
 import type React from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  href?: string; // for link
+  href?: string;
   children: ReactNode;
   className?: string;
   target?: HTMLAttributeAnchorTarget;
@@ -20,22 +20,24 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   const baseStyles = `
-    group inline-flex gap-2 items-center justify-center curser-pointer
-    px-3 py-2 font-semibold overflow-hidden text-text-light
-     rounded-md bg-primary-dark transition-all duration-300 hover:scale-105
-    ${className}
+    group relative inline-flex items-center justify-center cursor-pointer
+    p-2.5 rounded-full border border-border-main/50 text-text-light font-semibold
+    bg-background-dark overflow-hidden ${className}
   `;
 
   const AnimationContent = () => (
     <>
-      <FaLocationArrow
-        className="
-          transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]
-           group-hover:rotate-45"/>
-
       <span
-        className="transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]
-group-hover:animate-fly-1">
+        className="
+          absolute left-1.5 right-1.5 flex items-center justify-center w-8 h-8 rounded-full
+          bg-primary-dark z-10
+          transition-all duration-300 group-hover:w-[calc(100%-0.75rem)]
+        "
+      >
+        <FaLocationArrow className="transition-transform duration-200 group-hover:rotate-45" />
+      </span>
+      <span
+        className="flex items-center pl-9">
         {children}
       </span>
     </>
