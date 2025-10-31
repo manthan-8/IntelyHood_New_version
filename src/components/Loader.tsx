@@ -1,65 +1,59 @@
 "use client";
-import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
-export default function Loader() {
+export default function VideoLoader() {
+  const [showLoader, setShowLoader] = useState(true);
+  const [slideOut, setSlideOut] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSlideOut(true);
+      setTimeout(() => setShowLoader(false), 1000);
+    }, 2500); // video duration before sliding
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="fixed inset-0 bg-background-main flex items-center justify-center z-50">
-      <style jsx>{`
-        @keyframes pulse-glow {
-          0%, 100% { 
-            box-shadow: 0 0 20px rgba(6, 182, 212, 0.3),
-                        0 0 40px rgba(6, 182, 212, 0.2),
-                        0 0 60px rgba(6, 182, 212, 0.1);
-          }
-          50% { 
-            box-shadow: 0 0 30px rgba(6, 182, 212, 0.5),
-                        0 0 60px rgba(6, 182, 212, 0.3),
-                        0 0 90px rgba(6, 182, 212, 0.2);
-          }
-        }
+    <div className="relative min-h-screen overflow-hidden bg-black text-white">
+      {/* Loader Video */}
+      <AnimatePresence>
+        {showLoader && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black"
+            initial={{ opacity: 1, x: 0 }}
+            animate={{
+              opacity: slideOut ? 0 : 1,
+              x: slideOut ? "-100%" : 0,
+              transition: { duration: 1.2, ease: [0.4, 0, 0.2, 1] },
+            }}
+            exit={{ opacity: 0 }}
+          >
+            <video
+              src="/animate.mp4"
+              autoPlay
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
-      `}</style>
-
-      {/* Loader Container */}
-      <div className="relative flex items-center justify-center">
-        <div className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">
-          
-          {/* Central Core */}
-          <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center bg-gradient-to-br from-background-main via-background-main mask-b-to-background-dark border-2 border-primary-main/30 z-10 animate-[pulse-glow_3s_infinite]">
-            
-            {/* Inner Ring */}
-            <div className="absolute inset-2 rounded-full border border-primary-main/20 bg-gradient-to-br from-background-dark/50 to-transparent"></div>
-            
-            {/* Reverse Scanning Effect */}
-            <div
-              className="absolute inset-2 rounded-full border-2 border-transparent border-b-primary-main animate-spin"
-              style={{ animationDuration: "1.5s", animationDirection: "reverse" }}
-            ></div>
-            
-            {/* Logo */}
-            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center relative z-10">
-              <Image
-                src="/logo-white.png"
-                alt="Loading..."
-                width={64}
-                height={64}
-                className="object-contain filter drop-shadow-lg"
-                style={{ animation: "float 4s ease-in-out infinite" }}
-              />
-            </div>
-
-            {/* Main Scanning Effect */}
-            <div
-              className="absolute inset-0 rounded-full border-2 border-transparent border-t-primary-main animate-spin"
-              style={{ animationDuration: "2s" }}
-            ></div>
-          </div>
-        </div>
-      </div>
+      {/* Main Website Content */}
+      <motion.div
+        className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: showLoader ? 0 : 1 }}
+        transition={{ duration: 1.2, delay: 0.2 }}
+      >
+        <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          Welcome to <span className="text-cyan-400">Intelyhood</span>
+        </h1>
+        <p className="text-lg md:text-xl opacity-80 max-w-2xl">
+          Building the future of AI — one model at a time.
+        </p>
+      </motion.div>
     </div>
   );
 }

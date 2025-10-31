@@ -7,159 +7,366 @@ import { IoTrendingUp, IoTrophyOutline, IoWarningOutline } from "react-icons/io5
 import { LiaCookieSolid, LiaGavelSolid } from "react-icons/lia";
 import { MdOutlineCancel, MdOutlinePayment, MdOutlineRemoveRedEye } from "react-icons/md";
 import { PiScales } from "react-icons/pi";
+import { MdOutlinePrecisionManufacturing, MdOutlineWork, MdOutlineDataObject,MdOutlineCarRepair, MdOutlineIntegrationInstructions,} from "react-icons/md";
+import { AiOutlineRobot } from "react-icons/ai";
+import { TbApi } from "react-icons/tb";
 import { RiGovernmentLine, RiRefund2Fill } from "react-icons/ri";
 import {
-  FiSmile,
+  FiCode,
   FiZap,
   FiSettings,
-  FiHeadphones,
-  FiTrendingUp,
   FiUsers,
+  FiCpu,
+  FiDatabase,
+  FiCloud,
+  FiShield,
+  FiBookOpen,
+  FiInfo,
+  FiPhone,
+  FiBriefcase,
+  FiSearch,
+  FiBox,
+  FiMonitor,
+  FiGitBranch,
+  FiActivity,
 } from "react-icons/fi";
-import { GiCheckedShield } from "react-icons/gi";
 import { FaUsers, FaLightbulb, FaShieldAlt, FaClock, FaDollarSign, FaHandsHelping } from "react-icons/fa";
+import { ReactNode } from "react";
 
-export const navItems = [
-  { title: "Home", path: "/" },
-  { title: "About", path: "/about" },
-  { title: "Services", path: "/service" },
-  { title: "Features", path: "/#features" },
-  { title: "Career", path: "/career" },
-  { title: "Contact", path: "/contact" },
+
+export interface NavItem {
+  title: string;
+  path?: string | any;
+  submenu?: {
+    heading: string;
+    items: {
+      icon?: ReactNode | any;
+      title: string;
+      desc?: string;
+      path?: string;
+      subItems?: { title: string; path: string }[];
+    }[];
+  }[];
+}
+
+export const navItems: NavItem[] = [
+  {
+    title: "Products",
+    path: "",
+    submenu: [
+      {
+        heading: "Build AI",
+        items: [
+          {
+            icon: FiCpu,
+            title: "For Generative AI",
+            desc: "Supervised fine-tuning and RLHF",
+            path: "/genai",
+          },
+          {
+            icon: AiOutlineRobot,
+            title: "For Physical AI",
+            desc: "Powering next-gen robotics",
+            path: "/physical_ai",
+          },
+          // {
+          //   icon: MdOutlineCarRepair,
+          //   title: "For Automotive",
+          //   desc: "Unlock L2 to L5 autonomy",
+          // },
+        ],
+      },
+      {
+        heading: "Train AI Models",
+        items: [
+          {
+            icon: FiBox,
+            title: "LLM Training Studio",
+            desc: "Train and fine-tune large language models at scale",
+            path:"/llm"
+          },
+          {
+            icon: MdOutlineDataObject,
+            title: "Data Annotation",
+            desc: "Annotated and labeled massive datasets for model training",
+            path:"/data-annotation"
+          },
+          {
+            icon: FiGitBranch,
+            title: "Distributed Training",
+            desc: "Accelerate training using multi-node GPU clusters",
+            path:"/distributed-training"
+          },
+          {
+            icon: FiActivity,
+            title: "Model Monitoring",
+            desc: "Track metrics, losses, and improvements in real time",
+            path:"/model-monitoring"
+          },
+        ],
+      },
+      {
+        heading: "Automation & Deployment",
+        items: [
+          {
+            icon: FiSettings,
+            title: "Workflow Automation",
+            desc: "Automate repetitive AI workflows and pipelines",
+            path: "/workflow-automation"
+          },
+          {
+            icon: TbApi,
+            title: "Model Inference API",
+            desc: "Deploy trained models instantly with scalable APIs",
+            path: "/model-inference-api"
+          },
+          {
+            icon: MdOutlineIntegrationInstructions,
+            title: "System Integrations",
+            desc: "Seamlessly connect with enterprise tools and data sources",
+            path: "/system-integrations"
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    title: "Enterprise",
+    path: "/enterprise",
+  },
+
+  {
+    title: "Services",
+    path: "",
+    submenu: [
+      {
+        heading: "Our Core Services",
+        items: [
+  {
+    icon: FiUsers,
+    title: "Staff Augmentation",
+    desc: "Hire top tech talent quickly — with less effort and at no cost",
+    path: "/staff-augmentation",
+  },
+  {
+    icon: FiCode,
+    title: "IT Development",
+    desc: "Custom software solutions for your business",
+    path: "/it-development",
+  },
+  {
+    icon: MdOutlineWork,
+    title: "Vetted Tech Talents",
+    desc: "Rigorously vetted tech talent seamlessly integrates into your workflow",
+    path: "/tech-talents",
+  },
+  {
+    icon: MdOutlinePrecisionManufacturing,
+    title: "LLM Training",
+    desc: "Train large language models efficiently",
+    path: "/llm",
+  },
+  {
+    icon: FiDatabase,
+    title: "Data Annotation",
+    desc: "Annotated and labeled datasets for better AI model performance.",
+    path: "/data-annotation",
+  },
+],
+
+      },
+    ],
+  },
+
+  {
+    title: "Customers",
+    path: "/customers",
+  },
+
+  {
+    title: "Resources",
+    path: "",
+    submenu: [
+      {
+        heading: "Explore More",
+        items: [
+          {
+            icon: FiInfo,
+            title: "About Us",
+            desc: "Learn more about our mission and team",
+            path: "/about",
+          },
+          {
+            icon: FiPhone,
+            title: "Contact Us",
+            desc: "Get in touch with our support and sales team",
+            path: "/form",
+          },
+          {
+            icon: FiBriefcase,
+            title: "Careers",
+            desc: "Join our fast-growing AI company",
+            path: "/careers",
+          },
+          {
+            icon: FiUsers,
+            title: "Vetted Hire Talent",
+            desc: "Build your dream team with our experts",
+            path: "/tech-talents",
+          },
+          // {
+          //   icon: FiBookOpen,
+          //   title: "Blog",
+          //   desc: "Insights and updates from our experts",
+          //   path: "/blog",
+          // },
+          // {
+          //   icon: FiSearch,
+          //   title: "Research",
+          //   desc: "Discover our latest research and innovations",
+          //   path: "/research",
+          // },
+        ],
+      },
+    ],
+  },
 ];
+
 
 export const services = [
   {
-    title: "Web Development",
-    subtitle: "Modern & scalable websites",
+    title: "Staff Augmentation",
+    subtitle: "Expand your team effortlessly",
     features: [
-      "Responsive UI/UX design",
-      "Next.js & React expertise",
-      "SEO & performance optimization",
+      "Hire top-tier engineers on-demand",
+      "Flexible scaling for any project size",
+      "Reduce hiring time and cost",
     ],
-    icon: "/assets/icons/WebDev.gif",
+    icon: "/assets/icons/staff-augmentation.gif",
   },
   {
-    title: "Mobile Development",
-    subtitle: "iOS & Android solutions",
+    title: "LLM Training",
+    subtitle: "Fine-tune AI for your business",
     features: [
-      "Cross-platform apps (React Native)",
-      "Smooth performance & UI",
-      "App store deployment support",
+      "Train custom large language models",
+      "Data curation & hyperparameter tuning",
+      "Deploy scalable inference systems",
     ],
-    icon: "/assets/icons/MobileDev.gif",
+    icon: "/assets/icons/llm-training.gif",
   },
   {
-    title: "Software Development",
-    subtitle: "Deploy, scale, and secure",
+    title: "AI Deployment",
+    subtitle: "Production-ready intelligence",
     features: [
-      "Custom software solutions",
-      "Integration & automation",
-      "Maintenance & support",
+      "Deploy AI models on web, cloud & edge",
+      "Optimize inference speed and accuracy",
+      "Real-time monitoring & retraining pipelines",
     ],
-    icon: "/assets/icons/SoftwareDev.gif",
+    icon: "/assets/icons/ai-deployment.gif",
   },
   {
-    title: "UI/UX Design",
-    subtitle: "User-focused experiences",
+    title: "AI Research & Development",
+    subtitle: "Innovate and explore new frontiers",
     features: [
-      "Wireframes & prototypes",
-      "Design systems & style guides",
-      "Accessibility best practices",
+      "Research-grade experimentation setups",
+      "Custom dataset creation & evaluation",
+      "Integration with scientific & industrial data",
     ],
-    icon: "/assets/icons/UIUX.gif",
+    icon: "/assets/icons/ai-research.gif",
   },
   {
-    title: "AI & Automation",
-    subtitle: "Future-ready innovations",
+    title: "Vetted Tech Talents",
+    subtitle: "Work with pre-screened experts",
     features: [
-      "Chatbots & assistants",
-      "Workflow automation",
-      "Data-driven insights",
+      "AI-vetted global tech talent network",
+      "Rigorous skill & communication testing",
+      "Match with the perfect developer in days",
     ],
-    icon: "/assets/icons/AI&Automation.gif",
+    icon: "/assets/icons/vetted-talents.gif",
   },
   {
-    title: "API Development",
-    subtitle: "Connect and scale systems",
+    title: "Data Annotation",
+    subtitle: "Prepare quality data for AI",
     features: [
-      "REST & GraphQL APIs",
-      "Third-party integrations",
-      "Secure authentication",
+      "Image, text & video labeling",
+      "Human-in-the-loop quality assurance",
+      "Custom annotation pipelines",
     ],
-    icon: "/assets/icons/APIDev.gif",
+    icon: "/assets/icons/data-annotation.gif",
   },
   {
-    title: "Cloud & DevOps",
-    subtitle: "Efficient and scalable infra",
+    title: "MLOps & Automation",
+    subtitle: "Scale AI with efficiency",
     features: [
-      "AWS, Azure, GCP expertise",
-      "CI/CD pipelines",
-      "Monitoring & optimization",
+      "CI/CD pipelines for AI models",
+      "Model versioning & reproducibility",
+      "Automated training and deployment workflows",
     ],
-    icon: "/assets/icons/Cloud&DevOps.gif",
+    icon: "/assets/icons/mlops.gif",
   },
   {
-    title: "Digital Marketing",
-    subtitle: "Boost online presence",
+    title: "AI Consulting",
+    subtitle: "Strategize your AI transformation",
     features: [
-      "SEO & SEM",
-      "Social media marketing",
-      "Content strategy",
+      "AI roadmap & adoption strategy",
+      "Model selection & architecture guidance",
+      "ROI-driven AI implementation planning",
     ],
-    icon: "/assets/icons/DigitalMarketing.gif",
+    icon: "/assets/icons/ai-consulting.gif",
   },
   {
-    title: "E-commerce",
-    subtitle: "Custom online stores",
+    title: "AI for Enterprises",
+    subtitle: "Industry-grade AI solutions",
     features: [
-      "Shopify, WooCommerce, Magento",
-      "Payment gateway integration",
-      "Analytics & growth tracking",
+      "Finance, healthcare, legal & logistics AI",
+      "Fraud detection & process optimization",
+      "Predictive analytics & automation tools",
     ],
-    icon: "/assets/icons/E-commerce.gif",
+    icon: "/assets/icons/enterprise-ai.gif",
   },
   {
-    title: "EdTech Solutions",
-    subtitle: "Smart learning platforms",
+    title: "Computer Vision",
+    subtitle: "Perception for intelligent systems",
     features: [
-      "LMS development",
-      "Interactive courses",
-      "Gamification features",
+      "Object detection & tracking",
+      "Face recognition & scene understanding",
+      "Video analytics for security & industry",
     ],
-    icon: "/assets/icons/EdTech.gif",
+    icon: "/assets/icons/computer-vision.gif",
   },
   {
-    title: "IT Support",
-    subtitle: "Reliable tech assistance",
+    title: "Natural Language Processing",
+    subtitle: "Understand human language",
     features: [
-      "Remote troubleshooting",
-      "Network monitoring",
-      "24/7 technical support",
+      "Chatbots, summarization & sentiment analysis",
+      "Named entity recognition & translation",
+      "Conversational AI & speech models",
     ],
-    icon: "/assets/icons/ITSupport.gif",
+    icon: "/assets/icons/nlp.gif",
   },
   {
-    title: "Online Shopping",
-    subtitle: "Next-gen shopping solutions",
+    title: "Robotics & Automation",
+    subtitle: "Intelligent physical systems",
     features: [
-      "Marketplace platforms",
-      "Product recommendation engines",
-      "Inventory management",
+      "Robot control with AI perception",
+      "Sensor fusion & simulation environments",
+      "Edge AI for autonomous systems",
     ],
-    icon: "/assets/icons/online-shopping.gif",
+    icon: "/assets/icons/robotics.gif",
   },
   {
-    title: "Tech Consultation",
-    subtitle: "Expert strategic advice",
+    title: "AI Talent Hiring",
+    subtitle: "Build world-class AI teams",
     features: [
-      "Digital transformation roadmaps",
-      "Technology audits",
-      "Process optimization",
+      "Hire top AI researchers & engineers",
+      "Flexible engagement models",
+      "End-to-end recruitment support",
     ],
-    icon: "/assets/icons/TechConsultation.gif",
+    icon: "/assets/icons/ai-talent.gif",
   },
 ];
+
 
 export const privacy = [
   {
@@ -405,78 +612,99 @@ export const termsAndCondition = [
 export const steps = [
   {
     id: 1,
-    title: "Discovery & Requirement Gathering",
-    desc: "We start by understanding your goals, challenges, and expectations. This stage builds the foundation for a customized.",
-    points: ["Wireframes & Architecture", "Tech Stack Finalization", "Timelines & Milestones"],
+    title: "Discovery & Data Strategy",
+    desc: "We begin by understanding your goals, data availability, and AI opportunities — defining a clear roadmap for intelligent transformation.",
+    points: [
+      "Business & AI Use-Case Analysis",
+      "Data Audit & Feasibility Study",
+      "AI Roadmap Definition",
+    ],
   },
   {
     id: 2,
-    title: "Planning & Architecture",
-    desc: "We design the roadmap, project architecture, and delivery plan based on the discovered requirements.",
-    points: ["Client Consultation", "Business Requirement Analysis", "Scope Definition"],
+    title: "Data Collection & Preparation",
+    desc: "Data is the fuel of AI — we collect, clean, and label datasets ensuring quality and representativeness for optimal model training.",
+    points: [
+      "Data Sourcing & Cleaning",
+      "Annotation & Labeling Pipelines",
+      "Feature Engineering & Validation",
+    ],
   },
   {
     id: 3,
-    title: "Design & Development",
-    desc: "From UX/UI to backend logic, our team builds the solution iteratively with regular updates and feedback cycles.",
-    points: ["UI/UX Design", "Frontend & Backend Development", "API Integrations"],
+    title: "Model Design & Development",
+    desc: "We build and fine-tune custom AI models tailored to your business needs — ensuring scalability, accuracy, and efficiency.",
+    points: [
+      "Model Selection & Training",
+      "Evaluation & Benchmarking",
+      "Iterative Optimization",
+    ],
   },
   {
     id: 4,
-    title: "Quality Assurance & Launch",
-    desc: "We ensure the product is stable, tested, and ready to launch — meeting performance and security benchmarks.",
-    points: ["Manual & Automated Testing", "Bug Fixing", "Deployment & Go-Live"],
+    title: "Deployment & Integration",
+    desc: "We integrate trained AI models into your products or infrastructure — delivering real-world, production-grade intelligence.",
+    points: [
+      "Cloud or Edge Deployment",
+      "API & System Integration",
+      "Performance Optimization",
+    ],
   },
   {
     id: 5,
-    title: "Post-Launch Support",
-    desc: "We don't just deliver — we stand by our clients with continuous updates, optimizations, and support.",
-    points: ["Performance Monitoring", "Feature Enhancements", "Ongoing Support & Maintenance"],
+    title: "Monitoring & Continuous Improvement",
+    desc: "AI never stops learning — we monitor performance, retrain with new data, and continuously enhance model accuracy over time.",
+    points: [
+      "Real-time Monitoring & Logging",
+      "Model Retraining & Updates",
+      "Ongoing Support & Optimization",
+    ],
   },
 ];
 
+
 export const features = [
   {
-    title: "Seamless Experience",
-    subtitle: "Smooth & Intuitive",
+    title: "Automated LLM Workflows",
+    subtitle: "AI-Powered Pipelines",
     description:
-      "Enjoy a user-friendly interface with smooth navigation and effortless interaction.",
-    icon: FiSmile,
+      "Streamline operations using fully automated workflows that leverage LLMs for decision-making, report generation, and optimization.",
+    icon: FiCpu,
   },
   {
-    title: "High Performance",
-    subtitle: "Fast & Reliable",
+    title: "Intelligent Data Processing",
+    subtitle: "Smart ETL Systems",
     description:
-      "Optimized for speed and efficiency to deliver results without delays.",
+      "Automatically clean, structure, and analyze data using AI-driven extraction and natural language understanding.",
+    icon: FiDatabase,
+  },
+  {
+    title: "Lightning Fast Inference",
+    subtitle: "Optimized for Scale",
+    description:
+      "Experience low-latency model inference powered by GPU-optimized serving and parallelized task execution.",
     icon: FiZap,
   },
   {
-    title: "Secure Platform",
-    subtitle: "Data Protection",
+    title: "Adaptive Fine-Tuning",
+    subtitle: "Continuous Learning",
     description:
-      "Your information is encrypted and safeguarded with advanced security protocols.",
-    icon: GiCheckedShield,
-  },
-  {
-    title: "Customizable",
-    subtitle: "Tailored for You",
-    description:
-      "Easily personalize settings and features to match your preferences.",
+      "Your models evolve with new data and feedback, enabling context-aware and dynamically improving AI systems.",
     icon: FiSettings,
   },
   {
-    title: "24/7 Support",
-    subtitle: "Always Available",
+    title: "Cloud-Native AI Stack",
+    subtitle: "Scalable Infrastructure",
     description:
-      "Get round-the-clock assistance from our dedicated support team.",
-    icon: FiHeadphones,
+      "Run large language models securely in the cloud with automated scaling, monitoring, and deployment pipelines.",
+    icon: FiCloud,
   },
   {
-    title: "Scalable Solution",
-    subtitle: "Grow Without Limits",
+    title: "Secure AI Environment",
+    subtitle: "Privacy & Compliance",
     description:
-      "Built to adapt as your needs expand, ensuring long-term usability.",
-    icon: FiTrendingUp,
+      "Built with data protection and ethical AI principles to ensure privacy, compliance, and responsible automation.",
+    icon: FiShield,
   },
 ];
 

@@ -8,18 +8,12 @@ const clientsImages = [
     "/assets/clients/1.png",
     "/assets/clients/2.png",
     "/assets/clients/3.png",
-    "/assets/clients/4.png",
+    "/assets/clients/4.webp",
     "/assets/clients/5.png",
     "/assets/clients/6.png",
-    "/assets/clients/7.png",
-    "/assets/clients/8.png",
+    "/assets/clients/8.jpg",
     "/assets/clients/9.png",
-    "/assets/clients/10.png",
-    "/assets/clients/11.png",
-    "/assets/clients/12.png",
-    "/assets/clients/13.png",
-    "/assets/clients/14.png",
-    "/assets/clients/15.png",
+    "/assets/clients/10.webp",
 ];
 
 export default function Clients() {
@@ -34,7 +28,7 @@ export default function Clients() {
                 <div className="text-center mb-12" data-aos="zoom-in">
                     <h2 className="text-3xl lg:text-5xl font-bold text-text-light mb-4">
                         Building Trust {" "}
-                        <span className="text-text-inverse ">
+                        <span className="text-grey-400">
                              Through Results 
                         </span>
                     </h2>
@@ -45,14 +39,12 @@ export default function Clients() {
 
                 <div className="relative flex flex-col gap-5 overflow-hidden">
                     {/* left fade */}
-                    <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div>
+                    {/* <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div> */}
 
                     {/* right fade */}
-                    <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-black via-black/70 to-transparent z-10"></div>
+                    {/* <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-black via-black/70 to-transparent z-10"></div> */}
 
-                    <Slider images={clientsImages.slice(0, 5)} direction="left" />
-                    <Slider images={clientsImages.slice(5, 10)} direction="right" />
-                    <Slider images={clientsImages.slice(10, 15)} direction="left" />
+    <Slider images={clientsImages} direction="left" />
                 </div>
 
             </div>
