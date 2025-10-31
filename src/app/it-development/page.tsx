@@ -41,32 +41,32 @@ export default function ITDevelopment() {
   // --- Features Section ---
   const featuresData = [
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_37PM.png",
       title: "Full-Cycle Development",
       desc: "From ideation and design to development, testing, and deployment — we handle every step with precision and agility.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_37PM.png",
       title: "Agile Methodology",
       desc: "We follow agile sprints and CI/CD pipelines to ensure faster delivery, flexibility, and continuous improvement.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_37PM.png",
       title: "Cutting-Edge Tech Stack",
       desc: "Our teams work with React, Next.js, Node.js, Python, Java, and cloud platforms like AWS, Azure, and GCP.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_37PM.png",
       title: "Secure & Scalable Architecture",
       desc: "We design architectures that handle growth, traffic, and data security seamlessly for long-term reliability.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_37PM.png",
       title: "DevOps & Automation",
       desc: "Leverage CI/CD, containerization, and infrastructure automation to accelerate delivery and reduce downtime.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_37PM.png",
       title: "Quality Assurance",
       desc: "We use advanced testing frameworks to ensure bug-free, high-performance solutions that meet global standards.",
     },
@@ -117,7 +117,7 @@ export default function ITDevelopment() {
       />
             
       {/* Collection Section */}
-      <CollectionSection data={collectionData} />
+      {/* <CollectionSection data={collectionData} /> */}
 
       {/* Logos Section */}
       <LogosSection
@@ -131,11 +131,11 @@ export default function ITDevelopment() {
 
 
       {/* Quote Section */}
-      <QuoteSection
+      {/* <QuoteSection
         quote="Technology is best when it brings people together and simplifies the complex."
         author="Tim Cook"
         designation="CEO, Apple"
-      />
+      /> */}
 
       {/* Improve Data Section */}
       <ImproveDataSection
@@ -147,7 +147,7 @@ export default function ITDevelopment() {
       {/* Info Split Section */}
       <InfoSplitSection
         title="Our approach focuses on blending creativity, technology, and strategy to deliver solutions that drive measurable impact — from startups to enterprises."
-        imageSrc="/software-dev-team.webp"
+        imageSrc="/Generated Image October 31, 2025 - 3_38PM.png"
         reverse
         backgroundColor="bg-[#0a0a0a]"
         gradientFrom="from-gray-900"
@@ -155,14 +155,14 @@ export default function ITDevelopment() {
       />
 
       {/* Cards + Stats Section */}
-      <CardsSection
+      {/* <CardsSection
         cards={cards}
         stats={stats}
         mapImageSrc="/global-map-light.svg"
         legends={legends}
         backgroundColor="bg-black"
         textColor="text-white"
-      />
+      /> */}
 
       {/* Closing Section */}
       <ImproveDataSection

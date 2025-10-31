@@ -17,19 +17,19 @@ export default function EnterpriseSolutions() {
 
   const collectionData = [
     {
-      image: "/enterprise-digital.webp",
+      image: "/Generated Image October 31, 2025 - 3_18PM.png",
       title: "Digital Transformation",
       description:
         "Empower your enterprise with digital-first strategies that streamline operations and drive innovation across all departments.",
     },
     {
-      image: "/cloud-enterprise.webp",
+      image: "/Generated Image October 31, 2025 - 3_18PM (1).png",
       title: "Cloud Migration & Modernization",
       description:
         "Migrate legacy systems to modern, cloud-native infrastructure for agility, scalability, and cost efficiency.",
     },
     {
-      image: "/data-integration.webp",
+      image: "/Generated Image October 31, 2025 - 3_18PM (2).png",
       title: "Data Integration & Analytics",
       description:
         "Unify data from multiple sources and leverage analytics to make smarter, data-driven business decisions.",
@@ -38,32 +38,32 @@ export default function EnterpriseSolutions() {
 
   const featuresData = [
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_16PM.png",
       title: "Enterprise-Grade Security",
       desc: "We follow best-in-class security and compliance standards to safeguard enterprise data and systems.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_16PM.png",
       title: "Custom ERP & CRM Solutions",
       desc: "Tailor-made enterprise tools for process automation, customer management, and business optimization.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_16PM.png",
       title: "AI-Powered Automation",
       desc: "Reduce manual work with intelligent automation powered by AI, ML, and process orchestration.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_18PM (1).png",
       title: "Cloud Scalability",
       desc: "Deploy workloads on hybrid or multi-cloud infrastructure with seamless scalability and performance.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_18PM (2).png",
       title: "Business Continuity",
       desc: "Ensure uptime and resilience with our robust disaster recovery and high-availability solutions.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_16PM.png",
       title: "Compliance & Governance",
       desc: "We help enterprises stay compliant with GDPR, SOC 2, ISO 27001, and other global standards.",
     },
@@ -123,11 +123,11 @@ export default function EnterpriseSolutions() {
       {/* Features Section */}
       <FeaturesSection features={featuresData} />
       
-
+{/* 
       <QuoteSection
         quote="The secret of change is to focus all your energy not on fighting the old, but on building the new."
         author="Socrates"
-      />
+      /> */}
 
       <ImproveDataSection
         tagText="TRANSFORM WITH CONFIDENCE"
@@ -137,7 +137,7 @@ export default function EnterpriseSolutions() {
 
       <InfoSplitSection
         title="We collaborate with enterprises to reimagine operations, enhance productivity, and unlock the full potential of their digital ecosystem."
-        imageSrc="/enterprise-team.webp"
+        imageSrc="/Generated Image October 31, 2025 - 3_17PM.png"
         reverse
         backgroundColor="bg-[#0a0a0a]"
         gradientFrom="from-gray-900"
@@ -147,7 +147,7 @@ export default function EnterpriseSolutions() {
       <CardsSection
         cards={cards}
         stats={stats}
-        mapImageSrc="/global-map-light.svg"
+        mapImageSrc="/Generated Image October 31, 2025 - 3_16PM (1).png"
         legends={legends}
         backgroundColor="bg-black"
         textColor="text-white"

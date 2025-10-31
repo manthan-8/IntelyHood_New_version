@@ -19,19 +19,19 @@ export default function SystemIntegrations() {
   // --- Collection Section ---
   const collectionData = [
     {
-      image: "/enterprise-integration.webp",
+      image: "/Generated Image October 31, 2025 - 2_58PM.png",
       title: "Unified Enterprise Connectivity",
       description:
         "Integrate your AI and data systems with ERP, CRM, and cloud environments — ensuring seamless data flow and operational harmony across business platforms.",
     },
     {
-      image: "/api-gateway.webp",
+      image: "/Generated Image October 31, 2025 - 2_56PM.png",
       title: "API Gateway & Middleware",
       description:
         "Connect disparate systems using REST, GraphQL, and WebSocket APIs. Our intelligent gateway standardizes communication between AI models and enterprise systems.",
     },
     {
-      image: "/data-sync.webp",
+      image: "/Generated Image October 31, 2025 - 2_56PM (1).png",
       title: "Real-Time Data Synchronization",
       description:
         "Eliminate data silos by enabling live sync between data lakes, ML pipelines, and analytics dashboards with automated schema alignment.",
@@ -41,32 +41,32 @@ export default function SystemIntegrations() {
   // --- Features Section ---
   const featuresData = [
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.53.57 PM.png",
       title: "Plug-and-Play Integration Layer",
       desc: "Connect to existing business systems like SAP, Salesforce, or Oracle with prebuilt connectors and API endpoints.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.54.01 PM.png",
       title: "Cross-Platform Data Exchange",
       desc: "Enable data to flow securely between cloud and on-prem systems without compromising privacy or compliance.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.54.04 PM.png",
       title: "AI Workflow Interoperability",
       desc: "Our integration layer allows your AI workflows to interact with external triggers and events across multiple systems.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.54.09 PM.png",
       title: "Event-Driven Architecture",
       desc: "Leverage real-time event streaming with Kafka and Pub/Sub to build reactive, automated data ecosystems.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.54.12 PM.png",
       title: "Secure Authentication Layer",
       desc: "Use OAuth2, SSO, and enterprise-grade encryption to ensure secure communication across integrated systems.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.54.16 PM.png",
       title: "Scalable Microservices Support",
       desc: "Modular and containerized architecture enables seamless integration with microservices and serverless environments.",
     },
@@ -131,11 +131,11 @@ export default function SystemIntegrations() {
 
 
       {/* Quote Section */}
-      <QuoteSection
+      {/* <QuoteSection
         quote="The power of AI multiplies when your systems work together seamlessly."
         author="Satya Nadella"
         designation="CEO, Microsoft"
-      />
+      /> */}
 
       {/* Improve Data Section */}
       <ImproveDataSection
@@ -147,7 +147,7 @@ export default function SystemIntegrations() {
       {/* Info Split Section */}
       <InfoSplitSection
         title="Integrate your AI infrastructure into every layer of the enterprise — from backend data systems to customer-facing applications — through secure APIs and event-based automation."
-        imageSrc="/integration-lab.webp"
+        imageSrc="/Generated Image October 31, 2025 - 2_56PM (4).png"
         reverse
         backgroundColor="bg-[#0a0a0a]"
         gradientFrom="from-gray-900"
@@ -158,7 +158,7 @@ export default function SystemIntegrations() {
       <CardsSection
         cards={cards}
         stats={stats}
-        mapImageSrc="/global-map-light.svg"
+        mapImageSrc="/Generated Image October 31, 2025 - 2_56PM (3).png"
         legends={legends}
         backgroundColor="bg-black"
         textColor="text-white"

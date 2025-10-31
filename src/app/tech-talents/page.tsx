@@ -19,19 +19,19 @@ export default function TechTalent() {
   // --- Collection Section ---
   const collectionData = [
     {
-      image: "/global-talent-network.webp",
+      image: "/Generated Image October 31, 2025 - 3_43PM.png",
       title: "Access World-Class Tech Talent",
       description:
         "Get access to a global pool of elite engineers, designers, and data experts — pre-vetted for technical excellence and cultural fit.",
     },
     {
-      image: "/scalable-team.webp",
+      image: "/Generated Image October 31, 2025 - 3_43PM (1).png",
       title: "Flexible Hiring Models",
       description:
         "Choose between full-time, part-time, or project-based engagements. Scale your team instantly as your business evolves.",
     },
     {
-      image: "/remote-collaboration.webp",
+      image: "/Generated Image October 31, 2025 - 3_43PM (2).png",
       title: "Seamless Remote Collaboration",
       description:
         "Empower your team with remote professionals who integrate smoothly with your workflows, tools, and company culture.",
@@ -41,32 +41,32 @@ export default function TechTalent() {
   // --- Features Section ---
   const featuresData = [
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_43PM (5).png",
       title: "Vetted Tech Professionals",
       desc: "We connect you with engineers who have been screened for technical skill, problem-solving, and communication ability.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_43PM (5).png",
       title: "Domain Expertise",
       desc: "Our network covers AI, data engineering, DevOps, cybersecurity, full-stack development, and more.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_43PM (5).png",
       title: "Rapid Onboarding",
       desc: "Hire within days, not weeks — our streamlined process gets top talent working on your projects quickly.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_43PM (5).png",
       title: "Managed Staffing Support",
       desc: "We handle contracts, payments, and logistics — letting you focus purely on innovation and growth.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_43PM (5).png",
       title: "Continuous Skill Development",
       desc: "We ensure our professionals stay updated with modern technologies and industry practices.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_43PM (5).png",
       title: "Global Reach, Local Impact",
       desc: "Tap into a worldwide talent pool while maintaining time zone compatibility and communication alignment.",
     },
@@ -131,11 +131,11 @@ export default function TechTalent() {
       
 
       {/* Quote Section */}
-      <QuoteSection
+      {/* <QuoteSection
         quote="The right talent doesn't just fill roles — it transforms possibilities into progress."
         author="Satya Nadella"
         designation="CEO, Microsoft"
-      />
+      /> */}
 
       {/* Improve Data Section */}
       <ImproveDataSection
@@ -147,7 +147,7 @@ export default function TechTalent() {
       {/* Info Split Section */}
       <InfoSplitSection
         title="Our tech talent solutions combine flexibility, reliability, and expertise — helping you grow your engineering capacity without the complexity of recruitment."
-        imageSrc="/remote-team-collab.webp"
+        imageSrc="/Generated Image October 31, 2025 - 3_43PM (4).png"
         reverse
         backgroundColor="bg-[#0a0a0a]"
         gradientFrom="from-gray-900"
@@ -158,7 +158,7 @@ export default function TechTalent() {
       <CardsSection
         cards={cards}
         stats={stats}
-        mapImageSrc="/global-map-light.svg"
+        mapImageSrc="/Generated Image October 31, 2025 - 3_43PM (3).png"
         legends={legends}
         backgroundColor="bg-black"
         textColor="text-white"

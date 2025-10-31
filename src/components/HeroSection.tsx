@@ -47,21 +47,24 @@ export default function HeroSection() {
       </div>
 
       {/* ✅ Right Side - Video Animation (30%) */}
-      <motion.div
-        className="relative mt-10 lg:mt-0 flex justify-center lg:w-[30%] w-full"
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.7, duration: 1.2 }}
-      >
-        <video
-          src="genaiAnimation.webm" // <-- replace with your animation/video file
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="rounded-2xl w-full max-w-sm filter grayscale h-[500px] object-cover"
-        />
-      </motion.div>
+<motion.div
+  className="relative mt-10 lg:mt-0 flex justify-center lg:w-[30%] w-full"
+  initial={{ opacity: 0, x: 100 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ delay: 0.7, duration: 1.2 }}
+>
+  <div className="bg-black p-[5px] rounded-2xl"> {/* black background wrapper */}
+    <video
+      src="/A_cinematic_8second_202510301620.mp4"
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="rounded-2xl w-[calc(100%+30px)] max-w-[calc(640px+30px)] filter grayscale h-[500px] object-cover"
+    />
+  </div>
+</motion.div>
+
 
       {/* ✅ Subtle Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />

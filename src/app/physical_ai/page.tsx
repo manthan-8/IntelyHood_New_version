@@ -36,32 +36,32 @@ export default function physicalai() {
 
     const featuresData = [
         {
-            icon: "/vercel.svg",
+            icon: "/Screenshot 2025-10-31 at 1.27.07 PM.png",
             title: "Real-World Data at Scale",
             desc: "Collect, process, and refine multimodal data — from sensors, cameras, and robotics — with global reach and precision.",
         },
         {
-            icon: "/vercel.svg",
+            icon: "/Screenshot 2025-10-31 at 1.27.12 PM.png",
             title: "Human-in-the-Loop Precision",
             desc: "Combine automated pipelines with domain experts for labeling, QA, and continuous improvement.",
         },
         {
-            icon: "/vercel.svg",
+            icon: "/Screenshot 2025-10-31 at 1.27.16 PM.png",
             title: "Simulation + Reality Integration",
             desc: "Leverage digital twins and physics-based simulations to complement physical-world datasets.",
         },
         {
-            icon: "/vercel.svg",
+            icon: "/Screenshot 2025-10-31 at 1.27.19 PM.png",
             title: "Autonomy-Ready Data",
             desc: "Purpose-built for robotics, autonomous vehicles, drones, and smart devices that rely on accurate, dynamic data.",
         },
         {
-            icon: "/vercel.svg",
+            icon: "/Screenshot 2025-10-31 at 1.27.26 PM.png",
             title: "Accelerated Model Training",
             desc: "Feed your models with real-time, structured, and verified data streams optimized for faster training cycles.",
         },
         {
-            icon: "/vercel.svg",
+            icon: "/Screenshot 2025-10-31 at 1.27.31 PM.png",
             title: "Responsible AI at the Edge",
             desc: "Designed for safety, privacy, and ethical AI deployment in the physical world.",
         },
@@ -106,7 +106,7 @@ export default function physicalai() {
                 title="Physical AI Data Engine"
                 subtitle="Bridging the Physical and Digital Worlds with Intelligent Data."
                 buttonText="Book a Demo"
-                videoSrc="/genaiAnimation.webm"
+                imageSrc=""
             />
 
             <LogosSection
@@ -132,7 +132,7 @@ export default function physicalai() {
 
             <InfoSplitSection
                 title="Our hybrid model integrates automated pipelines, simulation tools, and expert review to deliver verified physical data for enterprise-scale AI applications — from autonomous systems to industrial robotics."
-                imageSrc="/ai-robot-lab.webp"
+                imageSrc="/Generated Image October 31, 2025 - 12_12PM.png"
                 reverse
                 backgroundColor="bg-[#0a0a0a]"
                 gradientFrom="from-gray-900"

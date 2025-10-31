@@ -19,19 +19,19 @@ export default function DistributedTraining() {
   // --- Collection Section ---
   const collectionData = [
     {
-      image: "/gpu-clusters.webp",
+      image: "/Generated Image October 31, 2025 - 1_46PM.png",
       title: "Distributed GPU Clusters",
       description:
         "Run massive model training workloads across synchronized GPU clusters, designed for stability, speed, and resource efficiency.",
     },
     {
-      image: "/parallel-compute.webp",
+      image: "/Generated Image October 31, 2025 - 1_46PM (1).png",
       title: "Parallelized Compute Pipelines",
       description:
         "Leverage advanced data and model parallelization to optimize training throughput while minimizing communication overhead.",
     },
     {
-      image: "/scaling-infra.webp",
+      image: "/Generated Image October 31, 2025 - 1_46PM (2).png",
       title: "Dynamic Scaling Infrastructure",
       description:
         "Intelligently scale up or down compute resources in real time — achieving optimal performance across thousands of nodes.",
@@ -41,32 +41,32 @@ export default function DistributedTraining() {
   // --- Features Section ---
   const featuresData = [
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.45.51 PM.png",
       title: "High-Performance Distributed Systems",
       desc: "Optimized compute clusters designed for seamless scaling of large language and vision models across multi-GPU environments.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.45.55 PM.png",
       title: "Data & Model Parallelism",
       desc: "Maximize efficiency through hybrid parallelism — combining tensor, pipeline, and data parallel techniques for balanced workload distribution.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.45.59 PM.png",
       title: "Fault Tolerance & Recovery",
       desc: "Our resilient architecture includes automatic checkpointing, job retries, and synchronization rollback mechanisms to prevent data loss.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.46.04 PM.png",
       title: "Optimized Communication Layer",
       desc: "Low-latency data transfer using NCCL, InfiniBand, and RDMA ensures consistent synchronization across multi-node clusters.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.46.08 PM.png",
       title: "Resource-Aware Scheduling",
       desc: "Intelligent scheduling engines allocate compute resources dynamically, preventing bottlenecks and ensuring workload balance.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.46.12 PM.png",
       title: "Cross-Cloud Integration",
       desc: "Unified training orchestration across AWS, Azure, and GCP — enabling flexible, hybrid distributed learning environments.",
     },
@@ -131,11 +131,11 @@ export default function DistributedTraining() {
 
 
       {/* Quote Section */}
-      <QuoteSection
+      {/* <QuoteSection
         quote="Scaling large models isn’t just about adding GPUs — it’s about designing systems that think in parallel."
         author="Andrew Ng"
         designation="Founder, DeepLearning.AI"
-      />
+      /> */}
 
       {/* Improve Data Section */}
       <ImproveDataSection
@@ -147,7 +147,7 @@ export default function DistributedTraining() {
       {/* Split Info Section */}
       <InfoSplitSection
         title="Our distributed training engine combines dynamic resource allocation, synchronized checkpointing, and multi-cloud orchestration — ensuring your large-scale AI training runs are efficient, resilient, and cost-effective."
-        imageSrc="/distributed-system-lab.webp"
+        imageSrc="/Generated Image October 31, 2025 - 1_46PM (4).png"
         reverse
         backgroundColor="bg-[#0a0a0a]"
         gradientFrom="from-gray-900"
@@ -158,7 +158,7 @@ export default function DistributedTraining() {
       <CardsSection
         cards={cards}
         stats={stats}
-        mapImageSrc="/global-map-light.svg"
+        mapImageSrc="/Generated Image October 31, 2025 - 1_46PM (3).png"
         legends={legends}
         backgroundColor="bg-black"
         textColor="text-white"

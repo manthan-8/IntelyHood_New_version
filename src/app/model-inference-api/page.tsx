@@ -41,32 +41,32 @@ export default function ModelInferenceAPI() {
   // --- Features Section ---
   const featuresData = [
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.54.31 PM.png",
       title: "Ultra-Low Latency APIs",
       desc: "Deploy models with sub-100ms response times using optimized runtime environments and GPU-accelerated inference layers.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.54.35 PM.png",
       title: "Multi-Model Endpoints",
       desc: "Host multiple models under unified APIs, enabling smart routing and A/B testing across different model versions.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.54.39 PM.png",
       title: "Auto-Scaling Infrastructure",
       desc: "Our inference engine dynamically scales compute instances to meet demand, ensuring consistent performance at any load.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.54.44 PM.png",
       title: "Streaming Inference Support",
       desc: "Enable token-level or frame-level streaming for conversational and vision-based models with real-time response delivery.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.54.47 PM.png",
       title: "Customizable Deployment Options",
       desc: "Deploy models across cloud, edge, or on-prem environments — optimized for privacy, cost, and performance.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.54.51 PM.png",
       title: "Monitoring & Usage Analytics",
       desc: "Track API usage, latency, error rates, and model drift through detailed dashboards and automated reports.",
     },
@@ -117,7 +117,7 @@ export default function ModelInferenceAPI() {
       />
 
       {/* Collection Section */}
-      <CollectionSection data={collectionData} />
+      {/* <CollectionSection data={collectionData} /> */}
       
       {/* Logos */}
       <LogosSection
@@ -131,11 +131,11 @@ export default function ModelInferenceAPI() {
       
 
       {/* Quote Section */}
-      <QuoteSection
+      {/* <QuoteSection
         quote="The intelligence of your AI depends not just on the model — but on how fast and reliably it delivers insights."
         author="Sundar Pichai"
         designation="CEO, Google"
-      />
+      /> */}
 
       {/* Improve Data Section */}
       <ImproveDataSection
@@ -147,7 +147,7 @@ export default function ModelInferenceAPI() {
       {/* Split Info Section */}
       <InfoSplitSection
         title="Our inference layer unifies GPU acceleration, intelligent caching, and auto-scaling — ensuring every model prediction is delivered with maximum efficiency and minimum latency."
-        imageSrc="/inference-lab.webp"
+        imageSrc="/Generated Image October 31, 2025 - 2_56PM (5).png"
         reverse
         backgroundColor="bg-[#0a0a0a]"
         gradientFrom="from-gray-900"
@@ -158,7 +158,7 @@ export default function ModelInferenceAPI() {
       <CardsSection
         cards={cards}
         stats={stats}
-        mapImageSrc="/global-map-light.svg"
+        mapImageSrc="/Generated Image October 31, 2025 - 3_09PM.png"
         legends={legends}
         backgroundColor="bg-black"
         textColor="text-white"
