@@ -19,19 +19,19 @@ export default function WorkflowAutomation() {
   // --- Collection Section ---
   const collectionData = [
     {
-      image: "/ai-pipeline.webp",
+      image: "/Generated Image October 31, 2025 - 2_40PM (3).png",
       title: "End-to-End Pipeline Automation",
       description:
         "Orchestrate data ingestion, preprocessing, training, and deployment automatically — reducing manual intervention and errors.",
     },
     {
-      image: "/workflow-intelligence.webp",
+      image: "/Generated Image October 31, 2025 - 2_40PM (2).png",
       title: "Intelligent Orchestration",
       description:
         "AI-driven automation dynamically schedules and optimizes pipelines based on data readiness, dependency graphs, and compute load.",
     },
     {
-      image: "/deployment-automation.webp",
+      image: "/Generated Image October 31, 2025 - 2_40PM (1).png",
       title: "Continuous Deployment Workflows",
       description:
         "Deploy new models, trigger retraining, and manage version rollouts seamlessly with CI/CD integrations and zero-downtime releases.",
@@ -41,32 +41,32 @@ export default function WorkflowAutomation() {
   // --- Features Section ---
   const featuresData = [
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.39.33 PM.png",
       title: "Smart Workflow Orchestration",
       desc: "Automate complex data and ML pipelines using intelligent triggers, condition-based flows, and adaptive scheduling.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.39.38 PM.png",
       title: "Cross-Platform Integrations",
       desc: "Seamlessly connect with tools like Airflow, Kubeflow, MLflow, and Jenkins to unify your AI workflow ecosystem.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.39.42 PM.png",
       title: "Error Detection & Auto-Recovery",
       desc: "Self-healing workflows automatically detect job failures, retry failed steps, and resume from checkpoints.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.39.47 PM.png",
       title: "Human-in-the-Loop Control",
       desc: "Enable manual approvals for critical workflow steps while keeping automation at the core for speed and safety.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.39.52 PM.png",
       title: "Scalable Execution Engine",
       desc: "Run thousands of concurrent workflow jobs with distributed orchestration and compute-aware task scheduling.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 2.39.57 PM.png",
       title: "Auditability & Compliance",
       desc: "Built-in tracking, versioning, and logging ensure every workflow meets enterprise-grade audit and compliance standards.",
     },
@@ -147,7 +147,7 @@ export default function WorkflowAutomation() {
       {/* Split Info Section */}
       <InfoSplitSection
         title="We unify your ML lifecycle — from data prep to model serving — into an intelligent, automated system that ensures consistency, traceability, and performance across every deployment."
-        imageSrc="/workflow-automation-lab.webp"
+        imageSrc="/Generated Image October 31, 2025 - 2_40PM.png"
         reverse
         backgroundColor="bg-[#0a0a0a]"
         gradientFrom="from-gray-900"
@@ -158,7 +158,7 @@ export default function WorkflowAutomation() {
       <CardsSection
         cards={cards}
         stats={stats}
-        mapImageSrc="/global-map-light.svg"
+        mapImageSrc="/Generated Image October 31, 2025 - 2_40PM (4).png"
         legends={legends}
         backgroundColor="bg-black"
         textColor="text-white"

@@ -53,32 +53,32 @@ export default function genai() {
 
  const featuresData = [
   {
-    icon: "/vercel.svg",
+    icon: "/Screenshot 2025-10-31 at 12.01.54 PM.png",
     title: "Ops Center for Data Integrity",
     desc: "Gain real-time visibility and control over every step of dataset creation, validation, and optimization.",
   },
   {
-    icon: "/vercel.svg",
+    icon: "/Screenshot 2025-10-31 at 12.01.58 PM.png",
     title: "Global Expert Network",
     desc: "Tap into a vetted ecosystem of linguists, engineers, and domain specialists — delivering data precision across every language, industry, and modality.",
   },
   {
-    icon: "/vercel.svg",
+    icon: "/Screenshot 2025-10-31 at 12.02.02 PM.png",
     title: "Model Performance Boost",
     desc: "Empower your Generative AI with advanced, high-quality data pipelines built for scalability and precision.",
   },
   {
-    icon: "/vercel.svg",
+    icon: "/Screenshot 2025-10-31 at 12.02.06 PM.png",
     title: "Data Efficiency at Scale",
     desc: "Accelerate dataset generation with intelligent automation and human-in-the-loop efficiency.",
   },
   {
-    icon: "/vercel.svg",
+    icon: "/Screenshot 2025-10-31 at 12.02.09 PM.png",
     title: "Continuous Model Evaluation",
     desc: "Identify blind spots and enhance model resilience through proactive benchmarking and red-teaming.",
   },
   {
-    icon: "/vercel.svg",
+    icon: "/Screenshot 2025-10-31 at 12.02.12 PM.png",
     title: "Responsible AI Development",
     desc: "Ensure every dataset aligns with ethical standards — prioritizing fairness, transparency, and data privacy.",
   },
@@ -91,7 +91,7 @@ export default function genai() {
         title="Generative AI Data Engine"
         subtitle="Powering the Next Wave of Intelligent Systems"
         buttonText="Book a Demo"
-        videoSrc="/genaiAnimation.webm"
+        videoSrc="/A_hypercinematic_8second_202510301704.mp4"
       />
       
       <LogosSection
@@ -101,7 +101,7 @@ export default function genai() {
     />
     <ModelTrainingFlow
         title="Model Training Flow"
-        imageSrc="/generative_ai.jpg"
+        imageSrc="/Generated Image October 31, 2025 - 11_52AM.png"
         note="Pre-Training, Post-Training, and Deployment are managed by customers"
       />
 
@@ -113,7 +113,7 @@ export default function genai() {
 
        <InfoSplitSection
         title="Generative AI Data Engine seamlessly integrates advanced automation with human-in-the-loop intelligence to deliver high-fidelity, domain-optimized training data — precisely aligned with your AI vision, accelerating innovation and model excellence at scale."
-        imageSrc="/Gen_Ai.webp"
+        imageSrc="/Generated Image October 31, 2025 - 11_56AM.png"
       />
       <ImproveDataSection
         tagText="BUILD AI"
@@ -123,12 +123,12 @@ export default function genai() {
 
      <FeaturesSection features={featuresData} />
       
-    <QuoteSection
+    {/* <QuoteSection
         quote="The Future of AI Starts Here"
         author="Reimagine what’s possible when data, automation, and intelligence converge.
 Your next breakthrough model begins with the right data engine."
         designation=""
-      />
+      /> */}
 
 
 

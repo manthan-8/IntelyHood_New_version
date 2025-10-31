@@ -19,19 +19,19 @@ export default function LLMTrainingData() {
   // --- Collection Section ---
   const collectionData = [
     {
-      image: "/dataset-lab.webp",
+      image: "/Generated Image October 31, 2025 - 12_31PM.png",
       title: "Language & Knowledge Labs",
       description:
         "Curating linguistic, semantic, and domain-specific text data — from scientific research and enterprise documents to conversational logs.",
     },
     {
-      image: "/prompt-generation.webp",
+      image: "/Generated Image October 31, 2025 - 12_31PM (1).png",
       title: "Prompt & Response Generation",
       description:
         "Automated systems generate and refine diverse prompt–response pairs, supporting creative, analytical, and technical reasoning.",
     },
     {
-      image: "/reinforcement-feedback.webp",
+      image: "/Generated Image October 31, 2025 - 12_32PM.png",
       title: "Human Feedback & RLHF",
       description:
         "Integrating human-in-the-loop feedback pipelines to align model behavior with human intent, values, and contextual nuance.",
@@ -41,32 +41,32 @@ export default function LLMTrainingData() {
   // --- Features Section ---
   const featuresData = [
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 12_12PM.png",
       title: "High-Fidelity Text Datasets",
       desc: "We source and curate domain-specific datasets from verified, multilingual corpora to maximize linguistic precision and factual grounding.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 12_31PM (1).png",
       title: "Human-Centered Curation",
       desc: "Linguists, domain experts, and researchers continuously review data to ensure contextual accuracy, tone, and ethical representation.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 12_31PM.png",
       title: "Model Evaluation & Benchmarking",
       desc: "Integrated evaluation suite detects hallucinations, bias, and performance gaps across reasoning, summarization, and dialogue tasks.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 12_32PM.png",
       title: "Multilingual Adaptation",
       desc: "Data pipelines designed for 60+ languages — optimized for global deployment across legal, healthcare, and enterprise sectors.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 12_37PM.png",
       title: "Accelerated Model Training",
       desc: "Delivering structured, clean, and deduplicated data optimized for GPU/TPU acceleration — reducing cost and training cycles.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 12_38PM.png",
       title: "Ethical AI Development",
       desc: "Every dataset is privacy-compliant, bias-tested, and aligned with responsible AI standards for transparent model behavior.",
     },
@@ -132,11 +132,11 @@ export default function LLMTrainingData() {
 
 
       {/* Quote Section */}
-      <QuoteSection
+      {/* <QuoteSection
         quote="High-quality, well-curated data isn’t just fuel for AI — it’s the architecture of intelligence itself."
         author="Dario Amodei"
         designation="Co-Founder, Anthropic"
-      />
+      /> */}
 
       {/* Improve Data Section */}
       <ImproveDataSection
@@ -148,7 +148,7 @@ export default function LLMTrainingData() {
       {/* Split Info Section */}
       <InfoSplitSection
         title="From raw data to aligned intelligence — our pipeline spans data sourcing, de-duplication, semantic annotation, RLHF feedback, and model evaluation. Every step ensures transparency, ethics, and linguistic depth."
-        imageSrc="/llm-data-lab.webp"
+        imageSrc="/Generated Image October 31, 2025 - 12_37PM.png"
         reverse
         backgroundColor="bg-[#0a0a0a]"
         gradientFrom="from-gray-900"
@@ -159,7 +159,7 @@ export default function LLMTrainingData() {
       <CardsSection
         cards={cards}
         stats={stats}
-        mapImageSrc="/global-map-light.svg"
+        mapImageSrc="/Generated Image October 31, 2025 - 12_38PM.png"
         legends={legends}
         backgroundColor="bg-black"
         textColor="text-white"

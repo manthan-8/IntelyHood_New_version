@@ -19,19 +19,19 @@ export default function StaffAugmentation() {
   // --- Collection Section ---
   const collectionData = [
     {
-      image: "/remote-team.webp",
+      image: "/Generated Image October 31, 2025 - 3_28PM.png",
       title: "Build High-Performance Teams On-Demand",
       description:
         "Access pre-vetted software engineers, AI experts, designers, and project managers to instantly scale your development capacity — without the overhead of hiring full-time staff.",
     },
     {
-      image: "/global-talent.webp",
+      image: "/Generated Image October 31, 2025 - 3_28PM (1).png",
       title: "Global Talent Network",
       description:
         "We connect you with top professionals across AI, cloud, full-stack, and DevOps — ensuring quality talent aligned with your technology stack and business goals.",
     },
     {
-      image: "/scalable-team.webp",
+      image: "/Generated Image October 31, 2025 - 3_28PM (2).png",
       title: "Flexible Engagement Models",
       description:
         "Choose hourly, monthly, or project-based models. Scale up or down anytime based on your project requirements and deadlines.",
@@ -41,32 +41,32 @@ export default function StaffAugmentation() {
   // --- Features Section ---
   const featuresData = [
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_28PM (3).png",
       title: "Dedicated Remote Developers",
       desc: "Hire highly skilled developers who work exclusively on your projects, maintaining full alignment with your vision and timeline.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_28PM (3).png",
       title: "Tech Expertise Across Domains",
       desc: "Our professionals specialize in AI, Data Science, Full Stack Development, UI/UX Design, and Cloud Infrastructure.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_28PM (3).png",
       title: "Transparent Communication",
       desc: "Daily stand-ups, progress reports, and real-time tracking ensure smooth collaboration and accountability.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_28PM (3).png",
       title: "Zero Recruitment Overhead",
       desc: "Skip the long hiring cycles. We handle screening, onboarding, and management while you focus on core business.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_28PM (3).png",
       title: "Enterprise-Grade Security",
       desc: "All our contracts include NDAs and IP protection to safeguard your business data and proprietary technology.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_28PM (3).png",
       title: "Scalable Resource Pool",
       desc: "Instantly add developers, designers, or data scientists as your project evolves — no red tape, no delay.",
     },
@@ -147,7 +147,7 @@ export default function StaffAugmentation() {
       {/* Info Split Section */}
       <InfoSplitSection
         title="We combine technology expertise, flexible contracts, and a global talent pool to provide staffing solutions that fit your project perfectly — from startups to Fortune 500s."
-        imageSrc="/team-collaboration.webp"
+        imageSrc="/Generated Image October 31, 2025 - 3_29PM.png"
         reverse
         backgroundColor="bg-[#0a0a0a]"
         gradientFrom="from-gray-900"
@@ -158,7 +158,7 @@ export default function StaffAugmentation() {
       <CardsSection
         cards={cards}
         stats={stats}
-        mapImageSrc="/global-map-light.svg"
+        mapImageSrc="/Generated Image October 31, 2025 - 3_28PM (4).png"
         legends={legends}
         backgroundColor="bg-black"
         textColor="text-white"

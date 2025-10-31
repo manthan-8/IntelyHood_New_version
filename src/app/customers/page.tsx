@@ -17,19 +17,19 @@ export default function CustomerSuccess() {
 
   const collectionData = [
     {
-      image: "/customer-insights.webp",
+      image: "/Generated Image October 31, 2025 - 3_49PM (1).png",
       title: "Customer Insights & Analytics",
       description:
         "Understand customer behavior deeply using AI-driven analytics and real-time feedback systems.",
     },
     {
-      image: "/omnichannel-support.webp",
+      image: "/Generated Image October 31, 2025 - 3_48PM.png",
       title: "Omnichannel Engagement",
       description:
         "Deliver consistent and personalized experiences across web, mobile, chat, and social platforms.",
     },
     {
-      image: "/retention-strategies.webp",
+      image: "/Generated Image October 31, 2025 - 3_49PM (2).png",
       title: "Retention & Loyalty Programs",
       description:
         "Boost customer lifetime value with predictive retention models and personalized loyalty strategies.",
@@ -38,32 +38,32 @@ export default function CustomerSuccess() {
 
   const featuresData = [
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_49PM (3).png",
       title: "Data-Driven Decision Making",
       desc: "Leverage analytics and customer data to improve engagement and satisfaction.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_49PM (3).png",
       title: "AI-Powered Support",
       desc: "Use intelligent chatbots and automation to deliver faster, smarter, and more personalized responses.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_49PM (3).png",
       title: "Feedback Loops",
       desc: "Gather, analyze, and act on customer feedback to continuously improve products and services.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_49PM (3).png",
       title: "Customer Journey Mapping",
       desc: "Visualize and optimize the complete customer lifecycle from acquisition to retention.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_49PM (3).png",
       title: "CRM Integration",
       desc: "Integrate seamlessly with Salesforce, HubSpot, and other CRM tools to centralize insights.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Generated Image October 31, 2025 - 3_49PM (3).png",
       title: "24/7 Support Enablement",
       desc: "Empower your support team with automation and real-time dashboards for better performance.",
     },
@@ -108,7 +108,7 @@ export default function CustomerSuccess() {
         title="Customer Success Solutions"
         subtitle="Empower your teams to deliver exceptional experiences and long-term customer loyalty through smart engagement tools."
         buttonText="Explore Solutions"
-        videoSrc="/customerSuccessHero.webm"
+        imageSrc="/Generated Image October 31, 2025 - 3_49PM (3).png"
       />
       
       <CollectionSection data={collectionData} />
@@ -121,18 +121,18 @@ export default function CustomerSuccess() {
 
       <FeaturesSection features={featuresData} />
 
-      <QuoteSection
+      {/* <QuoteSection
         quote="Customer success is about more than service — it’s about creating value at every interaction."
         author="Brian Halligan"
         designation="CEO, HubSpot"
-      />
+      /> */}
 
       <ImproveDataSection
         tagText="EMPOWER YOUR CUSTOMER EXPERIENCE"
         title="Make Every Interaction Meaningful"
         subtitle="We help you understand, engage, and retain your customers with intelligent, data-driven success strategies."
       />
-
+{/* 
       <InfoSplitSection
         title="Our customer success framework combines technology, analytics, and empathy to turn every customer into a long-term partner."
         imageSrc="/customer-support-team.webp"
@@ -140,12 +140,12 @@ export default function CustomerSuccess() {
         backgroundColor="bg-[#0a0a0a]"
         gradientFrom="from-gray-900"
         gradientTo="to-black"
-      />
+      /> */}
 
       <CardsSection
         cards={cards}
         stats={stats}
-        mapImageSrc="/global-map-light.svg"
+        mapImageSrc="/Generated Image October 31, 2025 - 3_49PM.png"
         legends={legends}
         backgroundColor="bg-black"
         textColor="text-white"

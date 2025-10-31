@@ -12,8 +12,9 @@ interface HeroProps {
   bottomText?: string;
   bottomLinkText?: string;
   bottomLink?: string;
-  reverse?: boolean; // <-- new prop
+  reverse?: boolean;
 }
+
 export default function HeroSection({
   title,
   subtitle,
@@ -26,26 +27,29 @@ export default function HeroSection({
   bottomLink = "#",
   reverse = false,
 }: HeroProps) {
-
   return (
     <section
-      className={`bg-black text-white min-h-screen w-full flex flex-col justify-center items-center px-6 md:px-20 md:flex-row md:justify-between ${
+      className={`bg-black text-white min-h-screen w-full flex flex-col-reverse md:flex-row items-center justify-center md:justify-between px-6 md:px-12 lg:px-14 pt-12 md:pt-8 lg:pt-12 ${
         reverse ? "md:flex-row-reverse" : ""
       }`}
     >
       {/* Left (or Right if reversed) */}
-      <div className="max-w-xl text-center md:text-left relative">
-        <h1 className="text-4xl md:text-6xl font-semibold mb-4">{title}</h1>
-        <p className="text-lg text-gray-300 mb-8">{subtitle}</p>
+      <div className="max-w-xl text-center md:text-left mt-10 md:mt-0">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+          {title}
+        </h1>
+        <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed">
+          {subtitle}
+        </p>
 
         <a href={buttonLink}>
-          <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition">
+          <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition-transform transform hover:scale-105">
             {buttonText} →
           </button>
         </a>
 
         {bottomText && (
-          <p className="absolute bottom-10 text-sm text-gray-400 text-center w-full">
+          <p className="mt-10 text-sm text-gray-400 text-center md:text-left">
             {bottomText}{" "}
             {bottomLinkText && (
               <a
@@ -60,27 +64,27 @@ export default function HeroSection({
       </div>
 
       {/* Right (or Left if reversed) */}
-      <div className="mt-10 md:mt-0">
-  {imageSrc ? (
-    <Image
-      src={imageSrc}
-      alt="AI visualization"
-      width={500}
-      height={500}
-      className="object-contain"
-    />
-  ) : (
-    <video
-      src={videoSrc || "/defaultVideo.mp4"} // fallback video if needed
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="object-contain rounded-2xl w-full max-w-sm h-[500px] object-cover"
-    />
-  )}
-</div>
-
+      <div className="flex justify-center md:justify-end w-full md:w-1/2 mb-10 md:mb-0">
+        {imageSrc ? (
+          <Image
+            src={imageSrc}
+            alt="AI visualization"
+            width={500}
+            height={500}
+            className="object-contain w-[80%] sm:w-[60%] md:w-[90%] lg:w-[500px] mx-auto rounded-2xl"
+            priority
+          />
+        ) : (
+          <video
+            src={videoSrc || "/defaultVideo.mp4"}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-cover rounded-2xl w-[80%] sm:w-[60%] md:w-[90%] lg:w-[500px] mx-auto shadow-lg"
+          />
+        )}
+      </div>
     </section>
   );
 }

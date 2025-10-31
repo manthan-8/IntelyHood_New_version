@@ -19,19 +19,19 @@ export default function DataAnnotation() {
   // --- Collection Section ---
   const collectionData = [
     {
-      image: "/annotation-lab.webp",
+      image: "/Generated Image October 31, 2025 - 1_31PM.png",
       title: "Annotation Labs",
       description:
         "Expert-led labeling hubs equipped with proprietary annotation tools and multi-modal interfaces for text, vision, and speech data.",
     },
     {
-      image: "/human-in-loop.webp",
+      image: "/Generated Image October 31, 2025 - 1_31PM (1).png",
       title: "Human-in-the-Loop Systems",
       description:
         "Real-time collaboration between annotators and AI validators ensures accurate, bias-free, and context-aware dataset creation.",
     },
     {
-      image: "/quality-assurance.webp",
+      image: "/Generated Image October 31, 2025 - 1_31PM (2).png",
       title: "Quality Assurance Pipelines",
       description:
         "Each dataset passes through multi-stage QA — combining automation, peer review, and domain-specific validation layers.",
@@ -41,32 +41,32 @@ export default function DataAnnotation() {
   // --- Features Section ---
   const featuresData = [
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.34.37 PM.png",
       title: "Multi-Modal Annotation",
       desc: "Text, image, audio, and video annotation capabilities under one infrastructure — ensuring seamless integration for complex AI models.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.34.41 PM.png",
       title: "Human + Machine Efficiency",
       desc: "AI-assisted labeling tools accelerate workflows while maintaining human-level judgment for edge cases and contextual accuracy.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.34.44 PM.png",
       title: "Scalable Annotation Infrastructure",
       desc: "Our cloud-based platform handles millions of data points daily — optimized for enterprise AI, LLMs, and autonomous systems.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.34.47 PM.png",
       title: "Advanced Quality Control",
       desc: "Layered QA pipelines identify inconsistencies, bias, and labeling drift — ensuring reliable ground truth for model training.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.34.50 PM.png",
       title: "Ethical & Secure Operations",
       desc: "Data is handled with end-to-end encryption, anonymization, and compliance with GDPR, HIPAA, and ISO data privacy standards.",
     },
     {
-      icon: "/vercel.svg",
+      icon: "/Screenshot 2025-10-31 at 1.34.55 PM.png",
       title: "Domain-Specific Expertise",
       desc: "Specialized annotation teams in healthcare, finance, manufacturing, and linguistics ensure datasets are relevant and reliable.",
     },
@@ -131,11 +131,11 @@ export default function DataAnnotation() {
       
 
       {/* Quote Section */}
-      <QuoteSection
+      {/* <QuoteSection
         quote="True AI performance begins with the integrity of the data it’s trained on. Annotation is not a task — it’s a craft."
         author="Fei-Fei Li"
         designation="Co-Director, Stanford Human-Centered AI"
-      />
+      /> */}
 
       {/* Improve Data Section */}
       <ImproveDataSection
@@ -147,7 +147,7 @@ export default function DataAnnotation() {
       {/* Split Info Section */}
       <InfoSplitSection
         title="Data annotation is the foundation of every successful AI model. Our pipeline spans from pre-labeling automation to continuous human QA, ensuring consistency, fairness, and contextual understanding."
-        imageSrc="/annotation-process.webp"
+        imageSrc="/Generated Image October 31, 2025 - 1_39PM copy.png"
         reverse
         backgroundColor="bg-[#0a0a0a]"
         gradientFrom="from-gray-900"
@@ -158,7 +158,7 @@ export default function DataAnnotation() {
       <CardsSection
         cards={cards}
         stats={stats}
-        mapImageSrc="/global-map-light.svg"
+        mapImageSrc="/Generated Image October 31, 2025 - 1_39PM.png"
         legends={legends}
         backgroundColor="bg-black"
         textColor="text-white"
