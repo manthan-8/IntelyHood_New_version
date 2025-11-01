@@ -34,7 +34,7 @@ export function ServiceCard() {
               >
                 {/* Icon */}
                 <div className="flex items-center justify-center text-white mb-4">
-                  <FiCheckCircle size={40} />
+                  <c.icon className="text-3xl text-white-400" />
                 </div>
 
                 {/* Title & Subtitle */}

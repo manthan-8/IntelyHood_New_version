@@ -23,15 +23,16 @@ export default function ModelTrainingFlow({
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-semibold mb-12">{title}</h2>
 
-        <div className="flex justify-center">
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            width={1300}
-            height={600}
-            className="rounded-2xl shadow-lg object-contain"
-          />
-        </div>
+        <div className="flex justify-center overflow-hidden rounded-2xl shadow-lg h-[500px]">
+  <Image
+    src={imageSrc}
+    alt={imageAlt}
+    width={1300}
+    height={600}
+    className="object-cover w-full h-full"
+  />
+</div>
+
 
         {note && (
           <p className="text-gray-400 text-sm mt-8 max-w-2xl mx-auto">{note}</p>
