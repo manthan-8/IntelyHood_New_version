@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
@@ -53,16 +54,15 @@ export default function HeroSection() {
   animate={{ opacity: 1, x: 0 }}
   transition={{ delay: 0.7, duration: 1.2 }}
 >
-  <div className="bg-black p-[5px] rounded-2xl"> {/* black background wrapper */}
-    <video
-      src="/A_cinematic_8second_202510301620.mp4"
-      autoPlay
-      loop
-      muted
-      playsInline
-      className="rounded-2xl w-[calc(100%+30px)] max-w-[calc(640px+30px)] filter grayscale h-[500px] object-cover"
-    />
-  </div>
+<div className="bg-black p-[5px] rounded-2xl">
+  <Image
+    src="/Generated Image October 31, 2025 - 6_39PM.png" // 👈 yahan apni image ka path do
+    alt="AI Visualization"
+    width={640}
+    height={500}
+    className="rounded-2xl w-[calc(100%+30px)] max-w-[calc(640px+30px)] h-[500px] object-cover grayscale"
+  />
+</div>
 </motion.div>
 
 

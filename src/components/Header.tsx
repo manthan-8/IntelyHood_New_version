@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { MdOutlineClose, MdOutlineMenu } from "react-icons/md";
 import { navItems } from "@/utilities/data";
@@ -41,13 +42,21 @@ const Header = () => {
       } ${isMenuOpen ? "backdrop-blur-2xl h-full" : ""}`}
     >
       <div className="max-w-screen-xl mx-auto">
-        <nav className="flex items-center justify-between border border-border-dark/20 rounded-xl p-4 backdrop-blur-xl">
+        <nav className="flex items-center justify-between border rounded-xl p-4 backdrop-blur-xl">
           {/* ✅ Left: Logo */}
-          <Link href="/" className="flex items-center">
-            <h2 className="text-2xl font-light text-white tracking-wide">
-              Intely<span className="text-white">Hood</span>
-            </h2>
-          </Link>
+          <div className="flex items-center space-x-3">
+            <div className="w-[120px] h-[50px] flex items-center justify-center pt-6">
+              <Link href="/">
+                <Image
+                  src="/5.png"
+                  alt="Logo"
+                  width={100}
+                  height={80}
+                  className="object-contain scale-200" // 👈 bigger logo, same navbar height
+                />
+              </Link>
+            </div>
+          </div>
 
           {/* ✅ Middle: Nav Links (Desktop Only) */}
           <div className="hidden lg:flex items-center gap-8 relative">

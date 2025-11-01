@@ -101,7 +101,7 @@ export default function genai() {
     />
     <ModelTrainingFlow
         title="Model Training Flow"
-        imageSrc="/Generated Image October 31, 2025 - 11_52AM.png"
+        imageSrc="/Generated Image October 31, 2025 - 5_47PM.png"
         note="Pre-Training, Post-Training, and Deployment are managed by customers"
       />
 

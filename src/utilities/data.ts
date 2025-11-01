@@ -5,13 +5,15 @@ import { GrCycle } from "react-icons/gr";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { IoTrendingUp, IoTrophyOutline, IoWarningOutline } from "react-icons/io5";
 import { LiaCookieSolid, LiaGavelSolid } from "react-icons/lia";
-import { MdOutlineCancel, MdOutlinePayment, MdOutlineRemoveRedEye } from "react-icons/md";
+import { MdOutlineCancel,MdOutlineScience,MdOutlineBusinessCenter,MdOutlineSmartToy, MdOutlinePayment, MdOutlineRemoveRedEye } from "react-icons/md";
 import { PiScales } from "react-icons/pi";
 import { MdOutlinePrecisionManufacturing, MdOutlineWork, MdOutlineDataObject,MdOutlineCarRepair, MdOutlineIntegrationInstructions,} from "react-icons/md";
 import { AiOutlineRobot } from "react-icons/ai";
 import { TbApi } from "react-icons/tb";
 import { RiGovernmentLine, RiRefund2Fill } from "react-icons/ri";
 import {
+  FiMessageSquare,
+  FiGlobe,
   FiCode,
   FiZap,
   FiSettings,
@@ -236,6 +238,7 @@ export const navItems: NavItem[] = [
 
 export const services = [
   {
+    icon: FiUsers,
     title: "Staff Augmentation",
     subtitle: "Expand your team effortlessly",
     features: [
@@ -243,9 +246,10 @@ export const services = [
       "Flexible scaling for any project size",
       "Reduce hiring time and cost",
     ],
-    icon: "/assets/icons/staff-augmentation.gif",
+    image: "/assets/icons/staff-augmentation.gif",
   },
   {
+    icon: MdOutlinePrecisionManufacturing,
     title: "LLM Training",
     subtitle: "Fine-tune AI for your business",
     features: [
@@ -253,9 +257,10 @@ export const services = [
       "Data curation & hyperparameter tuning",
       "Deploy scalable inference systems",
     ],
-    icon: "/assets/icons/llm-training.gif",
+    image: "/assets/icons/llm-training.gif",
   },
   {
+    icon: FiCode,
     title: "AI Deployment",
     subtitle: "Production-ready intelligence",
     features: [
@@ -263,9 +268,10 @@ export const services = [
       "Optimize inference speed and accuracy",
       "Real-time monitoring & retraining pipelines",
     ],
-    icon: "/assets/icons/ai-deployment.gif",
+    image: "/assets/icons/ai-deployment.gif",
   },
   {
+    icon: MdOutlineScience,
     title: "AI Research & Development",
     subtitle: "Innovate and explore new frontiers",
     features: [
@@ -273,9 +279,10 @@ export const services = [
       "Custom dataset creation & evaluation",
       "Integration with scientific & industrial data",
     ],
-    icon: "/assets/icons/ai-research.gif",
+    image: "/assets/icons/ai-research.gif",
   },
   {
+    icon: MdOutlineWork,
     title: "Vetted Tech Talents",
     subtitle: "Work with pre-screened experts",
     features: [
@@ -283,9 +290,10 @@ export const services = [
       "Rigorous skill & communication testing",
       "Match with the perfect developer in days",
     ],
-    icon: "/assets/icons/vetted-talents.gif",
+    image: "/assets/icons/vetted-talents.gif",
   },
   {
+    icon: FiDatabase,
     title: "Data Annotation",
     subtitle: "Prepare quality data for AI",
     features: [
@@ -293,9 +301,10 @@ export const services = [
       "Human-in-the-loop quality assurance",
       "Custom annotation pipelines",
     ],
-    icon: "/assets/icons/data-annotation.gif",
+    image: "/assets/icons/data-annotation.gif",
   },
   {
+    icon: FiSettings,
     title: "MLOps & Automation",
     subtitle: "Scale AI with efficiency",
     features: [
@@ -303,9 +312,10 @@ export const services = [
       "Model versioning & reproducibility",
       "Automated training and deployment workflows",
     ],
-    icon: "/assets/icons/mlops.gif",
+    image: "/assets/icons/mlops.gif",
   },
   {
+    icon: FiGlobe,
     title: "AI Consulting",
     subtitle: "Strategize your AI transformation",
     features: [
@@ -313,9 +323,10 @@ export const services = [
       "Model selection & architecture guidance",
       "ROI-driven AI implementation planning",
     ],
-    icon: "/assets/icons/ai-consulting.gif",
+    image: "/assets/icons/ai-consulting.gif",
   },
   {
+    icon: MdOutlineBusinessCenter,
     title: "AI for Enterprises",
     subtitle: "Industry-grade AI solutions",
     features: [
@@ -323,9 +334,10 @@ export const services = [
       "Fraud detection & process optimization",
       "Predictive analytics & automation tools",
     ],
-    icon: "/assets/icons/enterprise-ai.gif",
+    image: "/assets/icons/enterprise-ai.gif",
   },
   {
+    icon: FiCpu,
     title: "Computer Vision",
     subtitle: "Perception for intelligent systems",
     features: [
@@ -333,9 +345,10 @@ export const services = [
       "Face recognition & scene understanding",
       "Video analytics for security & industry",
     ],
-    icon: "/assets/icons/computer-vision.gif",
+    image: "/assets/icons/computer-vision.gif",
   },
   {
+    icon: FiMessageSquare,
     title: "Natural Language Processing",
     subtitle: "Understand human language",
     features: [
@@ -343,9 +356,10 @@ export const services = [
       "Named entity recognition & translation",
       "Conversational AI & speech models",
     ],
-    icon: "/assets/icons/nlp.gif",
+    image: "/assets/icons/nlp.gif",
   },
   {
+    icon: MdOutlineSmartToy,
     title: "Robotics & Automation",
     subtitle: "Intelligent physical systems",
     features: [
@@ -353,9 +367,10 @@ export const services = [
       "Sensor fusion & simulation environments",
       "Edge AI for autonomous systems",
     ],
-    icon: "/assets/icons/robotics.gif",
+    image: "/assets/icons/robotics.gif",
   },
   {
+    icon: MdOutlineWork,
     title: "AI Talent Hiring",
     subtitle: "Build world-class AI teams",
     features: [
@@ -363,7 +378,7 @@ export const services = [
       "Flexible engagement models",
       "End-to-end recruitment support",
     ],
-    icon: "/assets/icons/ai-talent.gif",
+    image: "/assets/icons/ai-talent.gif",
   },
 ];
 
